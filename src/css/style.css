@@ -1,0 +1,180 @@
+/* ==== WEB FONTS ==== */
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+/* ===== CONTAINER ELEMENT STYLES ===== */
+* {
+  box-sizing: border-box;
+}
+body {
+  color: #576366;
+  margin: 0;
+  font-family: Quicksand, sans-serif; 
+  overflow: hidden;
+  background-color: #fff;
+  animation: colorchange 25s; 
+  /* -webkit-animation: colorchange 25s;  */
+  animation-iteration-count: infinite;
+}
+
+.button {
+  text-align: center;
+  margin:  0;
+  cursor: pointer;
+}
+
+button {
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+.main_container {
+  margin:  0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.application {
+  padding: 10px;
+  margin-top: 10px;
+  height: auto;
+} 
+
+.container {
+  position: absolute;
+  top: 170px;
+  left: 0;
+  right: 0;
+}
+
+/* ==== ABOUT ==== */
+.about_container {
+  position: absolute;
+  padding: 20px;
+  bottom: -15px;
+  right: -10px;
+  color: #222;
+  border-radius: 2px;
+  padding-bottom: 0px;
+  width: 280px;
+  opacity: .8;
+  z-index: 20;
+  margin: 0;
+  cursor: pointer;
+  display: none;
+
+}
+
+.user_links_container {
+  height: 100px;
+  overflow-y: hidden;
+  overflow-x: auto;
+  widows: 260px;
+  max-width: 260px;
+}
+
+.user_links_container:hover {
+  overflow-y: scroll;
+}
+
+.add_link_button {
+
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #fff; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(0,0,0,0); 
+}
+
+.url_input {
+  /* padding: 0; */
+  height: 28px;
+  width: 300px;
+  border-radius: 3px;
+}
+
+
+.link_p {
+  margin-bottom: 0;
+}
+/* ==== ANIMATION  ==== */
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(1, 1); }
+    50% {-webkit-transform: scale(1.2, 1.2); }
+    100% {-webkit-transform: scale(1, 1);}
+}
+
+@-moz-keyframes pulsate {
+    0% {-webkit-transform: scale(1, 1); }
+    50% {-webkit-transform: scale(1.2, 1.2); }
+    100% {-webkit-transform: scale(1, 1);}
+}
+
+@keyframes pulsate {
+    0% {-webkit-transform: scale(1, 1); }
+    50% {-webkit-transform: scale(1.2, 1.2); }
+    100% {-webkit-transform: scale(1, 1);}
+}
+
+@keyframes colorchange
+{
+  0%   {background: rgba(249, 229, 159, 0.28); }
+  50%  {background: rgba(255, 255, 255, 0.9);}
+  100% {background: rgba(249, 229, 159, 0.28);}
+}
+
+@-webkit-keyframes colorchange 
+{
+  0%   {background: rgba(249, 229, 159, 0.28);}
+  50%  {background: rgba(255, 255, 255, 0.9);}
+  100% {background: rgba(249, 229, 159, 0.28);}
+}
+
+@-moz-keyframes colorchange 
+{
+  0%   {background: rgba(249, 229, 159, 0.28);}
+  50%  {background: rgba(255, 255, 255, 0.9);}
+  100% {background: rgba(249, 229, 159, 0.28);}
+}
+
+/* ==== MEDIA QUERIES ==== */
+
+@media screen and (max-width: 600px){
+    .tab {
+      display: none;
+      background-color: red;
+    }
+
+    .player_container {
+      display: none;
+    }
+
+    .ear_svg {
+      display: none;
+    }
+
+    .container {
+      top: 150px;
+    }
+  }
