@@ -5,7 +5,7 @@ import Foundation from 'react-foundation';
 let Links =  [];
 
 
-class About extends Component{
+class User_Links extends Component{
 	constructor(props) {
 		super(props);
 		this.Handle_keypress = this.Handle_keypress.bind(this);
@@ -68,8 +68,8 @@ class About extends Component{
 }
 
 
-About.defaultProps = {
+User_Links.defaultProps = {
 
 }
 
-export default About;
+export default User_Links;
