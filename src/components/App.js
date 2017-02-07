@@ -4,7 +4,8 @@ import { Row, Column } from 'react-foundation';
 import Foundation from 'react-foundation';
 import Quote_array from '../data/quote_array.js';
 import audio from '../data/audio_array.js';
-import About from './about.js';
+import User_Links from './user_links.js';
+import Search from './Search.js'
 
 class App extends Component {
   constructor(props, context) {
@@ -28,11 +29,11 @@ class App extends Component {
     return (
       <div>
       <div className="application">
-      {/*  <Row className="display"> */}
-          <Column  large={8}>
-              <About/>
-          </Column>
+      {/*  <Row className="display">
+          <Column  large={12}></Column>
+          <User_Links/> */}
        {/*  </Row>*/}
+       <Search/>
         </div>
       </div>)
   }
