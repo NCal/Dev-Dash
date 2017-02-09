@@ -47,6 +47,13 @@ button {
   right: 0;
 }
 
+
+/* ==== TIME ==== */
+
+.time {
+  font-size: 4em;
+}
+
 /* ==== SEARCH ==== */
 .search {
   position: relative;
@@ -63,7 +70,9 @@ button {
   margin-left: 20px;
 }
 .search_option_span {
+  position: relative;
   font-size: 15pt;
+  /* padding: 15px; */
 }
 /* ==== SROLL BAR ==== */
 
@@ -181,6 +190,11 @@ button {
 /* ==== MEDIA QUERIES ==== */
 
 @media screen and (max-width: 600px){
+
+  .search_option_span {
+    font-size: 12pt;
+  }
+
     .tab {
       display: none;
       background-color: red;
