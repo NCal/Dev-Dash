@@ -5,7 +5,8 @@ import Foundation from 'react-foundation';
 import Quote_array from '../data/quote_array.js';
 import audio from '../data/audio_array.js';
 import User_Links from './user_links.js';
-import Search from './Search.js'
+import Search from './Search.js';
+import Main_Date from './Date.js';
 
 class App extends Component {
   constructor(props, context) {
@@ -34,6 +35,7 @@ class App extends Component {
           <User_Links/> */}
        {/*  </Row>*/}
        <Search/>
+       <Main_Date/>
         </div>
       </div>)
   }

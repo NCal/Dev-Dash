@@ -33,23 +33,34 @@ class Search extends Component{
 		}
 	}
 	Handle_check(e){
+		console.log(e.target.type);
 		console.log(e.target);
-		let clicked_box = e.target;
 
-			for (let i=0;i<$('input.search_option').length; i++){
-				$('input.search_option')[i].checked =false;
-			}
+		if (e.target.type= 'radio'){
+			let clicked_box = e.target;
 
-		clicked_box.checked = true;
-		this.setState({search: clicked_box.name});
+				for (let i=0;i<$('input.search_option').length; i++){
+					$('input.search_option')[i].checked =false;
+				}
+
+			clicked_box.checked = true;
+			this.setState({search: clicked_box.name});
+		}
+
+		else {
+			
+		}
+		
 	}
 	render() {
 			return (<div className="search">
 					<Column  small={8} medium={8} large={8} centerOnSmall centerOnLarge centerOnMedium >
 						<input type="text"  placeholder="search" className="search_input" onKeyDown={this.Handle_keypress}/>
-						<input className="search_option" type="radio" name="google" onClick={this.Handle_check} defaultChecked/><span className="search_option_span ">Google</span>
-						<input className="search_option" type="radio" name="stack" onClick={this.Handle_check} /><span className="search_option_span ">Stack Overflow</span>
-						<input className="search_option" type="radio" name="github" onClick={this.Handle_check} /><span className="search_option_span ">Github</span>
+						<div className="option_container" style={{textAlign: 'center'}}>
+							<input style={{textAlign: 'center', cursor: 'pointer'}} className="search_option " type="radio" name="google" onClick={this.Handle_check} defaultChecked/><span type="span" className="search_option_span google">Google</span>
+							<input style={{textAlign: 'center', cursor: 'pointer'}} className="search_option " type="radio" name="stack" onClick={this.Handle_check} /><span type="span" className="search_option_span stack">Stack Overflow</span>
+							<input style={{textAlign: 'center', cursor: 'pointer'}} className="search_option " type="radio" name="github" onClick={this.Handle_check} /><span type="span" className="search_option_span github">Github</span>
+						</div>
 					</Column>
 			</div>)
 	}
