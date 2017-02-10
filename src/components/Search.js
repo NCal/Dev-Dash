@@ -33,10 +33,11 @@ class Search extends Component{
 		}
 	}
 	Handle_check(e){
-		console.log(e.target.type);
-		console.log(e.target);
+		// console.log(e.target.type);
+		// console.log(e.target);
 
-		if (e.target.type= 'radio'){
+		if (e.target.type=== 'radio'){
+			console.log('radio');
 			let clicked_box = e.target;
 
 				for (let i=0;i<$('input.search_option').length; i++){
@@ -48,7 +49,34 @@ class Search extends Component{
 		}
 
 		else {
-			
+			console.log('not radio');
+			let clicked_box = e.target.getAttribute('name');
+			console.log('clicked box',clicked_box);
+			this.setState({search: clicked_box});
+			let self = this;
+				setTimeout(function(){
+					if (self.state.search === 'google'){
+						for (let i=0;i<$('input.search_option').length; i++){
+							$('input.search_option')[i].checked =false;
+						}
+						document.querySelector('.google_input').checked =true;
+					}
+
+					if (self.state.search === 'stack'){
+						for (let i=0;i<$('input.search_option').length; i++){
+							$('input.search_option')[i].checked =false;
+						}
+						document.querySelector('.stack_input').checked =true;
+					}
+
+					if (self.state.search === 'github'){
+						for (let i=0;i<$('input.search_option').length; i++){
+							$('input.search_option')[i].checked =false;
+						}
+						document.querySelector('.github_input').checked =true;
+					}
+				},10);
+				
 		}
 		
 	}
@@ -57,9 +85,9 @@ class Search extends Component{
 					<Column  small={8} medium={8} large={8} centerOnSmall centerOnLarge centerOnMedium >
 						<input type="text"  placeholder="search" className="search_input" onKeyDown={this.Handle_keypress}/>
 						<div className="option_container" style={{textAlign: 'center'}}>
-							<input style={{textAlign: 'center', cursor: 'pointer'}} className="search_option " type="radio" name="google" onClick={this.Handle_check} defaultChecked/><span type="span" className="search_option_span google">Google</span>
-							<input style={{textAlign: 'center', cursor: 'pointer'}} className="search_option " type="radio" name="stack" onClick={this.Handle_check} /><span type="span" className="search_option_span stack">Stack Overflow</span>
-							<input style={{textAlign: 'center', cursor: 'pointer'}} className="search_option " type="radio" name="github" onClick={this.Handle_check} /><span type="span" className="search_option_span github">Github</span>
+							<input style={{textAlign: 'center', cursor: 'pointer'}} className="search_option google_input" type="radio" name="google" onClick={this.Handle_check} defaultChecked/><span style={{cursor: 'pointer'}} type="span" name="google" onClick={this.Handle_check} className="search_option_span google">Google</span>
+							<input style={{textAlign: 'center', cursor: 'pointer'}} className="search_option stack_input" type="radio" name="stack" onClick={this.Handle_check} /><span style={{cursor: 'pointer'}} type="span"  name="stack" onClick={this.Handle_check}  className="search_option_span stack">Stack Overflow</span>
+							<input style={{textAlign: 'center', cursor: 'pointer'}} className="search_option github_input" type="radio" name="github" onClick={this.Handle_check} /><span  style={{cursor: 'pointer'}} type="span"  name="github" onClick={this.Handle_check} className="search_option_span github">Github</span>
 						</div>
 					</Column>
 			</div>)
