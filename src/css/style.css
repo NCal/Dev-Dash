@@ -16,6 +16,8 @@ body {
   animation-iteration-count: infinite;
 }
 
+
+
 .button {
   text-align: center;
   margin:  0;
@@ -58,10 +60,7 @@ button {
 .search {
   position: relative;
   top: 500px;
-  /* opacity:0; */
-  /* display: block; */
   font-size:2em;
-  /* text-align: left; */
   color: rgb(0, 0, 0, 0.6);
 }
 
@@ -154,17 +153,15 @@ button {
     100% {-webkit-transform: scale(1, 1);}
 }
 
-@-moz-keyframes pulsate {
-    0% {-webkit-transform: scale(1, 1); }
-    50% {-webkit-transform: scale(1.2, 1.2); }
-    100% {-webkit-transform: scale(1, 1);}
-}
+
 
 @keyframes pulsate {
     0% {-webkit-transform: scale(1, 1); }
     50% {-webkit-transform: scale(1.2, 1.2); }
     100% {-webkit-transform: scale(1, 1);}
 }
+
+
 
 @keyframes colorchange
 {
@@ -180,20 +177,19 @@ button {
   100% {background: rgba(249, 229, 159, 0.28);}
 }
 
-@-moz-keyframes colorchange 
-{
-  0%   {background: rgba(249, 229, 159, 0.28);}
-  50%  {background: rgba(255, 255, 255, 0.9);}
-  100% {background: rgba(249, 229, 159, 0.28);}
-}
+
 
 /* ==== MEDIA QUERIES ==== */
 
 @media screen and (max-width: 600px){
 
   .search_option_span {
-    font-size: 12pt;
+    font-size: 8pt;
   }
+
+   .search_option {
+    width: 8px;
+   }
 
     .tab {
       display: none;
