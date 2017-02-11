@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Column } from 'react-foundation';
-
+import $ from 'jQuery';
 class Main_Date extends Component {
 	constructor(props) {
 		super(props);
@@ -23,19 +23,10 @@ class Main_Date extends Component {
 	    var today = new Date();
 	    var h = today.getHours();
 	    var m = today.getMinutes();
+		// console.log(h);
 
-		if (h === 13){ h= 1; }
-		if (h === 14){ h= 2; }
-		if (h === 15){ h= 3; }
-		if (h === 16){ h= 4; }
-		if (h === 17){ h= 5; }
-		if (h === 18){ h= 6; }
-		if (h === 19){ h= 7; }
-		if (h === 20){ h= 8; }
-		if (h === 21){ h= 9; }
-		if (h === 22){ h= 10; }
-		if (h === 23){ h= 11; }
-		if (h === 0 || h === 24){ h= 12; }
+		if (h >= 13 ){h = h - 12}
+		if (h === 0 || h === 24 || h === -12 ){ h= 12; }
 
 	    m = this.checkTime(m);
 		this.setState({ time: h + ":" + m});
@@ -47,11 +38,18 @@ class Main_Date extends Component {
 	    if (i < 10) {i = "0" + i };  // add zero in front of numbers < 10
 	    return i;
 	}
+	handleMouseOver(){
+		$('.time').animate({'letter-spacing': '0.3em'}, 500);
+	}
+	handleMouseLeave(){
+		$('.time').animate({'letter-spacing': '0em'}, 500);
+
+	}
 	render(){
 		return (<div>
 				<Column  small={8} medium={8} large={8} centerOnSmall centerOnLarge centerOnMedium >
 					
-					<h1  className="time" style={{textAlign: 'center'}}>{this.state.time}</h1>
+					<h1  className="time" style={{textAlign: 'center'}} onMouseOver={this.handleMouseOver} onMouseLeave={this.handleMouseLeave}>{this.state.time}</h1>
 					<p style={{textAlign: 'center'}}>{this.state.date}</p>
 				</Column>
 		</div>)
