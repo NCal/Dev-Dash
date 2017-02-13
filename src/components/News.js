@@ -14,8 +14,9 @@ class News extends Component {
 		super(props);
 
 		this.Get = this.Get.bind(this);
+		this.setNull = this.setNull.bind(this);
 		this.state = {
-			stories: null
+			stories: []
 		};
 		
 	}
@@ -26,35 +27,31 @@ class News extends Component {
 
 	Get(){
 		let self= this;
-		self.setState({stories: null});
-		debugger;
-		// if (this.state.stories === null){alert('null');}
-		// var stories = [];
-		$.getJSON(' https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty',
-			{}
-			, function(results){
-			// console.log(results);
-			if (results.length > 10){
-				results = results.slice(0, 10);
-				console.log('2: ',results);
-
-				for (var i=0; i < results.length; i++){
-					$.getJSON('https://hacker-news.firebaseio.com/v0/item/'+results[i]+'.json?print=pretty',
-					{},
-					function(stuff){
-						stories.push({ title: stuff.title, url: stuff.url});
-					});
-				}
-				
-				setTimeout(function(){
-						console.log('stories:', stories); 
-						self.setState({stories: stories})
-						console.log('this.state.stories', self.state.stories);
-					},200);
-			}
-		})
-
+		stories = [];
 		
+			$.getJSON(' https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty',
+				{},
+				 function(results){
+				// console.log(results);
+				if (results.length > 10){
+					results = results.slice(0, 10);
+					console.log('2: ',results);
+
+					for (var i=0; i < results.length; i++){
+						$.getJSON('https://hacker-news.firebaseio.com/v0/item/'+results[i]+'.json?print=pretty',
+						{},
+						function(stuff){
+							stories.push({ title: stuff.title, url: stuff.url});
+						});
+					}
+					
+					setTimeout(function(){
+							console.log('stories:', stories); 
+							self.setState({stories: stories})
+							console.log('this.state.stories', self.state.stories);
+						},200);
+				}
+			});
 	}
 
 	render(){
