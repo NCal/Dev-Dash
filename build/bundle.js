@@ -21887,7 +21887,7 @@
 	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Quicksand);", ""]);
 
 	// module
-	exports.push([module.id, "/* ==== WEB FONTS ==== */\n\n/* ===== CONTAINER ELEMENT STYLES ===== */\n* {\n  box-sizing: border-box;\n}\nbody {\n  color: #576366;\n  margin: 0;\n  font-family: Quicksand, sans-serif; \n  overflow: hidden;\n  background-color: #fff;\n  animation: colorchange 25s; \n  /* -webkit-animation: colorchange 25s;  */\n  animation-iteration-count: infinite;\n}\n\n\n\n.button {\n  text-align: center;\n  margin:  0;\n  cursor: pointer;\n}\n\nbutton {\n  background-color: blue;\n  color: white;\n  cursor: pointer;\n}\n.main_container {\n  margin:  0;\n  padding: 0;\n  height: 100%;\n  width: 100%;\n}\n\n.application {\n  padding: 10px;\n  margin-top: 10px;\n  height: auto;\n} \n\n.container {\n  position: absolute;\n  top: 170px;\n  left: 0;\n  right: 0;\n}\n\n\n/* ==== TIME ==== */\n\n.time {\n  font-size: 4em;\n}\n\n/* ==== SEARCH ==== */\n.search {\n  position: relative;\n  top: 500px;\n  font-size:2em;\n  color: rgb(0, 0, 0, 0.6);\n}\n\n.search_option {\n  position: relative;\n  margin-left: 20px;\n}\n.search_option_span {\n  position: relative;\n  font-size: 15pt;\n  /* padding: 15px; */\n}\n/* ==== SROLL BAR ==== */\n\n::-webkit-scrollbar {\n    width: 4px;\n}\n \n::-webkit-scrollbar-track {\n    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); \n    -webkit-border-radius: 10px;\n    border-radius: 10px;\n}\n \n::-webkit-scrollbar-thumb {\n    -webkit-border-radius: 10px;\n    border-radius: 10px;\n    background: #fff; \n    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); \n}\n\n::-webkit-scrollbar-thumb:window-inactive {\n  background: rgba(0,0,0,0); \n}\n\n\n/* USER LINKS */\n.url_input {\n  /* padding: 0; */\n  height: 28px;\n  width: 300px;\n  border-radius: 3px;\n}\n\n.about_container {\n  position: absolute;\n  padding: 20px;\n  bottom: -15px;\n  right: -10px;\n  color: #222;\n  border-radius: 2px;\n  padding-bottom: 0;\n  width: 280px;\n  opacity: .8;\n  z-index: 20;\n  margin: 0;\n  cursor: pointer;\n  display: none;\n\n}\n\n.user_links_container {\n  max-height: 100px;\n  overflow-y: scroll;\n  /* overflow-x: auto; */\n  width: 240px;\n  max-width: 260px;\n}\n\n.user_links_container:hover {\n  overflow-y: scroll;\n}\n\n.add_link_button {\n\n}\n\n.link_p {\n  margin-bottom: 0;\n}\n/* ==== ANIMATION  ==== */\n\n@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }\n@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }\n@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }\n\n@-webkit-keyframes pulsate {\n    0% {-webkit-transform: scale(1, 1); }\n    50% {-webkit-transform: scale(1.2, 1.2); }\n    100% {-webkit-transform: scale(1, 1);}\n}\n\n\n\n@keyframes pulsate {\n    0% {-webkit-transform: scale(1, 1); }\n    50% {-webkit-transform: scale(1.2, 1.2); }\n    100% {-webkit-transform: scale(1, 1);}\n}\n\n\n\n@keyframes colorchange\n{\n  0%   {background: rgba(249, 229, 159, 0.28); }\n  50%  {background: rgba(255, 255, 255, 0.9);}\n  100% {background: rgba(249, 229, 159, 0.28);}\n}\n\n@-webkit-keyframes colorchange \n{\n  0%   {background: rgba(249, 229, 159, 0.28);}\n  50%  {background: rgba(255, 255, 255, 0.9);}\n  100% {background: rgba(249, 229, 159, 0.28);}\n}\n\n\n\n/* ==== MEDIA QUERIES ==== */\n\n@media screen and (max-width: 600px){\n\n  .search_option_span {\n    font-size: 8pt;\n  }\n\n   .search_option {\n    width: 8px;\n   }\n\n    .tab {\n      display: none;\n      background-color: red;\n    }\n\n    .player_container {\n      display: none;\n    }\n\n    .ear_svg {\n      display: none;\n    }\n\n    .container {\n      top: 150px;\n    }\n  }\n", ""]);
+	exports.push([module.id, "/* ==== WEB FONTS ==== */\n\n/* ===== CONTAINER ELEMENT STYLES ===== */\n* {\n  box-sizing: border-box;\n}\nbody {\n  color: #576366;\n  margin: 0;\n  font-family: Quicksand, sans-serif; \n  overflow: hidden;\n  background-color: #fff;\n  animation: colorchange 25s; \n  /* -webkit-animation: colorchange 25s;  */\n  animation-iteration-count: infinite;\n}\n\n\n\n.button {\n  text-align: center;\n  margin:  0;\n  cursor: pointer;\n}\n\nbutton {\n  background-color: blue;\n  color: white;\n  cursor: pointer;\n}\n.main_container {\n  margin:  0;\n  padding: 0;\n  height: 100%;\n  width: 100%;\n}\n\n.application {\n  padding: 10px;\n  margin-top: 10px;\n  height: auto;\n} \n\n.container {\n  position: absolute;\n  top: 170px;\n  left: 0;\n  right: 0;\n}\n\n\n/* ==== NEWS ==== */\n.news_container {\n  position: absolute;\n  top: 0;\n  left: 0;\n\n}\n\n\n/* ==== TIME ==== */\n\n.time {\n  font-size: 4em;\n}\n\n/* ==== SEARCH ==== */\n.search {\n  position: relative;\n  top: 500px;\n  font-size:2em;\n  color: rgb(0, 0, 0, 0.6);\n}\n\n.search_option {\n  position: relative;\n  margin-left: 20px;\n}\n.search_option_span {\n  position: relative;\n  font-size: 15pt;\n  /* padding: 15px; */\n}\n/* ==== SROLL BAR ==== */\n\n::-webkit-scrollbar {\n    width: 4px;\n}\n \n::-webkit-scrollbar-track {\n    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); \n    -webkit-border-radius: 10px;\n    border-radius: 10px;\n}\n \n::-webkit-scrollbar-thumb {\n    -webkit-border-radius: 10px;\n    border-radius: 10px;\n    background: #fff; \n    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); \n}\n\n::-webkit-scrollbar-thumb:window-inactive {\n  background: rgba(0,0,0,0); \n}\n\n\n/* USER LINKS */\n.url_input {\n  /* padding: 0; */\n  height: 28px;\n  width: 300px;\n  border-radius: 3px;\n}\n\n.about_container {\n  position: absolute;\n  padding: 20px;\n  bottom: -15px;\n  right: -10px;\n  color: #222;\n  border-radius: 2px;\n  padding-bottom: 0;\n  width: 280px;\n  opacity: .8;\n  z-index: 20;\n  margin: 0;\n  cursor: pointer;\n  display: none;\n\n}\n\n.user_links_container {\n  max-height: 100px;\n  overflow-y: scroll;\n  /* overflow-x: auto; */\n  width: 240px;\n  max-width: 260px;\n}\n\n.user_links_container:hover {\n  overflow-y: scroll;\n}\n\n.add_link_button {\n\n}\n\n.link_p {\n  margin-bottom: 0;\n}\n/* ==== ANIMATION  ==== */\n\n@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }\n@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }\n@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }\n\n@-webkit-keyframes pulsate {\n    0% {-webkit-transform: scale(1, 1); }\n    50% {-webkit-transform: scale(1.2, 1.2); }\n    100% {-webkit-transform: scale(1, 1);}\n}\n\n\n\n@keyframes pulsate {\n    0% {-webkit-transform: scale(1, 1); }\n    50% {-webkit-transform: scale(1.2, 1.2); }\n    100% {-webkit-transform: scale(1, 1);}\n}\n\n\n\n@keyframes colorchange\n{\n  0%   {background: rgba(249, 229, 159, 0.28); }\n  50%  {background: rgba(255, 255, 255, 0.9);}\n  100% {background: rgba(249, 229, 159, 0.28);}\n}\n\n@-webkit-keyframes colorchange \n{\n  0%   {background: rgba(249, 229, 159, 0.28);}\n  50%  {background: rgba(255, 255, 255, 0.9);}\n  100% {background: rgba(249, 229, 159, 0.28);}\n}\n\n\n\n/* ==== MEDIA QUERIES ==== */\n\n@media screen and (max-width: 600px){\n\n  .search_option_span {\n    font-size: 8pt;\n  }\n\n   .search_option {\n    width: 8px;\n   }\n\n    .tab {\n      display: none;\n      background-color: red;\n    }\n\n    .player_container {\n      display: none;\n    }\n\n    .ear_svg {\n      display: none;\n    }\n\n    .container {\n      top: 150px;\n    }\n  }\n", ""]);
 
 	// exports
 
@@ -37325,6 +37325,7 @@
 	// console.log(XHMLHttpRequest);
 
 	// import hn from 'hackernews-api';
+	var stories = [];
 
 	var News = function (_Component) {
 		_inherits(News, _Component);
@@ -37335,7 +37336,9 @@
 			var _this = _possibleConstructorReturn(this, (News.__proto__ || Object.getPrototypeOf(News)).call(this, props));
 
 			_this.Get = _this.Get.bind(_this);
-			_this.state = {};
+			_this.state = {
+				stories: null
+			};
 
 			return _this;
 		}
@@ -37348,24 +37351,63 @@
 		}, {
 			key: 'Get',
 			value: function Get() {
-				_jQuery2.default.getJSON('https://hacker-news.firebaseio.com/v0/topstories.json', {
-					"type": "story"
-				}, function (results) {
-					console.log(results);
+				var self = this;
+				self.setState({ stories: null });
+				debugger;
+				// if (this.state.stories === null){alert('null');}
+				// var stories = [];
+				_jQuery2.default.getJSON(' https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty', {}, function (results) {
+					// console.log(results);
+					if (results.length > 10) {
+						results = results.slice(0, 10);
+						console.log('2: ', results);
+
+						for (var i = 0; i < results.length; i++) {
+							_jQuery2.default.getJSON('https://hacker-news.firebaseio.com/v0/item/' + results[i] + '.json?print=pretty', {}, function (stuff) {
+								stories.push({ title: stuff.title, url: stuff.url });
+							});
+						}
+
+						setTimeout(function () {
+							console.log('stories:', stories);
+							self.setState({ stories: stories });
+							console.log('this.state.stories', self.state.stories);
+						}, 200);
+					}
 				});
 			}
 		}, {
 			key: 'render',
 			value: function render() {
-				return _react2.default.createElement(
-					'div',
-					null,
-					_react2.default.createElement(
-						'h1',
-						{ onClick: this.Get },
-						'news'
-					)
-				);
+				if (this.state.stories !== null) {
+					return _react2.default.createElement(
+						'div',
+						{ className: 'news_container' },
+						_react2.default.createElement(
+							'h1',
+							{ onClick: this.Get },
+							'news'
+						),
+						_react2.default.createElement(
+							'ul',
+							null,
+							this.state.stories.map(function (thang, i) {
+
+								return _react2.default.createElement(
+									'li',
+									{ key: i },
+									_react2.default.createElement(
+										'a',
+										{ href: '' },
+										thang.title
+									)
+								);
+							})
+						)
+					);
+				} else {
+					return _react2.default.createElement('div', null);
+				}
 			}
 		}]);
 
