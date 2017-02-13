@@ -7,6 +7,7 @@ import audio from '../data/audio_array.js';
 import User_Links from './user_links.js';
 import Search from './Search.js';
 import Main_Date from './Date.js';
+import News from './News.js';
 
 class App extends Component {
   constructor(props, context) {
@@ -36,6 +37,7 @@ class App extends Component {
        {/*  </Row>*/}
        <Search/>
        <Main_Date/>
+       <News/>
         </div>
       </div>)
   }

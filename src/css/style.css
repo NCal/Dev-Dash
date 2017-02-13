@@ -50,6 +50,15 @@ button {
 }
 
 
+/* ==== NEWS ==== */
+.news_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+
+
 /* ==== TIME ==== */
 
 .time {
