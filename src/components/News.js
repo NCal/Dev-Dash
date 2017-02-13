@@ -14,7 +14,6 @@ class News extends Component {
 		super(props);
 
 		this.Get = this.Get.bind(this);
-		this.setNull = this.setNull.bind(this);
 		this.state = {
 			stories: []
 		};
