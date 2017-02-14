@@ -77,7 +77,7 @@ class News extends Component {
 				
 				<ul>
 					{this.state.stories.map(function(thang, i){
-						return <li key={i}><a href={thang.url}>{thang.title}</a></li>
+						return <li key={i}><a href={thang.url} target="blank_">{thang.title}</a></li>
 					})}
 				</ul>
 			</div></div>)
