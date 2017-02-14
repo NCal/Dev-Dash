@@ -1,14 +1,8 @@
 import React, { Component } from 'react';
 import { Row, Column } from 'react-foundation';
 import $ from 'jQuery';
-// import child_process from 'xmlhttprequest';
-// import fs from 'xmlhttprequest';
-// import XMLHttpRequest from 'xmlhttprequest';
-// var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-// console.log(XHMLHttpRequest);
 
-// import hn from 'hackernews-api';
-var stories = [];
+
 class News extends Component {
 	constructor(props) {
 		super(props);
@@ -49,7 +43,7 @@ class News extends Component {
 			});
 
 				function loop_2(ids){
-					stories = [];
+					let stories = [];
 					for (var j=0; j < ids.length; j++){
 						$.getJSON('https://hacker-news.firebaseio.com/v0/item/'+ids[j]+'.json?print=pretty',
 						{},
