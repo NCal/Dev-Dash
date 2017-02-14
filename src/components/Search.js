@@ -59,7 +59,7 @@ class Search extends Component{
 	}
 	render() {
 			return (<div className="search">
-					<Column  small={8} medium={8} large={8} centerOnSmall centerOnLarge centerOnMedium >
+					<Column  small={8} medium={8} large={4} centerOnSmall centerOnLarge centerOnMedium >
 						<input type="text"  placeholder="search" className="search_input" onKeyDown={this.Handle_keypress}/>
 						<div className="option_container" style={{textAlign: 'center'}}>
 							<input style={input_styles} className="search_option google_input" type="radio" name="google" onClick={this.Handle_check} defaultChecked/><span style={{cursor: 'pointer'}} type="span" name="google" onClick={this.Handle_check} className="search_option_span google">Google</span>

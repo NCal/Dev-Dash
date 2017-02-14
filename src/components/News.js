@@ -14,8 +14,10 @@ class News extends Component {
 		super(props);
 
 		this.Get = this.Get.bind(this);
+		this.handleClick = this.handleClick.bind(this);
 		this.state = {
-			stories: []
+			on: false,
+			stories: null
 		};
 		
 	}
@@ -24,49 +26,66 @@ class News extends Component {
 		console.log('new mounted');
 	}
 
+	handleClick(){
+		if (this.state.on === false){
+				this.Get();
+				this.setState({'on': true});
+		} else {
+			this.setState({'on': false});
+		}
+	}
+
 	Get(){
 		let self= this;
-		stories = [];
-		
+		const total = 10;
+
 			$.getJSON(' https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty',
 				{},
 				 function(results){
-				// console.log(results);
-				if (results.length > 10){
-					results = results.slice(0, 10);
-					console.log('2: ',results);
+					let ids = results.slice(0, total);
+					console.log('ids',ids);
+					console.log(ids.length);
+					loop_2(ids);
+			});
 
-					for (var i=0; i < results.length; i++){
-						$.getJSON('https://hacker-news.firebaseio.com/v0/item/'+results[i]+'.json?print=pretty',
+				function loop_2(ids){
+					stories = [];
+					for (var j=0; j < ids.length; j++){
+						$.getJSON('https://hacker-news.firebaseio.com/v0/item/'+ids[j]+'.json?print=pretty',
 						{},
-						function(stuff){
-							stories.push({ title: stuff.title, url: stuff.url});
+						function(response){
+							stories.push({ title: response.title, url: response.url});
+							final(stories);
 						});
 					}
-					
-					setTimeout(function(){
-							console.log('stories:', stories); 
-							self.setState({stories: stories})
-							console.log('this.state.stories', self.state.stories);
-						},200);
 				}
-			});
+				
+			
+			function final(stories){
+				if (stories.length === total){
+					self.setState({stories: stories});
+					console.log('this.state.stories', self.state.stories);	
+				}
+			}
 	}
 
 	render(){
-		if (this.state.stories !== null){
-			return (<div className="news_container">
-				<h1 onClick={this.Get}>news</h1>
+		if (this.state.on === true){
+			return (<div className="outer" ><div className="news_container">
+				{/*<h1 onClick={this.handleClick}>news</h1>*/}
+				<h5 onClick={this.handleClick} style={{color: 'white', cursor: 'pointer'}}>hide</h5>
+				
 				<ul>
 					{this.state.stories.map(function(thang, i){
-
-						return <li key={i}><a href="">{thang.title}</a></li>
+						return <li key={i}><a href={thang.url}>{thang.title}</a></li>
 					})}
 				</ul>
-				
-			</div>)
+			</div></div>)
 		} else {
-			return <div></div>
+			return (<div className="news_container" style={{cursor: 'pointer'}} onClick={this.handleClick}>
+				<h5  style={{color: 'white', cursor: 'pointer'}}>news</h5>
+				<img src="src/assets/news_icon.png" alt="news icon"  style={{width: '50px', cursor: 'pointer'}}/>
+				</div>)
 		}
 		
 	}

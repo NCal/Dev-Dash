@@ -39,15 +39,15 @@ class Main_Date extends Component {
 	    return i;
 	}
 	handleMouseOver(){
-		$('.time').animate({'letter-spacing': '0.3em'}, 500);
+		$('.time').animate({'letter-spacing': '0.3em'}, 200);
 	}
 	handleMouseLeave(){
-		$('.time').animate({'letter-spacing': '0em'}, 500);
+		$('.time').animate({'letter-spacing': '0em'}, 200);
 
 	}
 	render(){
 		return (<div>
-				<Column  small={8} medium={8} large={8} centerOnSmall centerOnLarge centerOnMedium >
+				<Column  small={8} medium={8} large={3} centerOnSmall centerOnLarge centerOnMedium >
 					
 					<h1  className="time" style={{textAlign: 'center'}} onMouseOver={this.handleMouseOver} onMouseLeave={this.handleMouseLeave}>{this.state.time}</h1>
 					<p style={{textAlign: 'center'}}>{this.state.date}</p>
