@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { Row, Column } from 'react-foundation';
 import Foundation from 'react-foundation';
-import Quote_array from '../data/quote_array.js';
-import audio from '../data/audio_array.js';
+// import Quote_array from '../data/quote_array.js';
+// import audio from '../data/audio_array.js';
 import User_Links from './user_links.js';
 import Search from './Search.js';
 import Main_Date from './Date.js';

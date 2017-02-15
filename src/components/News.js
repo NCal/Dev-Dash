@@ -31,7 +31,7 @@ class News extends Component {
 
 	Get(){
 		let self= this;
-		const total = 10;
+		const total = 20;
 
 			$.getJSON(' https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty',
 				{},
@@ -54,35 +54,43 @@ class News extends Component {
 					}
 				}
 				
-			
 			function final(stories){
 				if (stories.length === total){
-					self.setState({stories: stories});
-					console.log('this.state.stories', self.state.stories);	
-				}
+						self.setState({stories: stories});
+						console.log('this.state.stories', self.state.stories);	
+					}
 			}
-	}
+}
 
 	render(){
 		if (this.state.on === true){
-			return (<div className="outer" ><div className="news_container">
-				{/*<h1 onClick={this.handleClick}>news</h1>*/}
-				<h5 onClick={this.handleClick} style={{color: 'white', cursor: 'pointer'}}>hide</h5>
-				
+			return (<div className="outer" >
+				<h5 onClick={this.handleClick} style={{color: 'white', cursor: 'pointer'}} className="news_title">hide</h5>
+				<div className="news_container">
 				<ul>
 					{this.state.stories.map(function(thang, i){
 						return <li key={i}><a href={thang.url} target="blank_">{thang.title}</a></li>
 					})}
 				</ul>
-			</div></div>)
+			<div className="empty"></div>
+			</div>
+			<div className="fadeout"></div>
+			</div>)
 		} else {
-			return (<div className="news_container" style={{cursor: 'pointer'}} onClick={this.handleClick}>
-				<h5  style={{color: 'white', cursor: 'pointer'}}>news</h5>
+			return (<div className="outer" onClick={this.handleClick}>
+				<h5  style={{color: 'white', cursor: 'pointer'}}>{this.props.name}</h5>
 				<img src="src/assets/news_icon.png" alt="news icon"  style={{width: '50px', cursor: 'pointer'}}/>
+				<div className="news_container" style={{cursor: 'pointer'}} >
+				
+				</div>
 				</div>)
 		}
 		
 	}
 }
+
+News.defaultProps = {
+	name: 'News'
+};
 
 export default News;
