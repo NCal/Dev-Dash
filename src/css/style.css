@@ -10,7 +10,7 @@ body {
   margin: 0;
   font-family: Quicksand, sans-serif; 
   overflow: hidden;
-  background-color: salmon;
+  background-color: rgba(255, 119, 115, 1);
   /* animation: colorchange 25s;  */
   /* -webkit-animation: colorchange 25s;  */
   animation-iteration-count: infinite;
@@ -60,13 +60,46 @@ button {
 
   top: 10px;
   left: 10px;
-
-  /* height: 400px; */
-  /* overflow: scroll */
+  overflow-x: hidden;
+  height: 300px;
+  width: 500px;
+  overflow-y: scroll
 
 }
+::-webkit-scrollbar {
+ display: none;
+}
 
+.empty {
+  position: relative;
+  height: 70px;
+}
+
+.fadeout {
+    position: relative; 
+    top: 263px;
+    height: 80px;
+    width: 550px;
+    /* top: 13px; */
+    background: -webkit-linear-gradient(
+      rgba(255, 119, 115, 0) 0%,
+      rgba(255, 119, 115, 1) 100%
+    ); 
+  
+    background-image: linear-gradient(
+      rgba(255, 119, 115, 0) 0%,
+      rgba(255, 119, 115, 1) 100%
+    );
+   
+} 
+
+.news_container {
+    position: absolute;
+  top: 40px;
+  left: 10px;
+}
 .news_container li {
+
   font-size: 10pt;
   color: #fff;
   list-style: none;
@@ -74,10 +107,24 @@ button {
 }
 
 .news_container a {
-  /* color:  #fff; */
+  color:  #fff;
 }
 
+.news_container a:hover {
+  opacity: .8;
+}
 
+.news_title {
+  position: absolute;
+/*   top: 10px;
+  left: 10px; */
+}
+
+.outer {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
 /* ==== TIME ==== */
 
 .time {
@@ -92,6 +139,9 @@ button {
   color: rgb(0, 0, 0, 0.6);
 }
 
+.search_input {
+  height: 25px;
+}
 .search_option {
   position: relative;
   margin-left: 20px;
