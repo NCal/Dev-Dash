@@ -100,18 +100,20 @@ button {
 }
 .news_container li {
 
-  font-size: 10pt;
+  font-size: 13pt;
   color: #fff;
   list-style: none;
 
 }
 
 .news_container a {
+  opacity: .9;
   color:  #fff;
 }
 
 .news_container a:hover {
-  opacity: .8;
+  opacity: 1;
+  text-decoration: underline;
 }
 
 .news_title {
@@ -144,7 +146,7 @@ button {
 }
 .search_option {
   position: relative;
-  margin-left: 20px;
+  margin: 10px;
 }
 .search_option_span {
   position: relative;
@@ -218,6 +220,13 @@ button {
 
 .link_p {
   margin-bottom: 0;
+}
+
+
+.weather_component {
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 /* ==== ANIMATION  ==== */
 
