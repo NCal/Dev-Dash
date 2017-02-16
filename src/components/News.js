@@ -11,18 +11,19 @@ class News extends Component {
 		this.handleClick = this.handleClick.bind(this);
 		this.state = {
 			on: false,
-			stories: null
+			stories: []
 		};
 		
 	}
 
 	componentDidMount() {
 		console.log('new mounted');
+		this.Get();
 	}
 
 	handleClick(){
 		if (this.state.on === false){
-				this.Get();
+				// this.Get();
 				this.setState({'on': true});
 		} else {
 			this.setState({'on': false});
@@ -30,10 +31,11 @@ class News extends Component {
 	}
 
 	Get(){
+		console.log('getting');
 		let self= this;
 		const total = 20;
 
-			$.getJSON(' https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty',
+			$.getJSON('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty',
 				{},
 				 function(results){
 					let ids = results.slice(0, total);
@@ -64,26 +66,26 @@ class News extends Component {
 
 	render(){
 		if (this.state.on === true){
-			return (<div className="outer" >
-				<h5 onClick={this.handleClick} style={{color: 'white', cursor: 'pointer'}} className="news_title">hide</h5>
-				<div className="news_container">
-				<ul>
-					{this.state.stories.map(function(thang, i){
-						return <li key={i}><a href={thang.url} target="blank_">{thang.title}</a></li>
-					})}
-				</ul>
-			<div className="empty"></div>
+			return (
+				<div className="outer" >
+					<h5 onClick={this.handleClick} style={{color: 'white', cursor: 'pointer'}} className="news_title">hide</h5>
+					<div className="news_container">
+						<ul>
+							{this.state.stories.map(function(thang, i){
+								return <li key={i}><a href={thang.url} target="blank_">{thang.title}</a></li>
+							})}
+						</ul>
+						<div className="empty"></div>
+					</div>
+					<div className="fadeout"></div>
 			</div>
-			<div className="fadeout"></div>
-			</div>)
+			)
 		} else {
-			return (<div className="outer" onClick={this.handleClick}>
-				<h5  style={{color: 'white', cursor: 'pointer'}}>{this.props.name}</h5>
-				<img src="src/assets/news_icon.png" alt="news icon"  style={{width: '50px', cursor: 'pointer'}}/>
-				<div className="news_container" style={{cursor: 'pointer'}} >
-				
+			return (
+				<div className="outer" >
+					<img onClick={this.handleClick} src="src/assets/news_icon.png" alt="news icon"  style={{width: '50px', cursor: 'pointer'}}/>
 				</div>
-				</div>)
+				)
 		}
 		
 	}
