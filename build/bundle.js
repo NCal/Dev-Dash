@@ -44,7 +44,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/nbroaddus/Desktop/n_dev/work/Dev-Dash/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/nbroaddus/Desktop/n_dev/work/Dev-Dash/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 	'use strict';
 
@@ -75,7 +75,7 @@
 	// CSS 
 	// Libs
 
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/nbroaddus/Desktop/n_dev/work/Dev-Dash/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 1 */
@@ -370,15 +370,8 @@
 /* 4 */
 /***/ function(module, exports) {
 
-	/*
-	object-assign
-	(c) Sindre Sorhus
-	@license MIT
-	*/
-
 	'use strict';
 	/* eslint-disable no-unused-vars */
-	var getOwnPropertySymbols = Object.getOwnPropertySymbols;
 	var hasOwnProperty = Object.prototype.hasOwnProperty;
 	var propIsEnumerable = Object.prototype.propertyIsEnumerable;
 
@@ -399,7 +392,7 @@
 			// Detect buggy property enumeration order in older V8 versions.
 
 			// https://bugs.chromium.org/p/v8/issues/detail?id=4118
-			var test1 = new String('abc');  // eslint-disable-line no-new-wrappers
+			var test1 = new String('abc');  // eslint-disable-line
 			test1[5] = 'de';
 			if (Object.getOwnPropertyNames(test1)[0] === '5') {
 				return false;
@@ -428,7 +421,7 @@
 			}
 
 			return true;
-		} catch (err) {
+		} catch (e) {
 			// We don't expect any of the above to throw, but better to be safe.
 			return false;
 		}
@@ -448,8 +441,8 @@
 				}
 			}
 
-			if (getOwnPropertySymbols) {
-				symbols = getOwnPropertySymbols(from);
+			if (Object.getOwnPropertySymbols) {
+				symbols = Object.getOwnPropertySymbols(from);
 				for (var i = 0; i < symbols.length; i++) {
 					if (propIsEnumerable.call(from, symbols[i])) {
 						to[symbols[i]] = from[symbols[i]];
@@ -21894,7 +21887,7 @@
 	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Quicksand);", ""]);
 
 	// module
-	exports.push([module.id, "/* ==== WEB FONTS ==== */\n\n/* ===== CONTAINER ELEMENT STYLES ===== */\n* {\n  box-sizing: border-box;\n}\nbody {\n  color: #576366;\n  margin: 0;\n  font-family: Quicksand, sans-serif; \n  overflow: hidden;\n  background-color: rgba(255, 119, 115, 1);\n  /* animation: colorchange 25s;  */\n  /* -webkit-animation: colorchange 25s;  */\n  animation-iteration-count: infinite;\n}\n\n\n\n.button {\n  text-align: center;\n  margin:  0;\n  cursor: pointer;\n}\n\nbutton {\n  background-color: blue;\n  color: white;\n  cursor: pointer;\n}\n.main_container {\n  margin:  0;\n  padding: 0;\n  height: 100%;\n  width: 100%;\n}\n\n.application {\n  padding: 10px;\n  margin-top: 10px;\n  height: auto;\n} \n\n.container {\n  position: absolute;\n  top: 170px;\n  left: 0;\n  right: 0;\n}\n\n\n/* ==== NEWS ==== */\n\n.outer {\n}\n.news_container {\n  position: absolute;\n\n\n  top: 10px;\n  left: 10px;\n  overflow-x: hidden;\n  height: 300px;\n  width: 500px;\n  overflow-y: scroll\n\n}\n::-webkit-scrollbar {\n display: none;\n}\n\n.empty {\n  position: relative;\n  height: 70px;\n}\n\n.fadeout {\n    position: relative; \n    top: 263px;\n    height: 80px;\n    width: 550px;\n    /* top: 13px; */\n    background: -webkit-linear-gradient(\n      rgba(255, 119, 115, 0) 0%,\n      rgba(255, 119, 115, 1) 100%\n    ); \n  \n    background-image: linear-gradient(\n      rgba(255, 119, 115, 0) 0%,\n      rgba(255, 119, 115, 1) 100%\n    );\n   \n} \n\n.news_container {\n    position: absolute;\n  top: 40px;\n  left: 10px;\n}\n.news_container li {\n\n  font-size: 10pt;\n  color: #fff;\n  list-style: none;\n\n}\n\n.news_container a {\n  color:  #fff;\n}\n\n.news_container a:hover {\n  opacity: .8;\n}\n\n.news_title {\n  position: absolute;\n/*   top: 10px;\n  left: 10px; */\n}\n\n.outer {\n  position: absolute;\n  top: 10px;\n  left: 10px;\n}\n/* ==== TIME ==== */\n\n.time {\n  font-size: 4em;\n}\n\n/* ==== SEARCH ==== */\n.search {\n  position: relative;\n  top: 500px;\n  font-size:2em;\n  color: rgb(0, 0, 0, 0.6);\n}\n\n.search_input {\n  height: 25px;\n}\n.search_option {\n  position: relative;\n  margin-left: 20px;\n}\n.search_option_span {\n  position: relative;\n  font-size: 15pt;\n  /* padding: 15px; */\n}\n/* ==== SROLL BAR ==== */\n\n::-webkit-scrollbar {\n    width: 4px;\n}\n \n::-webkit-scrollbar-track {\n    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); \n    -webkit-border-radius: 10px;\n    border-radius: 10px;\n}\n \n::-webkit-scrollbar-thumb {\n    -webkit-border-radius: 10px;\n    border-radius: 10px;\n    background: #fff; \n    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); \n}\n\n::-webkit-scrollbar-thumb:window-inactive {\n  background: rgba(0,0,0,0); \n}\n\n\n/* USER LINKS */\n.url_input {\n  /* padding: 0; */\n  height: 28px;\n  width: 300px;\n  border-radius: 3px;\n}\n\n.about_container {\n  position: absolute;\n  padding: 20px;\n  bottom: -15px;\n  right: -10px;\n  color: #222;\n  border-radius: 2px;\n  padding-bottom: 0;\n  width: 280px;\n  opacity: .8;\n  z-index: 20;\n  margin: 0;\n  cursor: pointer;\n  display: none;\n\n}\n\n.user_links_container {\n  max-height: 100px;\n  overflow-y: scroll;\n  /* overflow-x: auto; */\n  width: 240px;\n  max-width: 260px;\n}\n\n.user_links_container:hover {\n  overflow-y: scroll;\n}\n\n.add_link_button {\n\n}\n\n.link_p {\n  margin-bottom: 0;\n}\n/* ==== ANIMATION  ==== */\n\n@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }\n@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }\n@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }\n\n@-webkit-keyframes pulsate {\n    0% {-webkit-transform: scale(1, 1); }\n    50% {-webkit-transform: scale(1.2, 1.2); }\n    100% {-webkit-transform: scale(1, 1);}\n}\n\n\n\n@keyframes pulsate {\n    0% {-webkit-transform: scale(1, 1); }\n    50% {-webkit-transform: scale(1.2, 1.2); }\n    100% {-webkit-transform: scale(1, 1);}\n}\n\n\n\n@keyframes colorchange\n{\n  0%   {background: rgba(249, 229, 159, 0.28); }\n  50%  {background: rgba(255, 255, 255, 0.9);}\n  100% {background: rgba(249, 229, 159, 0.28);}\n}\n\n@-webkit-keyframes colorchange \n{\n  0%   {background: rgba(249, 229, 159, 0.28);}\n  50%  {background: rgba(255, 255, 255, 0.9);}\n  100% {background: rgba(249, 229, 159, 0.28);}\n}\n\n\n\n/* ==== MEDIA QUERIES ==== */\n\n@media screen and (max-width: 1200px){\n\n\n  .news_container {\n    display: none;\n  }\n}\n\n@media screen and (max-width: 600px){\n\n\n  .search_option_span {\n    font-size: 8pt;\n  }\n\n   .search_option {\n    width: 8px;\n   }\n\n  .tab {\n    display: none;\n    background-color: red;\n  }\n\n    .player_container {\n      display: none;\n    }\n\n    .ear_svg {\n      display: none;\n    }\n\n    .container {\n      top: 150px;\n    }\n  }\n", ""]);
+	exports.push([module.id, "/* ==== WEB FONTS ==== */\n\n/* ===== CONTAINER ELEMENT STYLES ===== */\n* {\n  box-sizing: border-box;\n}\nbody {\n  color: #576366;\n  margin: 0;\n  font-family: Quicksand, sans-serif; \n  overflow: hidden;\n  background-color: rgba(255, 119, 115, 1);\n  /* animation: colorchange 25s;  */\n  /* -webkit-animation: colorchange 25s;  */\n  animation-iteration-count: infinite;\n}\n\n\n\n.button {\n  text-align: center;\n  margin:  0;\n  cursor: pointer;\n}\n\nbutton {\n  background-color: blue;\n  color: white;\n  cursor: pointer;\n}\n.main_container {\n  margin:  0;\n  padding: 0;\n  height: 100%;\n  width: 100%;\n}\n\n.application {\n  padding: 10px;\n  margin-top: 10px;\n  height: auto;\n} \n\n.container {\n  position: absolute;\n  top: 170px;\n  left: 0;\n  right: 0;\n}\n\n\n/* ==== NEWS ==== */\n\n.outer {\n}\n.news_container {\n  position: absolute;\n\n\n  top: 10px;\n  left: 10px;\n  overflow-x: hidden;\n  height: 300px;\n  width: 500px;\n  overflow-y: scroll\n\n}\n::-webkit-scrollbar {\n display: none;\n}\n\n.empty {\n  position: relative;\n  height: 70px;\n}\n\n.fadeout {\n    position: relative; \n    top: 263px;\n    height: 80px;\n    width: 550px;\n    /* top: 13px; */\n    background: -webkit-linear-gradient(\n      rgba(255, 119, 115, 0) 0%,\n      rgba(255, 119, 115, 1) 100%\n    ); \n  \n    background-image: linear-gradient(\n      rgba(255, 119, 115, 0) 0%,\n      rgba(255, 119, 115, 1) 100%\n    );\n   \n} \n\n.news_container {\n    position: absolute;\n  top: 40px;\n  left: 10px;\n}\n.news_container li {\n\n  font-size: 13pt;\n  color: #fff;\n  list-style: none;\n\n}\n\n.news_container a {\n  opacity: .9;\n  color:  #fff;\n}\n\n.news_container a:hover {\n  opacity: 1;\n  text-decoration: underline;\n}\n\n.news_title {\n  position: absolute;\n/*   top: 10px;\n  left: 10px; */\n}\n\n.outer {\n  position: absolute;\n  top: 10px;\n  left: 10px;\n}\n/* ==== TIME ==== */\n\n.time {\n  font-size: 4em;\n}\n\n/* ==== SEARCH ==== */\n.search {\n  position: relative;\n  top: 500px;\n  font-size:2em;\n  color: rgb(0, 0, 0, 0.6);\n}\n\n.search_input {\n  height: 25px;\n}\n.search_option {\n  position: relative;\n  margin: 10px;\n}\n.search_option_span {\n  position: relative;\n  font-size: 15pt;\n  /* padding: 15px; */\n}\n/* ==== SROLL BAR ==== */\n\n::-webkit-scrollbar {\n    width: 4px;\n}\n \n::-webkit-scrollbar-track {\n    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); \n    -webkit-border-radius: 10px;\n    border-radius: 10px;\n}\n \n::-webkit-scrollbar-thumb {\n    -webkit-border-radius: 10px;\n    border-radius: 10px;\n    background: #fff; \n    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); \n}\n\n::-webkit-scrollbar-thumb:window-inactive {\n  background: rgba(0,0,0,0); \n}\n\n\n/* USER LINKS */\n.url_input {\n  /* padding: 0; */\n  height: 28px;\n  width: 300px;\n  border-radius: 3px;\n}\n\n.about_container {\n  position: absolute;\n  padding: 20px;\n  bottom: -15px;\n  right: -10px;\n  color: #222;\n  border-radius: 2px;\n  padding-bottom: 0;\n  width: 280px;\n  opacity: .8;\n  z-index: 20;\n  margin: 0;\n  cursor: pointer;\n  display: none;\n\n}\n\n.user_links_container {\n  max-height: 100px;\n  overflow-y: scroll;\n  /* overflow-x: auto; */\n  width: 240px;\n  max-width: 260px;\n}\n\n.user_links_container:hover {\n  overflow-y: scroll;\n}\n\n.add_link_button {\n\n}\n\n.link_p {\n  margin-bottom: 0;\n}\n\n\n.weather_component {\n  position: absolute;\n  top: 10px;\n  right: 10px;\n}\n/* ==== ANIMATION  ==== */\n\n@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }\n@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }\n@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }\n\n@-webkit-keyframes pulsate {\n    0% {-webkit-transform: scale(1, 1); }\n    50% {-webkit-transform: scale(1.2, 1.2); }\n    100% {-webkit-transform: scale(1, 1);}\n}\n\n\n\n@keyframes pulsate {\n    0% {-webkit-transform: scale(1, 1); }\n    50% {-webkit-transform: scale(1.2, 1.2); }\n    100% {-webkit-transform: scale(1, 1);}\n}\n\n\n\n@keyframes colorchange\n{\n  0%   {background: rgba(249, 229, 159, 0.28); }\n  50%  {background: rgba(255, 255, 255, 0.9);}\n  100% {background: rgba(249, 229, 159, 0.28);}\n}\n\n@-webkit-keyframes colorchange \n{\n  0%   {background: rgba(249, 229, 159, 0.28);}\n  50%  {background: rgba(255, 255, 255, 0.9);}\n  100% {background: rgba(249, 229, 159, 0.28);}\n}\n\n\n\n/* ==== MEDIA QUERIES ==== */\n\n@media screen and (max-width: 1200px){\n\n\n  .news_container {\n    display: none;\n  }\n}\n\n@media screen and (max-width: 600px){\n\n\n  .search_option_span {\n    font-size: 8pt;\n  }\n\n   .search_option {\n    width: 8px;\n   }\n\n  .tab {\n    display: none;\n    background-color: red;\n  }\n\n    .player_container {\n      display: none;\n    }\n\n    .ear_svg {\n      display: none;\n    }\n\n    .container {\n      top: 150px;\n    }\n  }\n", ""]);
 
 	// exports
 
@@ -21903,7 +21896,7 @@
 /* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/nbroaddus/Desktop/n_dev/work/Dev-Dash/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/nbroaddus/Desktop/n_dev/work/Dev-Dash/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 	'use strict';
 
@@ -21936,6 +21929,10 @@
 	var _News = __webpack_require__(214);
 
 	var _News2 = _interopRequireDefault(_News);
+
+	var _Weather = __webpack_require__(215);
+
+	var _Weather2 = _interopRequireDefault(_Weather);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -21985,7 +21982,8 @@
 	          { className: 'application' },
 	          _react2.default.createElement(_Search2.default, null),
 	          _react2.default.createElement(_Date2.default, null),
-	          _react2.default.createElement(_News2.default, null)
+	          _react2.default.createElement(_News2.default, null),
+	          _react2.default.createElement(_Weather2.default, null)
 	        )
 	      );
 	    }
@@ -22009,7 +22007,7 @@
 
 	exports.default = App;
 
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/nbroaddus/Desktop/n_dev/work/Dev-Dash/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "app.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "app.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 185 */
@@ -24489,7 +24487,7 @@
 /* 210 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/nbroaddus/Desktop/n_dev/work/Dev-Dash/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/nbroaddus/Desktop/n_dev/work/Dev-Dash/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 	'use strict';
 
@@ -24623,7 +24621,7 @@
 
 	exports.default = User_Links;
 
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/nbroaddus/Desktop/n_dev/work/Dev-Dash/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "user_links.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "user_links.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 211 */
@@ -34855,7 +34853,7 @@
 /* 212 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/nbroaddus/Desktop/n_dev/work/Dev-Dash/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/nbroaddus/Desktop/n_dev/work/Dev-Dash/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 	'use strict';
 
@@ -34994,13 +34992,13 @@
 
 	exports.default = Search;
 
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/nbroaddus/Desktop/n_dev/work/Dev-Dash/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Search.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Search.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 213 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/nbroaddus/Desktop/n_dev/work/Dev-Dash/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/nbroaddus/Desktop/n_dev/work/Dev-Dash/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 	'use strict';
 
@@ -35123,13 +35121,13 @@
 
 	exports.default = Main_Date;
 
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/nbroaddus/Desktop/n_dev/work/Dev-Dash/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Date.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Date.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 214 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/nbroaddus/Desktop/n_dev/work/Dev-Dash/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/nbroaddus/Desktop/n_dev/work/Dev-Dash/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 	'use strict';
 
@@ -35169,7 +35167,7 @@
 			_this.handleClick = _this.handleClick.bind(_this);
 			_this.state = {
 				on: false,
-				stories: null
+				stories: []
 			};
 
 			return _this;
@@ -35179,12 +35177,13 @@
 			key: 'componentDidMount',
 			value: function componentDidMount() {
 				console.log('new mounted');
+				this.Get();
 			}
 		}, {
 			key: 'handleClick',
 			value: function handleClick() {
 				if (this.state.on === false) {
-					this.Get();
+					// this.Get();
 					this.setState({ 'on': true });
 				} else {
 					this.setState({ 'on': false });
@@ -35193,10 +35192,11 @@
 		}, {
 			key: 'Get',
 			value: function Get() {
+				console.log('getting');
 				var self = this;
 				var total = 20;
 
-				_jQuery2.default.getJSON(' https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty', {}, function (results) {
+				_jQuery2.default.getJSON('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty', {}, function (results) {
 					var ids = results.slice(0, total);
 					console.log('ids', ids);
 					console.log(ids.length);
@@ -35257,14 +35257,8 @@
 				} else {
 					return _react2.default.createElement(
 						'div',
-						{ className: 'outer', onClick: this.handleClick },
-						_react2.default.createElement(
-							'h5',
-							{ style: { color: 'white', cursor: 'pointer' } },
-							this.props.name
-						),
-						_react2.default.createElement('img', { src: 'src/assets/news_icon.png', alt: 'news icon', style: { width: '50px', cursor: 'pointer' } }),
-						_react2.default.createElement('div', { className: 'news_container', style: { cursor: 'pointer' } })
+						{ className: 'outer' },
+						_react2.default.createElement('img', { onClick: this.handleClick, src: 'src/assets/news_icon.png', alt: 'news icon', style: { width: '50px', cursor: 'pointer' } })
 					);
 				}
 			}
@@ -35279,7 +35273,176 @@
 
 	exports.default = News;
 
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/nbroaddus/Desktop/n_dev/work/Dev-Dash/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "News.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "News.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 215 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _jQuery = __webpack_require__(211);
+
+	var _jQuery2 = _interopRequireDefault(_jQuery);
+
+	var _reactFoundation = __webpack_require__(185);
+
+	var _reactFoundation2 = _interopRequireDefault(_reactFoundation);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Weather = function (_Component) {
+		_inherits(Weather, _Component);
+
+		function Weather(props) {
+			_classCallCheck(this, Weather);
+
+			var _this = _possibleConstructorReturn(this, (Weather.__proto__ || Object.getPrototypeOf(Weather)).call(this, props));
+
+			_this.Get = _this.Get.bind(_this);
+			_this.handleData = _this.handleData.bind(_this);
+			_this.clearState = _this.clearState.bind(_this);
+
+			_this.state = {
+				entered: false,
+				location: null,
+				name: null,
+				temp: null,
+				icon: null,
+				current: ''
+			};
+			return _this;
+		}
+
+		_createClass(Weather, [{
+			key: 'componentDidMount',
+			value: function componentDidMount() {
+				var self = this;
+				console.log('weather mounted');
+				// self.Get();
+			}
+		}, {
+			key: 'Get',
+			value: function Get(location) {
+				var self = this;
+				console.log('weather get');
+				_jQuery2.default.getJSON('http://api.openweathermap.org/data/2.5/weather?&APPID=6cdaac4949dc28cbd357bc03b8771c11', {
+					units: "imperial",
+					q: location,
+					mode: 'JSON'
+				}, function (response) {
+					console.log(response);
+					var locationName = response.name;
+					var current = response.weather[0].description;
+					var temp = response.main.temp;
+					var icon = response.weather[0].icon;
+
+					self.setState({ 'current': current }, function () {
+						self.setState({ 'name': locationName }, function () {
+							self.setState({ 'temp': temp }, function () {
+								self.setState({ 'icon': "http://openweathermap.org/img/w/" + icon + ".png" }, function () {
+									console.log('icon:', this.state.icon);
+									self.setState({ entered: true });
+								});
+							});
+						});
+					});
+				});
+			}
+		}, {
+			key: 'handleData',
+			value: function handleData(e) {
+				var input_value = document.querySelector('.weather_input').value;
+				if (e.key === 'Enter') {
+					this.setState({ location: input_value }, function () {
+						console.log(this.state.location);
+						this.Get(this.state.location);
+					});
+				}
+			}
+		}, {
+			key: 'clearState',
+			value: function clearState() {
+				console.log('clearState');
+				this.setState({
+					'entered': false,
+					'location': null,
+					'name': null,
+					'temp': null,
+					'current': ''
+				});
+			}
+		}, {
+			key: 'render',
+			value: function render() {
+				if (this.state.entered === false) {
+					return _react2.default.createElement(
+						'div',
+						{ className: 'weather_component' },
+						_react2.default.createElement(
+							_reactFoundation.Column,
+							{ large: 12 },
+							_react2.default.createElement('input', { type: 'text', placeholder: 'enter your location', className: 'weather_input', onKeyPress: this.handleData })
+						)
+					);
+				} else {
+					return _react2.default.createElement(
+						'div',
+						{ className: 'weather_component' },
+						_react2.default.createElement(
+							_reactFoundation.Column,
+							{ large: 12 },
+							_react2.default.createElement(
+								'h5',
+								null,
+								this.state.name
+							),
+							_react2.default.createElement(
+								'h5',
+								null,
+								this.state.current
+							),
+							_react2.default.createElement('img', { src: this.state.icon, alt: 'weather_icon' }),
+							_react2.default.createElement(
+								'h5',
+								null,
+								this.state.temp
+							),
+							_react2.default.createElement(
+								'p',
+								{ onClick: this.clearState, style: { cursor: 'pointer' } },
+								'Change location'
+							)
+						)
+					);
+				}
+			}
+		}]);
+
+		return Weather;
+	}(_react.Component);
+
+	exports.default = Weather;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Weather.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }
 /******/ ]);

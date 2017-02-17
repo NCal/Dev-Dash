@@ -12,6 +12,7 @@ class Weather extends Component {
 		this.clearState = this.clearState.bind(this);
 
 		this.state = {
+			local: false,
 			entered: false,
 			location: null,
 			name: null,
@@ -24,7 +25,13 @@ class Weather extends Component {
 	componentDidMount(){
 		var self = this;
 		console.log('weather mounted');
-		// self.Get();
+		this.handleLocalData();
+	}
+	handleLocalData(){
+		if (localStorage.location !== undefined){
+			console.log('local location exists', localStorage.location);
+			this.Get(localStorage.location);
+		}
 	}
 
 	Get(location){
@@ -44,7 +51,7 @@ class Weather extends Component {
 
 		        self.setState({'current': current}, function(){
 		        	self.setState({'name': locationName}, function(){
-		        		self.setState({'temp': temp}, function(){
+		        		self.setState({'temp': temp +' °'}, function(){
 		        			self.setState({'icon': "http://openweathermap.org/img/w/"+ icon +".png"}, function(){
 		        				console.log('icon:', this.state.icon);
 		        				self.setState({entered: true});
@@ -63,6 +70,8 @@ class Weather extends Component {
 		if (e.key === 'Enter'){
 			this.setState({location: input_value}, function(){
 				console.log(this.state.location);
+				localStorage.location = this.state.location;
+				console.log('local location', localStorage.location);
 				this.Get(this.state.location);
 			});
 		}
@@ -96,7 +105,7 @@ class Weather extends Component {
 						<h5>{this.state.current}</h5>
 						<img src={this.state.icon} alt="weather_icon" />
 						<h5>{this.state.temp}</h5>
-						<p onClick={this.clearState} style={{cursor: 'pointer'}}>Change location</p>
+						<p className="title" onClick={this.clearState} style={{cursor: 'pointer'}}>Change {<br/>}Location</p>
 					</Column>
 				</div>
 				)
