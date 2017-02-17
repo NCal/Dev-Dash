@@ -17,7 +17,9 @@ body {
 }
 
 
-
+h1,h2,h3,h4,h5,span,p,li,a,ul,ol{
+  font-family: Quicksand, sans-serif; 
+}
 .button {
   text-align: center;
   margin:  0;
@@ -49,6 +51,16 @@ button {
   right: 0;
 }
 
+.title {
+  opacity: .6;
+  transition: .5s;
+  font-size: 15px;
+}
+
+.title:hover {
+  opacity: 1;
+  transition: .5s;
+}
 
 /* ==== NEWS ==== */
 
@@ -56,13 +68,11 @@ button {
 }
 .news_container {
   position: absolute;
-
-
   top: 10px;
   left: 10px;
   overflow-x: hidden;
   height: 300px;
-  width: 500px;
+  width: 450px;
   overflow-y: scroll
 
 }
@@ -79,7 +89,7 @@ button {
     position: relative; 
     top: 263px;
     height: 80px;
-    width: 550px;
+    width: 450px;
     /* top: 13px; */
     background: -webkit-linear-gradient(
       rgba(255, 119, 115, 0) 0%,
@@ -100,19 +110,17 @@ button {
 }
 .news_container li {
 
-  font-size: 13pt;
+  font-size: 11pt;
   color: #fff;
   list-style: none;
 
 }
 
 .news_container a {
-  opacity: .9;
   color:  #fff;
 }
 
 .news_container a:hover {
-  opacity: 1;
   text-decoration: underline;
 }
 
@@ -228,6 +236,27 @@ button {
   top: 10px;
   right: 10px;
 }
+
+.weather_component h5, p, img{
+  margin-bottom: 0;
+  font-size: 18px;
+  color: #fff;
+  text-align: right;
+}
+.weather_component p {
+  opacity: .5;
+  transition: .5s;
+}
+
+.weather_component p:hover {
+  opacity: 1;
+}
+.weather_component img{
+  position: relative;
+  left: 28px;
+  top: 0px;
+}
+
 /* ==== ANIMATION  ==== */
 
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
