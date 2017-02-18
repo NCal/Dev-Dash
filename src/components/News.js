@@ -70,11 +70,11 @@ class News extends Component {
 				<div className="outer" >
 					<h5 onClick={this.handleClick} style={{color: 'white', cursor: 'pointer'}} className="news_title title">hide</h5>
 					<div className="news_container">
-						<ul>
+						<ol>
 							{this.state.stories.map(function(thang, i){
 								return <li key={i}><a href={thang.url} target="blank_">{thang.title}</a></li>
 							})}
-						</ul>
+						</ol>
 						<div className="empty"></div>
 					</div>
 					<div className="fadeout"></div>
