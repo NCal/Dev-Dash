@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Column } from 'react-foundation';
 import Foundation from 'react-foundation';
+import $ from 'jQuery';
 // import Quote_array from '../data/quote_array.js';
 // import audio from '../data/audio_array.js';
 import User_Links from './user_links.js';
@@ -27,6 +28,7 @@ class App extends Component {
   outer_click_handler(e) {
     // console.log('outer click handler', e);
   }
+
 
   render(){
     return (
