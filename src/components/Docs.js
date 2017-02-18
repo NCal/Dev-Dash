@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Column } from 'react-foundation';
 import Foundation from 'react-foundation';
+import $ from 'jQuery';
 
 
 let data = [
@@ -15,13 +16,15 @@ let data = [
 		{symbol: 'ND', name: 'Node', url: 'https://nodejs.org/api/'},
 		{symbol: 'B', name: 'Bootstrap', url: 'http://getbootstrap.com/'},
 		{symbol: 'F', name: 'Foundation', url: 'http://foundation.zurb.com/sites/docs/'},
+		{symbol: 'NPM', name: 'NPM', url: 'https://www.npmjs.com/'},
+		{symbol: 'W', name: 'Webpack', url: 'http://webpack.github.io/docs/'},
 ];
 
 class Docs extends Component {
 	constructor(props){
 		super(props);
 		this.Toggle =this.Toggle.bind(this);
-
+		this.handleInput =this.handleInput.bind(this);
 		this.state = {
 			name: 'D',
 			on: false
@@ -42,13 +45,32 @@ class Docs extends Component {
 			this.setState({on: false});
 		}
 	}
+	onEdit(e){
+		let search = e;
+		console.log(e);
+	
+		for (let i = 0; i< data.length; i++){
+
+			if ( data[i].name.toLowerCase().indexOf(search.toLowerCase()) === -1){
+				$('.doc_bloc h5[title="'+data[i].name+'"]').hide();
+			}  else {
+				$('.doc_bloc h5[title="'+data[i].name+'"]').show();
+			}
+		}
+	}
+
+	handleInput(e){
+		let search = e.target.value;
+		this.onEdit(search);
+
+	}
 	render(){
 
 		if (this.state.on ===true){
 			return (
 				<div className="docs_component">
 				<p style={{cursor: 'pointer'}} onClick={this.Toggle}>Hide</p>
-				<input type="text" className="docs_search_input"/>
+				<input type="text" className="docs_search_input" onChange={this.handleInput}/>
 				<div className="inner_scroll">
 				
 				{data.map(function(thang, i){
@@ -70,5 +92,9 @@ class Docs extends Component {
 	
 	}
 }
+
+Docs.defaultProps = {
+	name: 'Docs'
+};
 
 export default Docs;
