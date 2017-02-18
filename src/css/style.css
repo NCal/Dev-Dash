@@ -112,8 +112,8 @@ button {
 
   font-size: 11pt;
   color: #fff;
-  list-style: none;
-
+  /* list-style: n; */
+  padding-left: 2px;
 }
 
 .news_container a {
@@ -255,6 +255,59 @@ button {
   position: relative;
   left: 28px;
   top: 0px;
+}
+
+/* ==== DOCS ==== */
+.docs_component{
+  height: 200px;
+  width: 300px;
+  background-color: #222;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+
+.docs_off_component {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+/* .docs_component input {
+  display: inline;
+  width: 100px;
+} */
+
+.inner_scroll {
+  position: relative;
+  height: 150px;
+  /* background-color: #ccc; */
+    overflow: scroll;
+}
+
+.doc_bloc {
+  text-align: center;
+  background-color: #222;
+}
+
+.doc_bloc h1,h2,h3,h4,h5 {
+    font-style: italic;
+}
+
+.doc_bloc:hover {
+  opacity: .8;
+  cursor: pointer;
+  background-color: #333;
+}
+
+.docs_search_input{
+  height: 25px;
+  display: inline;
+  width: 200px;
+  position: relative;
 }
 
 /* ==== ANIMATION  ==== */

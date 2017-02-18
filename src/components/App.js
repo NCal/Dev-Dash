@@ -8,6 +8,7 @@ import Search from './Search.js';
 import Main_Date from './Date.js';
 import News from './News.js';
 import Weather from './Weather.js';
+import Docs from './Docs.js'
 
 class App extends Component {
   constructor(props, context) {
@@ -39,6 +40,7 @@ class App extends Component {
        <Main_Date/>
        <News/>
        <Weather/>
+       <Docs/>
         </div>
       </div>)
   }
