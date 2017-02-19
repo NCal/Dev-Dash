@@ -12,14 +12,14 @@ body {
   overflow: hidden;
   background-color: #222;
   background-image: url('/src/assets/bg_photos/LAX-DEN_Gilad_Rom_5.jpg');
-  /* animation: colorchange 25s;  */
-  /* -webkit-animation: colorchange 25s;  */
-  animation-iteration-count: infinite;
+}
+
+h1,h2,h3,h4,h5,span,p,li,a,ul,ol{
+  font-family: Quicksand, sans-serif; 
 }
 
 input {
   border: 0 !important; 
-  /* outline: 0; */
   color: #fff !important; 
   box-shadow: none !important;
   background: transparent !important;
@@ -27,28 +27,7 @@ input {
 }
 
 input::-webkit-input-placeholder {
-color: #fff !important;
-}
-
-h1,h2,h3,h4,h5,span,p,li,a,ul,ol{
-  font-family: Quicksand, sans-serif; 
-}
-.button {
-  text-align: center;
-  margin:  0;
-  cursor: pointer;
-}
-
-button {
-  background-color: blue;
-  color: white;
-  cursor: pointer;
-}
-.main_container {
-  margin:  0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
+  color: #fff !important;
 }
 
 .application {
@@ -57,11 +36,11 @@ button {
   height: auto;
 } 
 
-.container {
-  position: absolute;
-  top: 170px;
-  left: 0;
-  right: 0;
+.main_container {
+  margin:  0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .title {
@@ -77,8 +56,6 @@ button {
 
 /* ==== NEWS ==== */
 
-.outer {
-}
 .news_container {
   position: absolute;
   top: 10px;
@@ -87,13 +64,13 @@ button {
   height: 300px;
   width: 450px;
   overflow-y: scroll
-
 }
+
 ::-webkit-scrollbar {
  display: none;
 }
 
-.empty {
+/* .empty {
   position: relative;
   height: 70px;
 }
@@ -104,7 +81,6 @@ button {
     height: 80px;
     width: 480px;
     display: none;
-    /* top: 13px; */
     background: -webkit-linear-gradient(
       rgba(255, 119, 115, 0) 0%,
       rgba(255, 119, 115, 1) 100%
@@ -115,19 +91,17 @@ button {
       rgba(255, 119, 115, 1) 100%
     );
    
-} 
+}  */
 
 .news_container {
-    position: absolute;
+  position: absolute;
   top: 40px;
   left: 10px;
   padding-left: 10px;
 }
 .news_container li {
-
   font-size: 13pt;
   color: #fff;
-  /* list-style: n; */
   padding-left: 2px;
 }
 
@@ -141,8 +115,6 @@ button {
 
 .news_title {
   position: absolute;
-/*   top: 10px;
-  left: 10px; */
 }
 
 .outer {
@@ -170,18 +142,19 @@ button {
   font-size: 30px;
   padding: 20px;
 }
+
 .search_option {
   position: relative;
   margin: 10px;
 }
+
 .search_option_span {
   position: relative;
   font-size: 15pt;
   color:  #fff;
-  /* padding: 15px; */
 }
-/* ==== SROLL BAR ==== */
 
+/* ==== SROLL BAR ==== */
 ::-webkit-scrollbar {
     width: 4px;
 }
@@ -204,51 +177,7 @@ button {
 }
 
 
-/* USER LINKS */
-.url_input {
-  /* padding: 0; */
-  height: 28px;
-  width: 300px;
-  border-radius: 3px;
-}
-
-.about_container {
-  position: absolute;
-  padding: 20px;
-  bottom: -15px;
-  right: -10px;
-  color: #222;
-  border-radius: 2px;
-  padding-bottom: 0;
-  width: 280px;
-  opacity: .8;
-  z-index: 20;
-  margin: 0;
-  cursor: pointer;
-  display: none;
-
-}
-
-.user_links_container {
-  max-height: 100px;
-  overflow-y: scroll;
-  /* overflow-x: auto; */
-  width: 240px;
-  max-width: 260px;
-}
-
-.user_links_container:hover {
-  overflow-y: scroll;
-}
-
-.add_link_button {
-
-}
-
-.link_p {
-  margin-bottom: 0;
-}
-
+/* WEATHER COMPONENT */
 
 .weather_component {
   position: absolute;
@@ -280,6 +209,7 @@ button {
 .docs_component{
   height: 350px;
   width: 300px;
+  opacity: .8;
   background-color: #222;
   position: absolute;
   bottom: 0;
@@ -295,16 +225,12 @@ button {
   right: 10px;
   cursor: pointer;
 }
-/* .docs_component input {
-  display: inline;
-  width: 100px;
-} */
 
 .inner_scroll {
   position: relative;
   height: 300px;
-  /* background-color: #ccc; */
-    overflow: scroll;
+  padding-bottom: 20px;
+  overflow: scroll;
 }
 
 .doc_bloc {
@@ -331,23 +257,15 @@ button {
   position: relative;
 }
 
-
 .doc_logo {
   width: 100%;
-  /* overflow: hidden; */
 }
+
+
 /* ==== ANIMATION  ==== */
 
-@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
-
-@-webkit-keyframes pulsate {
-    0% {-webkit-transform: scale(1, 1); }
-    50% {-webkit-transform: scale(1.2, 1.2); }
-    100% {-webkit-transform: scale(1, 1);}
-}
-
 
 
 @keyframes pulsate {
@@ -356,7 +274,11 @@ button {
     100% {-webkit-transform: scale(1, 1);}
 }
 
-
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(1, 1); }
+    50% {-webkit-transform: scale(1.2, 1.2); }
+    100% {-webkit-transform: scale(1, 1);}
+}
 
 @keyframes colorchange
 {
