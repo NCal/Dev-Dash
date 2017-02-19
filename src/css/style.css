@@ -10,7 +10,7 @@ body {
   margin: 0;
   font-family: Quicksand, sans-serif; 
   overflow: hidden;
-  background-color: rgba(255, 119, 115, 1);
+  background-color: #222;
   background-image: url('/src/assets/bg_photos/LAX-DEN_Gilad_Rom_5.jpg');
   /* animation: colorchange 25s;  */
   /* -webkit-animation: colorchange 25s;  */
@@ -118,13 +118,14 @@ button {
 } 
 
 .news_container {
-  position: absolute;
+    position: absolute;
   top: 40px;
   left: 10px;
+  padding-left: 10px;
 }
 .news_container li {
 
-  font-size: 11pt;
+  font-size: 13pt;
   color: #fff;
   /* list-style: n; */
   padding-left: 2px;
@@ -140,6 +141,8 @@ button {
 
 .news_title {
   position: absolute;
+/*   top: 10px;
+  left: 10px; */
 }
 
 .outer {
@@ -164,6 +167,8 @@ button {
 
 .search_input {
   height: 25px;
+  font-size: 30px;
+  padding: 20px;
 }
 .search_option {
   position: relative;
@@ -172,6 +177,7 @@ button {
 .search_option_span {
   position: relative;
   font-size: 15pt;
+  color:  #fff;
   /* padding: 15px; */
 }
 /* ==== SROLL BAR ==== */
@@ -392,7 +398,7 @@ button {
 
 
   .search_option_span {
-    font-size: 8pt;
+    font-size: 16px;
   }
 
    .search_option {
