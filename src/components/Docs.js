@@ -87,7 +87,6 @@ class Docs extends Component {
 					<div className="inner_scroll">
 						{docs_data.map(function(thang, i){
 							return <a key={i} style={{color: '#fff'}} href={thang.url}><Column large={3} className="doc_bloc">
-								{/*<h5 title={thang.name}>{thang.symbol}</h5>*/}
 								<img className="doc_logo" title={thang.name} src={thang.logo}/>
 							</Column></a>
 						})}
