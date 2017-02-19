@@ -11,11 +11,24 @@ body {
   font-family: Quicksand, sans-serif; 
   overflow: hidden;
   background-color: rgba(255, 119, 115, 1);
+  background-image: url('/src/assets/bg_photos/LAX-DEN_Gilad_Rom_5.jpg');
   /* animation: colorchange 25s;  */
   /* -webkit-animation: colorchange 25s;  */
   animation-iteration-count: infinite;
 }
 
+input {
+  border: 0 !important; 
+  /* outline: 0; */
+  color: #fff !important; 
+  box-shadow: none !important;
+  background: transparent !important;
+  border-bottom: 1px solid #fff !important;
+}
+
+input::-webkit-input-placeholder {
+color: #fff !important;
+}
 
 h1,h2,h3,h4,h5,span,p,li,a,ul,ol{
   font-family: Quicksand, sans-serif; 
@@ -90,6 +103,7 @@ button {
     top: 263px;
     height: 80px;
     width: 480px;
+    display: none;
     /* top: 13px; */
     background: -webkit-linear-gradient(
       rgba(255, 119, 115, 0) 0%,
@@ -104,7 +118,7 @@ button {
 } 
 
 .news_container {
-    position: absolute;
+  position: absolute;
   top: 40px;
   left: 10px;
 }
@@ -126,8 +140,6 @@ button {
 
 .news_title {
   position: absolute;
-/*   top: 10px;
-  left: 10px; */
 }
 
 .outer {
@@ -139,6 +151,7 @@ button {
 
 .time {
   font-size: 4em;
+  color: #fff;
 }
 
 /* ==== SEARCH ==== */
@@ -259,14 +272,14 @@ button {
 
 /* ==== DOCS ==== */
 .docs_component{
-  height: 200px;
+  height: 350px;
   width: 300px;
   background-color: #222;
   position: absolute;
   bottom: 0;
   right: 0;
-  padding: 10px;
-  border-radius: 3px;
+  padding: 15px;
+  border-top-left-radius: 7px;
 }
 
 
@@ -283,7 +296,7 @@ button {
 
 .inner_scroll {
   position: relative;
-  height: 150px;
+  height: 300px;
   /* background-color: #ccc; */
     overflow: scroll;
 }
@@ -291,6 +304,8 @@ button {
 .doc_bloc {
   text-align: center;
   background-color: #222;
+  height: 70px;
+  overflow: hidden;
 }
 
 .doc_bloc h1,h2,h3,h4,h5 {
@@ -310,6 +325,11 @@ button {
   position: relative;
 }
 
+
+.doc_logo {
+  width: 100%;
+  /* overflow: hidden; */
+}
 /* ==== ANIMATION  ==== */
 
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
@@ -352,10 +372,20 @@ button {
 
 @media screen and (max-width: 1200px){
 
-
+  .outer {
+    display: none;
+  }
   .news_container {
     display: none;
   }
+
+  .docs_component {
+    display: none;
+  }
+}
+
+.news_component {
+  display: none;
 }
 
 @media screen and (max-width: 600px){
