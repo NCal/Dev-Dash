@@ -310,14 +310,14 @@ input::-webkit-input-placeholder {
   .docs_component {
     display: none;
   }
+
+  .news_component {
+    display: none;
+  }
 }
 
-.news_component {
-  display: none;
-}
 
 @media screen and (max-width: 600px){
-
 
   .search_option_span {
     font-size: 16px;
@@ -332,15 +332,15 @@ input::-webkit-input-placeholder {
     background-color: red;
   }
 
-    .player_container {
-      display: none;
-    }
-
-    .ear_svg {
-      display: none;
-    }
-
-    .container {
-      top: 150px;
-    }
+  .player_container {
+    display: none;
   }
+
+  .ear_svg {
+    display: none;
+  }
+
+  .container {
+    top: 150px;
+  }
+}
