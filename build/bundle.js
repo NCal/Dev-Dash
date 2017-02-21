@@ -21887,7 +21887,7 @@
 	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Quicksand);", ""]);
 
 	// module
-	exports.push([module.id, "/* ==== WEB FONTS ==== */\n\n/* ===== CONTAINER ELEMENT STYLES ===== */\n* {\n  box-sizing: border-box;\n}\nbody {\n  color: #576366;\n  margin: 0;\n  font-family: Quicksand, sans-serif; \n  overflow: hidden;\n  background-color: rgba(255, 119, 115, 1);\n  /* animation: colorchange 25s;  */\n  /* -webkit-animation: colorchange 25s;  */\n  animation-iteration-count: infinite;\n}\n\n\n\n.button {\n  text-align: center;\n  margin:  0;\n  cursor: pointer;\n}\n\nbutton {\n  background-color: blue;\n  color: white;\n  cursor: pointer;\n}\n.main_container {\n  margin:  0;\n  padding: 0;\n  height: 100%;\n  width: 100%;\n}\n\n.application {\n  padding: 10px;\n  margin-top: 10px;\n  height: auto;\n} \n\n.container {\n  position: absolute;\n  top: 170px;\n  left: 0;\n  right: 0;\n}\n\n\n/* ==== NEWS ==== */\n\n.outer {\n}\n.news_container {\n  position: absolute;\n\n\n  top: 10px;\n  left: 10px;\n  overflow-x: hidden;\n  height: 300px;\n  width: 500px;\n  overflow-y: scroll\n\n}\n::-webkit-scrollbar {\n display: none;\n}\n\n.empty {\n  position: relative;\n  height: 70px;\n}\n\n.fadeout {\n    position: relative; \n    top: 263px;\n    height: 80px;\n    width: 550px;\n    /* top: 13px; */\n    background: -webkit-linear-gradient(\n      rgba(255, 119, 115, 0) 0%,\n      rgba(255, 119, 115, 1) 100%\n    ); \n  \n    background-image: linear-gradient(\n      rgba(255, 119, 115, 0) 0%,\n      rgba(255, 119, 115, 1) 100%\n    );\n   \n} \n\n.news_container {\n    position: absolute;\n  top: 40px;\n  left: 10px;\n}\n.news_container li {\n\n  font-size: 13pt;\n  color: #fff;\n  list-style: none;\n\n}\n\n.news_container a {\n  opacity: .9;\n  color:  #fff;\n}\n\n.news_container a:hover {\n  opacity: 1;\n  text-decoration: underline;\n}\n\n.news_title {\n  position: absolute;\n/*   top: 10px;\n  left: 10px; */\n}\n\n.outer {\n  position: absolute;\n  top: 10px;\n  left: 10px;\n}\n/* ==== TIME ==== */\n\n.time {\n  font-size: 4em;\n}\n\n/* ==== SEARCH ==== */\n.search {\n  position: relative;\n  top: 500px;\n  font-size:2em;\n  color: rgb(0, 0, 0, 0.6);\n}\n\n.search_input {\n  height: 25px;\n}\n.search_option {\n  position: relative;\n  margin: 10px;\n}\n.search_option_span {\n  position: relative;\n  font-size: 15pt;\n  /* padding: 15px; */\n}\n/* ==== SROLL BAR ==== */\n\n::-webkit-scrollbar {\n    width: 4px;\n}\n \n::-webkit-scrollbar-track {\n    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); \n    -webkit-border-radius: 10px;\n    border-radius: 10px;\n}\n \n::-webkit-scrollbar-thumb {\n    -webkit-border-radius: 10px;\n    border-radius: 10px;\n    background: #fff; \n    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); \n}\n\n::-webkit-scrollbar-thumb:window-inactive {\n  background: rgba(0,0,0,0); \n}\n\n\n/* USER LINKS */\n.url_input {\n  /* padding: 0; */\n  height: 28px;\n  width: 300px;\n  border-radius: 3px;\n}\n\n.about_container {\n  position: absolute;\n  padding: 20px;\n  bottom: -15px;\n  right: -10px;\n  color: #222;\n  border-radius: 2px;\n  padding-bottom: 0;\n  width: 280px;\n  opacity: .8;\n  z-index: 20;\n  margin: 0;\n  cursor: pointer;\n  display: none;\n\n}\n\n.user_links_container {\n  max-height: 100px;\n  overflow-y: scroll;\n  /* overflow-x: auto; */\n  width: 240px;\n  max-width: 260px;\n}\n\n.user_links_container:hover {\n  overflow-y: scroll;\n}\n\n.add_link_button {\n\n}\n\n.link_p {\n  margin-bottom: 0;\n}\n\n\n.weather_component {\n  position: absolute;\n  top: 10px;\n  right: 10px;\n}\n/* ==== ANIMATION  ==== */\n\n@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }\n@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }\n@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }\n\n@-webkit-keyframes pulsate {\n    0% {-webkit-transform: scale(1, 1); }\n    50% {-webkit-transform: scale(1.2, 1.2); }\n    100% {-webkit-transform: scale(1, 1);}\n}\n\n\n\n@keyframes pulsate {\n    0% {-webkit-transform: scale(1, 1); }\n    50% {-webkit-transform: scale(1.2, 1.2); }\n    100% {-webkit-transform: scale(1, 1);}\n}\n\n\n\n@keyframes colorchange\n{\n  0%   {background: rgba(249, 229, 159, 0.28); }\n  50%  {background: rgba(255, 255, 255, 0.9);}\n  100% {background: rgba(249, 229, 159, 0.28);}\n}\n\n@-webkit-keyframes colorchange \n{\n  0%   {background: rgba(249, 229, 159, 0.28);}\n  50%  {background: rgba(255, 255, 255, 0.9);}\n  100% {background: rgba(249, 229, 159, 0.28);}\n}\n\n\n\n/* ==== MEDIA QUERIES ==== */\n\n@media screen and (max-width: 1200px){\n\n\n  .news_container {\n    display: none;\n  }\n}\n\n@media screen and (max-width: 600px){\n\n\n  .search_option_span {\n    font-size: 8pt;\n  }\n\n   .search_option {\n    width: 8px;\n   }\n\n  .tab {\n    display: none;\n    background-color: red;\n  }\n\n    .player_container {\n      display: none;\n    }\n\n    .ear_svg {\n      display: none;\n    }\n\n    .container {\n      top: 150px;\n    }\n  }\n", ""]);
+	exports.push([module.id, "/* ==== WEB FONTS ==== */\n\n/* ===== CONTAINER ELEMENT STYLES ===== */\n* {\n  box-sizing: border-box;\n}\nbody {\n  color: #576366;\n  margin: 0;\n  font-family: Quicksand, sans-serif; \n  overflow: hidden;\n  background-color: #222;\n  background-image: url('/src/assets/bg_photos/LAX-DEN_Gilad_Rom_5.jpg');\n}\n\nh1,h2,h3,h4,h5,span,p,li,a,ul,ol{\n  font-family: Quicksand, sans-serif; \n}\n\ninput {\n  border: 0 !important; \n  color: #fff !important; \n  box-shadow: none !important;\n  background: transparent !important;\n  border-bottom: 1px solid #fff !important;\n}\n\ninput::-webkit-input-placeholder {\n  color: #fff !important;\n}\n\n.application {\n  padding: 10px;\n  margin-top: 10px;\n  height: auto;\n} \n\n.main_container {\n  margin:  0;\n  padding: 0;\n  height: 100%;\n  width: 100%;\n}\n\n.title {\n  opacity: .6;\n  transition: .5s;\n  font-size: 15px;\n}\n\n.title:hover {\n  opacity: 1;\n  transition: .5s;\n}\n\n/* ==== NEWS ==== */\n\n.news_container {\n  position: absolute;\n  top: 10px;\n  left: 10px;\n  overflow-x: hidden;\n  height: 300px;\n  width: 450px;\n  overflow-y: scroll\n}\n\n::-webkit-scrollbar {\n display: none;\n}\n\n/* .empty {\n  position: relative;\n  height: 70px;\n}\n\n.fadeout {\n    position: relative; \n    top: 263px;\n    height: 80px;\n    width: 480px;\n    display: none;\n    background: -webkit-linear-gradient(\n      rgba(255, 119, 115, 0) 0%,\n      rgba(255, 119, 115, 1) 100%\n    ); \n  \n    background-image: linear-gradient(\n      rgba(255, 119, 115, 0) 0%,\n      rgba(255, 119, 115, 1) 100%\n    );\n   \n}  */\n\n.news_container {\n  position: absolute;\n  top: 40px;\n  left: 10px;\n  padding-left: 10px;\n}\n.news_container li {\n  font-size: 13pt;\n  color: #fff;\n  padding-left: 2px;\n}\n\n.news_container a {\n  color:  #fff;\n}\n\n.news_container a:hover {\n  text-decoration: underline;\n}\n\n.news_title {\n  position: absolute;\n}\n\n.outer {\n  position: absolute;\n  top: 10px;\n  left: 10px;\n}\n/* ==== TIME ==== */\n\n.time {\n  font-size: 4em;\n  color: #fff;\n}\n\n/* ==== SEARCH ==== */\n.search {\n  position: relative;\n  top: 500px;\n  font-size:2em;\n  color: rgb(0, 0, 0, 0.6);\n}\n\n.search_input {\n  height: 25px;\n  font-size: 30px;\n  padding: 20px;\n}\n\n.search_option {\n  position: relative;\n  margin: 10px;\n}\n\n.search_option_span {\n  position: relative;\n  font-size: 15pt;\n  color:  #fff;\n}\n\n/* ==== SROLL BAR ==== */\n::-webkit-scrollbar {\n    width: 4px;\n}\n \n::-webkit-scrollbar-track {\n    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); \n    -webkit-border-radius: 10px;\n    border-radius: 10px;\n}\n \n::-webkit-scrollbar-thumb {\n    -webkit-border-radius: 10px;\n    border-radius: 10px;\n    background: #fff; \n    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); \n}\n\n::-webkit-scrollbar-thumb:window-inactive {\n  background: rgba(0,0,0,0); \n}\n\n\n/* WEATHER COMPONENT */\n\n.weather_component {\n  position: absolute;\n  top: 10px;\n  right: 10px;\n}\n\n.weather_component h5, p, img{\n  margin-bottom: 0;\n  font-size: 18px;\n  color: #fff;\n  text-align: right;\n}\n.weather_component p {\n  opacity: .5;\n  transition: .5s;\n}\n\n.weather_component p:hover {\n  opacity: 1;\n}\n.weather_component img{\n  position: absolute;\n  right: 71px;\n  top: 40px;\n}\n\n/* ==== DOCS ==== */\n.docs_component{\n  height: 350px;\n  width: 300px;\n  opacity: .8;\n  background-color: #222;\n  position: absolute;\n  bottom: 0;\n  right: 0;\n  padding: 15px;\n  border-top-left-radius: 7px;\n}\n\n\n.docs_off_component {\n  position: absolute;\n  bottom: 10px;\n  right: 10px;\n  cursor: pointer;\n}\n\n.inner_scroll {\n  position: relative;\n  height: 300px;\n  padding-bottom: 20px;\n  overflow: scroll;\n}\n\n.doc_bloc {\n  text-align: center;\n  background-color: #222;\n  height: 70px;\n  overflow: hidden;\n}\n\n/* .doc_bloc h1,h2,h3,h4,h5 {\n    font-style: italic;\n} */\n\n.doc_bloc:hover {\n  opacity: .8;\n  cursor: pointer;\n  background-color: #333;\n}\n\n.docs_search_input{\n  height: 25px;\n  display: inline;\n  width: 200px;\n  position: relative;\n}\n\n.doc_logo {\n  width: 100%;\n}\n\n\n/* ==== ANIMATION  ==== */\n\n@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }\n@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }\n\n\n@keyframes pulsate {\n    0% {-webkit-transform: scale(1, 1); }\n    50% {-webkit-transform: scale(1.2, 1.2); }\n    100% {-webkit-transform: scale(1, 1);}\n}\n\n@-webkit-keyframes pulsate {\n    0% {-webkit-transform: scale(1, 1); }\n    50% {-webkit-transform: scale(1.2, 1.2); }\n    100% {-webkit-transform: scale(1, 1);}\n}\n\n@keyframes colorchange\n{\n  0%   {background: rgba(249, 229, 159, 0.28); }\n  50%  {background: rgba(255, 255, 255, 0.9);}\n  100% {background: rgba(249, 229, 159, 0.28);}\n}\n\n@-webkit-keyframes colorchange \n{\n  0%   {background: rgba(249, 229, 159, 0.28);}\n  50%  {background: rgba(255, 255, 255, 0.9);}\n  100% {background: rgba(249, 229, 159, 0.28);}\n}\n\n\n\n/* ==== MEDIA QUERIES ==== */\n\n@media screen and (max-width: 1200px){\n\n  .outer {\n    display: none;\n  }\n  .news_container {\n    display: none;\n  }\n\n  .docs_component, .docs_off_component {\n    display: none;\n  }\n\n  .news_component {\n    display: none;\n  }\n}\n\n\n@media screen and (max-width: 600px){\n\n  .search_option_span {\n    font-size: 16px;\n  }\n\n   .search_option {\n    width: 8px;\n   }\n\n  .tab {\n    display: none;\n    background-color: red;\n  }\n\n  .player_container {\n    display: none;\n  }\n\n  .ear_svg {\n    display: none;\n  }\n\n  .container {\n    top: 150px;\n  }\n}\n", ""]);
 
 	// exports
 
@@ -21914,25 +21914,25 @@
 
 	var _reactFoundation2 = _interopRequireDefault(_reactFoundation);
 
-	var _user_links = __webpack_require__(210);
-
-	var _user_links2 = _interopRequireDefault(_user_links);
-
-	var _Search = __webpack_require__(212);
+	var _Search = __webpack_require__(210);
 
 	var _Search2 = _interopRequireDefault(_Search);
 
-	var _Date = __webpack_require__(213);
+	var _Date = __webpack_require__(211);
 
 	var _Date2 = _interopRequireDefault(_Date);
 
-	var _News = __webpack_require__(214);
+	var _News = __webpack_require__(213);
 
 	var _News2 = _interopRequireDefault(_News);
 
-	var _Weather = __webpack_require__(215);
+	var _Weather = __webpack_require__(214);
 
 	var _Weather2 = _interopRequireDefault(_Weather);
+
+	var _Docs = __webpack_require__(215);
+
+	var _Docs2 = _interopRequireDefault(_Docs);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -21941,9 +21941,6 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	// import Quote_array from '../data/quote_array.js';
-	// import audio from '../data/audio_array.js';
-
 
 	var App = function (_Component) {
 	  _inherits(App, _Component);
@@ -21976,15 +21973,12 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'application' },
-	          _react2.default.createElement(_Search2.default, null),
-	          _react2.default.createElement(_Date2.default, null),
-	          _react2.default.createElement(_News2.default, null),
-	          _react2.default.createElement(_Weather2.default, null)
-	        )
+	        { className: 'application' },
+	        _react2.default.createElement(_Search2.default, null),
+	        _react2.default.createElement(_Date2.default, null),
+	        _react2.default.createElement(_News2.default, null),
+	        _react2.default.createElement(_Weather2.default, null),
+	        _react2.default.createElement(_Docs2.default, null)
 	      );
 	    }
 	  }]);
@@ -24501,13 +24495,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _jQuery = __webpack_require__(211);
-
-	var _jQuery2 = _interopRequireDefault(_jQuery);
-
 	var _reactFoundation = __webpack_require__(185);
-
-	var _reactFoundation2 = _interopRequireDefault(_reactFoundation);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -24517,114 +24505,254 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var Links = [];
+	var Search_urls = [{ name: 'google' }, { name: 'stackoverflow' }, { name: 'github' }];
 
-	var User_Links = function (_Component) {
-		_inherits(User_Links, _Component);
+	var input_styles = { textAlign: 'center', cursor: 'pointer' };
 
-		function User_Links(props) {
-			_classCallCheck(this, User_Links);
+	var Search = function (_Component) {
+		_inherits(Search, _Component);
 
-			var _this = _possibleConstructorReturn(this, (User_Links.__proto__ || Object.getPrototypeOf(User_Links)).call(this, props));
+		function Search(props) {
+			_classCallCheck(this, Search);
 
+			var _this = _possibleConstructorReturn(this, (Search.__proto__ || Object.getPrototypeOf(Search)).call(this, props));
+
+			_this.Handle_check = _this.Handle_check.bind(_this);
 			_this.Handle_keypress = _this.Handle_keypress.bind(_this);
-			_this.Save_link = _this.Save_link.bind(_this);
-			_this.Add_link = _this.Add_link.bind(_this);
 			_this.state = {
-				button: true
-
+				search: 'google'
 			};
 			return _this;
 		}
 
-		_createClass(User_Links, [{
+		_createClass(Search, [{
 			key: 'componentDidMount',
 			value: function componentDidMount() {
-				// console.log('hello');
-			}
-		}, {
-			key: 'Add_link',
-			value: function Add_link() {
-				this.setState({ button: false });
-			}
-		}, {
-			key: 'Save_link',
-			value: function Save_link() {
-				// console.log('save link');
-				var input = document.querySelector('.url_input');
-				console.log(input.value);
-				var split = input.value.split('');
-				if (split.filter(function (thang) {
-					return thang !== ' ';
-				}).length === 0) {
-					// console.log('hi');
-				} else if (input.value !== "") {
-					Links.push({ Url: 'http://' + input.value });
-				}
-				// console.log(''Links);
-				this.setState({ button: true });
+				// console.log('search mounted');
 			}
 		}, {
 			key: 'Handle_keypress',
 			value: function Handle_keypress(e) {
-				if (e.key == 'Enter') {
-					this.Save_link();
+				var input = document.querySelector('.search_input');
+				var search = input.value;
+
+				for (var i = 0; i < document.getElementsByClassName('search_option').length; i++) {
+					if (e.key === 'Enter' && this.state.search === document.getElementsByClassName('search_option')[i].name) {
+						window.location = 'https://www.' + this.state.search + '.com/search?q=' + search;
+					}
+				}
+			}
+		}, {
+			key: 'Handle_check',
+			value: function Handle_check(e) {
+				var _this2 = this;
+
+				var search_option = document.getElementsByClassName('search_option');
+
+				if (e.target.type === 'radio') {
+					var clicked_box = e.target;
+					// uncheck all buttons
+					for (var i = 0; i < search_option.length; i++) {
+						search_option[i].checked = false;
+					}
+
+					clicked_box.checked = true;
+					this.setState({ search: clicked_box.name });
+				} else {
+					(function () {
+						var clicked_box = e.target.getAttribute('name');
+						var self = _this2;
+
+						_this2.setState({ search: clicked_box });
+						setTimeout(function () {
+							for (var _i = 0; _i < search_option.length; _i++) {
+								search_option[_i].checked = false;
+
+								if (self.state.search === search_option[_i].name) {
+									document.querySelector('.' + search_option[_i].name + '_input').checked = true;
+								}
+							}
+						}, 10);
+					})();
 				}
 			}
 		}, {
 			key: 'render',
 			value: function render() {
-				if (this.state.button === true) {
-					return _react2.default.createElement(
-						'div',
-						null,
-						_react2.default.createElement(
-							'button',
-							{ onClick: this.Add_link, className: 'add_link_button button' },
-							'+'
-						),
+				return _react2.default.createElement(
+					'div',
+					{ className: 'search' },
+					_react2.default.createElement(
+						_reactFoundation.Column,
+						{ small: 8, medium: 8, large: 4, centerOnSmall: true, centerOnLarge: true, centerOnMedium: true },
+						_react2.default.createElement('input', { type: 'text', placeholder: 'search', className: 'search_input', onKeyDown: this.Handle_keypress }),
 						_react2.default.createElement(
 							'div',
-							{ className: 'user_links_container' },
-							Links.map(function (thang, i) {
-								return _react2.default.createElement(
-									'a',
-									{ href: thang.Url, key: i },
-									_react2.default.createElement(
-										'p',
-										{ className: 'link_p' },
-										thang.Url
-									)
-								);
-							})
+							{ className: 'option_container', style: { textAlign: 'center' } },
+							_react2.default.createElement('input', { style: input_styles, className: 'search_option google_input', type: 'radio', name: 'google', onClick: this.Handle_check, defaultChecked: true }),
+							_react2.default.createElement(
+								'span',
+								{ style: { cursor: 'pointer' }, type: 'span', name: 'google', onClick: this.Handle_check, className: 'search_option_span google' },
+								'Google'
+							),
+							_react2.default.createElement('input', { style: input_styles, className: 'search_option stackoverflow_input', type: 'radio', name: 'stackoverflow', onClick: this.Handle_check }),
+							_react2.default.createElement(
+								'span',
+								{ style: { cursor: 'pointer' }, type: 'span', name: 'stackoverflow', onClick: this.Handle_check, className: 'search_option_span stackoverflow' },
+								'Stack Overflow'
+							),
+							_react2.default.createElement('input', { style: input_styles, className: 'search_option github_input', type: 'radio', name: 'github', onClick: this.Handle_check }),
+							_react2.default.createElement(
+								'span',
+								{ style: { cursor: 'pointer' }, type: 'span', name: 'github', onClick: this.Handle_check, className: 'search_option_span github' },
+								'Github'
+							)
 						)
-					);
-				} else {
-					return _react2.default.createElement(
-						'div',
-						null,
-						_react2.default.createElement('input', { className: 'url_input', type: 'url', placeholder: 'Enter a link', onKeyPress: this.Handle_keypress }),
-						_react2.default.createElement(
-							'button',
-							{ onClick: this.Save_link, className: 'save_link_button button' },
-							'Save'
-						)
-					);
-				}
+					)
+				);
 			}
 		}]);
 
-		return User_Links;
+		return Search;
 	}(_react.Component);
 
-	User_Links.defaultProps = {};
+	Search.defaultProps = {};
 
-	exports.default = User_Links;
+	exports.default = Search;
 
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "user_links.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Search.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 211 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactFoundation = __webpack_require__(185);
+
+	var _jQuery = __webpack_require__(212);
+
+	var _jQuery2 = _interopRequireDefault(_jQuery);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Main_Date = function (_Component) {
+		_inherits(Main_Date, _Component);
+
+		function Main_Date(props) {
+			_classCallCheck(this, Main_Date);
+
+			var _this = _possibleConstructorReturn(this, (Main_Date.__proto__ || Object.getPrototypeOf(Main_Date)).call(this, props));
+
+			_this.startTime = _this.startTime.bind(_this);
+			_this.checkTime = _this.checkTime.bind(_this);
+
+			_this.state = {
+				time: '',
+				date: ''
+			};
+			return _this;
+		}
+
+		_createClass(Main_Date, [{
+			key: 'componentDidMount',
+			value: function componentDidMount() {
+				// console.log('Date mounted');
+				this.startTime();
+			}
+		}, {
+			key: 'startTime',
+			value: function startTime() {
+				var today = new Date();
+				var h = today.getHours();
+				var m = today.getMinutes();
+				// console.log(h);
+
+				if (h >= 13) {
+					h = h - 12;
+				}
+				if (h === 0 || h === 24 || h === -12) {
+					h = 12;
+				}
+
+				m = this.checkTime(m);
+				this.setState({ time: h + ":" + m });
+				this.setState({ date: today.toDateString() });
+				var t = setTimeout(this.startTime, 500);
+			}
+		}, {
+			key: 'checkTime',
+			value: function checkTime(i) {
+				if (i < 10) {
+					i = "0" + i;
+				}; // add zero in front of numbers < 10
+				return i;
+			}
+		}, {
+			key: 'handleMouseOver',
+			value: function handleMouseOver() {
+				(0, _jQuery2.default)('.time').animate({ 'letter-spacing': '0.3em' }, 200);
+			}
+		}, {
+			key: 'handleMouseLeave',
+			value: function handleMouseLeave() {
+				(0, _jQuery2.default)('.time').animate({ 'letter-spacing': '0em' }, 200);
+			}
+		}, {
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'div',
+					null,
+					_react2.default.createElement(
+						_reactFoundation.Column,
+						{ small: 8, medium: 8, large: 3, centerOnSmall: true, centerOnLarge: true, centerOnMedium: true },
+						_react2.default.createElement(
+							'h1',
+							{ className: 'time', style: { textAlign: 'center' }, onMouseOver: this.handleMouseOver, onMouseLeave: this.handleMouseLeave },
+							this.state.time
+						),
+						_react2.default.createElement(
+							'p',
+							{ style: { textAlign: 'center' } },
+							this.state.date
+						)
+					)
+				);
+			}
+		}]);
+
+		return Main_Date;
+	}(_react.Component);
+
+	Date.defaultProps = {
+		name: 'Date'
+	};
+
+	exports.default = Main_Date;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Date.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 212 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -34850,151 +34978,6 @@
 
 
 /***/ },
-/* 212 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactFoundation = __webpack_require__(185);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Search_urls = [{ name: 'google' }, { name: 'stackoverflow' }, { name: 'github' }];
-
-	var input_styles = { textAlign: 'center', cursor: 'pointer' };
-
-	var Search = function (_Component) {
-		_inherits(Search, _Component);
-
-		function Search(props) {
-			_classCallCheck(this, Search);
-
-			var _this = _possibleConstructorReturn(this, (Search.__proto__ || Object.getPrototypeOf(Search)).call(this, props));
-
-			_this.Handle_check = _this.Handle_check.bind(_this);
-			_this.Handle_keypress = _this.Handle_keypress.bind(_this);
-			_this.state = {
-				search: 'google'
-			};
-			return _this;
-		}
-
-		_createClass(Search, [{
-			key: 'componentDidMount',
-			value: function componentDidMount() {
-				// console.log('search mounted');
-			}
-		}, {
-			key: 'Handle_keypress',
-			value: function Handle_keypress(e) {
-				var input = document.querySelector('.search_input');
-				var search = input.value;
-
-				for (var i = 0; i < document.getElementsByClassName('search_option').length; i++) {
-					if (e.key === 'Enter' && this.state.search === document.getElementsByClassName('search_option')[i].name) {
-						window.location = 'https://www.' + this.state.search + '.com/search?q=' + search;
-					}
-				}
-			}
-		}, {
-			key: 'Handle_check',
-			value: function Handle_check(e) {
-				var _this2 = this;
-
-				var search_option = document.getElementsByClassName('search_option');
-
-				if (e.target.type === 'radio') {
-					var clicked_box = e.target;
-					// uncheck all buttons
-					for (var i = 0; i < search_option.length; i++) {
-						search_option[i].checked = false;
-					}
-
-					clicked_box.checked = true;
-					this.setState({ search: clicked_box.name });
-				} else {
-					(function () {
-						var clicked_box = e.target.getAttribute('name');
-						var self = _this2;
-
-						_this2.setState({ search: clicked_box });
-						setTimeout(function () {
-							for (var _i = 0; _i < search_option.length; _i++) {
-								search_option[_i].checked = false;
-
-								if (self.state.search === search_option[_i].name) {
-									document.querySelector('.' + search_option[_i].name + '_input').checked = true;
-								}
-							}
-						}, 10);
-					})();
-				}
-			}
-		}, {
-			key: 'render',
-			value: function render() {
-				return _react2.default.createElement(
-					'div',
-					{ className: 'search' },
-					_react2.default.createElement(
-						_reactFoundation.Column,
-						{ small: 8, medium: 8, large: 4, centerOnSmall: true, centerOnLarge: true, centerOnMedium: true },
-						_react2.default.createElement('input', { type: 'text', placeholder: 'search', className: 'search_input', onKeyDown: this.Handle_keypress }),
-						_react2.default.createElement(
-							'div',
-							{ className: 'option_container', style: { textAlign: 'center' } },
-							_react2.default.createElement('input', { style: input_styles, className: 'search_option google_input', type: 'radio', name: 'google', onClick: this.Handle_check, defaultChecked: true }),
-							_react2.default.createElement(
-								'span',
-								{ style: { cursor: 'pointer' }, type: 'span', name: 'google', onClick: this.Handle_check, className: 'search_option_span google' },
-								'Google'
-							),
-							_react2.default.createElement('input', { style: input_styles, className: 'search_option stackoverflow_input', type: 'radio', name: 'stackoverflow', onClick: this.Handle_check }),
-							_react2.default.createElement(
-								'span',
-								{ style: { cursor: 'pointer' }, type: 'span', name: 'stackoverflow', onClick: this.Handle_check, className: 'search_option_span stackoverflow' },
-								'Stack Overflow'
-							),
-							_react2.default.createElement('input', { style: input_styles, className: 'search_option github_input', type: 'radio', name: 'github', onClick: this.Handle_check }),
-							_react2.default.createElement(
-								'span',
-								{ style: { cursor: 'pointer' }, type: 'span', name: 'github', onClick: this.Handle_check, className: 'search_option_span github' },
-								'Github'
-							)
-						)
-					)
-				);
-			}
-		}]);
-
-		return Search;
-	}(_react.Component);
-
-	Search.defaultProps = {};
-
-	exports.default = Search;
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Search.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
-/***/ },
 /* 213 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -35014,136 +34997,7 @@
 
 	var _reactFoundation = __webpack_require__(185);
 
-	var _jQuery = __webpack_require__(211);
-
-	var _jQuery2 = _interopRequireDefault(_jQuery);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Main_Date = function (_Component) {
-		_inherits(Main_Date, _Component);
-
-		function Main_Date(props) {
-			_classCallCheck(this, Main_Date);
-
-			var _this = _possibleConstructorReturn(this, (Main_Date.__proto__ || Object.getPrototypeOf(Main_Date)).call(this, props));
-
-			_this.startTime = _this.startTime.bind(_this);
-			_this.checkTime = _this.checkTime.bind(_this);
-
-			_this.state = {
-				time: '',
-				date: ''
-			};
-			return _this;
-		}
-
-		_createClass(Main_Date, [{
-			key: 'componentDidMount',
-			value: function componentDidMount() {
-				console.log('Date mounted');
-				this.startTime();
-			}
-		}, {
-			key: 'startTime',
-			value: function startTime() {
-				var today = new Date();
-				var h = today.getHours();
-				var m = today.getMinutes();
-				// console.log(h);
-
-				if (h >= 13) {
-					h = h - 12;
-				}
-				if (h === 0 || h === 24 || h === -12) {
-					h = 12;
-				}
-
-				m = this.checkTime(m);
-				this.setState({ time: h + ":" + m });
-				this.setState({ date: today.toDateString() });
-				var t = setTimeout(this.startTime, 500);
-			}
-		}, {
-			key: 'checkTime',
-			value: function checkTime(i) {
-				if (i < 10) {
-					i = "0" + i;
-				}; // add zero in front of numbers < 10
-				return i;
-			}
-		}, {
-			key: 'handleMouseOver',
-			value: function handleMouseOver() {
-				(0, _jQuery2.default)('.time').animate({ 'letter-spacing': '0.3em' }, 200);
-			}
-		}, {
-			key: 'handleMouseLeave',
-			value: function handleMouseLeave() {
-				(0, _jQuery2.default)('.time').animate({ 'letter-spacing': '0em' }, 200);
-			}
-		}, {
-			key: 'render',
-			value: function render() {
-				return _react2.default.createElement(
-					'div',
-					null,
-					_react2.default.createElement(
-						_reactFoundation.Column,
-						{ small: 8, medium: 8, large: 3, centerOnSmall: true, centerOnLarge: true, centerOnMedium: true },
-						_react2.default.createElement(
-							'h1',
-							{ className: 'time', style: { textAlign: 'center' }, onMouseOver: this.handleMouseOver, onMouseLeave: this.handleMouseLeave },
-							this.state.time
-						),
-						_react2.default.createElement(
-							'p',
-							{ style: { textAlign: 'center' } },
-							this.state.date
-						)
-					)
-				);
-			}
-		}]);
-
-		return Main_Date;
-	}(_react.Component);
-
-	Date.defaultProps = {
-		name: 'Date'
-	};
-
-	exports.default = Main_Date;
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Date.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
-/***/ },
-/* 214 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactFoundation = __webpack_require__(185);
-
-	var _jQuery = __webpack_require__(211);
+	var _jQuery = __webpack_require__(212);
 
 	var _jQuery2 = _interopRequireDefault(_jQuery);
 
@@ -35176,7 +35030,7 @@
 		_createClass(News, [{
 			key: 'componentDidMount',
 			value: function componentDidMount() {
-				console.log('new mounted');
+				// console.log('new mounted');
 				this.Get();
 			}
 		}, {
@@ -35192,14 +35046,14 @@
 		}, {
 			key: 'Get',
 			value: function Get() {
-				console.log('getting');
+				// console.log('getting');
 				var self = this;
 				var total = 20;
 
 				_jQuery2.default.getJSON('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty', {}, function (results) {
 					var ids = results.slice(0, total);
-					console.log('ids', ids);
-					console.log(ids.length);
+					// console.log('ids',ids);
+					// console.log(ids.length);
 					loop_2(ids);
 				});
 
@@ -35216,7 +35070,7 @@
 				function final(stories) {
 					if (stories.length === total) {
 						self.setState({ stories: stories });
-						console.log('this.state.stories', self.state.stories);
+						// console.log('this.state.stories', self.state.stories);	
 					}
 				}
 			}
@@ -35229,14 +35083,14 @@
 						{ className: 'outer' },
 						_react2.default.createElement(
 							'h5',
-							{ onClick: this.handleClick, style: { color: 'white', cursor: 'pointer' }, className: 'news_title' },
+							{ onClick: this.handleClick, style: { color: 'white', cursor: 'pointer' }, className: 'news_title title' },
 							'hide'
 						),
 						_react2.default.createElement(
 							'div',
 							{ className: 'news_container' },
 							_react2.default.createElement(
-								'ul',
+								'ol',
 								null,
 								this.state.stories.map(function (thang, i) {
 									return _react2.default.createElement(
@@ -35276,7 +35130,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "News.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 215 */
+/* 214 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -35293,7 +35147,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _jQuery = __webpack_require__(211);
+	var _jQuery = __webpack_require__(212);
 
 	var _jQuery2 = _interopRequireDefault(_jQuery);
 
@@ -35322,6 +35176,7 @@
 			_this.clearState = _this.clearState.bind(_this);
 
 			_this.state = {
+				local: false,
 				entered: false,
 				location: null,
 				name: null,
@@ -35336,20 +35191,28 @@
 			key: 'componentDidMount',
 			value: function componentDidMount() {
 				var self = this;
-				console.log('weather mounted');
-				// self.Get();
+				// console.log('weather mounted');
+				this.handleLocalData();
+			}
+		}, {
+			key: 'handleLocalData',
+			value: function handleLocalData() {
+				if (localStorage.location !== undefined) {
+					// console.log('local location exists', localStorage.location);
+					this.Get(localStorage.location);
+				}
 			}
 		}, {
 			key: 'Get',
 			value: function Get(location) {
 				var self = this;
-				console.log('weather get');
+				// console.log('weather get');
 				_jQuery2.default.getJSON('http://api.openweathermap.org/data/2.5/weather?&APPID=6cdaac4949dc28cbd357bc03b8771c11', {
 					units: "imperial",
 					q: location,
 					mode: 'JSON'
 				}, function (response) {
-					console.log(response);
+					// console.log(response);
 					var locationName = response.name;
 					var current = response.weather[0].description;
 					var temp = response.main.temp;
@@ -35357,9 +35220,9 @@
 
 					self.setState({ 'current': current }, function () {
 						self.setState({ 'name': locationName }, function () {
-							self.setState({ 'temp': temp }, function () {
+							self.setState({ 'temp': temp + ' °' }, function () {
 								self.setState({ 'icon': "http://openweathermap.org/img/w/" + icon + ".png" }, function () {
-									console.log('icon:', this.state.icon);
+									// console.log('icon:', this.state.icon);
 									self.setState({ entered: true });
 								});
 							});
@@ -35373,7 +35236,9 @@
 				var input_value = document.querySelector('.weather_input').value;
 				if (e.key === 'Enter') {
 					this.setState({ location: input_value }, function () {
-						console.log(this.state.location);
+						// console.log(this.state.location);
+						localStorage.location = this.state.location;
+						// console.log('local location', localStorage.location);
 						this.Get(this.state.location);
 					});
 				}
@@ -35381,7 +35246,7 @@
 		}, {
 			key: 'clearState',
 			value: function clearState() {
-				console.log('clearState');
+				// console.log('clearState');
 				this.setState({
 					'entered': false,
 					'location': null,
@@ -35428,8 +35293,10 @@
 							),
 							_react2.default.createElement(
 								'p',
-								{ onClick: this.clearState, style: { cursor: 'pointer' } },
-								'Change location'
+								{ className: 'title', onClick: this.clearState, style: { cursor: 'pointer' } },
+								'Change ',
+								_react2.default.createElement('br', null),
+								'Location'
 							)
 						)
 					);
@@ -35443,6 +35310,218 @@
 	exports.default = Weather;
 
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Weather.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 215 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactFoundation = __webpack_require__(185);
+
+	var _reactFoundation2 = _interopRequireDefault(_reactFoundation);
+
+	var _jQuery = __webpack_require__(212);
+
+	var _jQuery2 = _interopRequireDefault(_jQuery);
+
+	var _docs_data = __webpack_require__(216);
+
+	var _docs_data2 = _interopRequireDefault(_docs_data);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Docs_search = function (_Component) {
+		_inherits(Docs_search, _Component);
+
+		function Docs_search(props) {
+			_classCallCheck(this, Docs_search);
+
+			var _this = _possibleConstructorReturn(this, (Docs_search.__proto__ || Object.getPrototypeOf(Docs_search)).call(this, props));
+
+			_this.handleInput = _this.handleInput.bind(_this);
+			_this.state = {
+				name: 'docs_search',
+				add_state: false
+			};
+			return _this;
+		}
+
+		_createClass(Docs_search, [{
+			key: 'componentDidMount',
+			value: function componentDidMount() {
+				// console.log('Docs Search mounted');
+			}
+		}, {
+			key: 'onEdit',
+			value: function onEdit(e) {
+				var search = e;
+				// console.log(e);
+
+				for (var i = 0; i < _docs_data2.default.length; i++) {
+					if (_docs_data2.default[i].name.toLowerCase().indexOf(search.toLowerCase()) === -1) {
+						(0, _jQuery2.default)('.doc_bloc img[title="' + _docs_data2.default[i].name + '"]').parent().hide();
+					} else {
+						(0, _jQuery2.default)('.doc_bloc img[title="' + _docs_data2.default[i].name + '"]').parent().show();
+					}
+				}
+			}
+		}, {
+			key: 'handleInput',
+			value: function handleInput(e) {
+				var search = e.target.value;
+				this.onEdit(search);
+			}
+		}, {
+			key: 'render',
+			value: function render() {
+				if (!this.state.add_state) {
+					return _react2.default.createElement(
+						'div',
+						null,
+						_react2.default.createElement('input', { type: 'text', className: 'docs_search_input', placeholder: 'search', onChange: this.handleInput })
+					);
+				} else {
+					return _react2.default.createElement(
+						'div',
+						null,
+						_react2.default.createElement(
+							'div',
+							null,
+							'+'
+						),
+						_react2.default.createElement('input', { type: 'text', className: 'docs_search_input', placeholder: 'search', onChange: this.handleInput })
+					);
+				}
+			}
+		}]);
+
+		return Docs_search;
+	}(_react.Component);
+
+	var Docs = function (_Component2) {
+		_inherits(Docs, _Component2);
+
+		function Docs(props) {
+			_classCallCheck(this, Docs);
+
+			var _this2 = _possibleConstructorReturn(this, (Docs.__proto__ || Object.getPrototypeOf(Docs)).call(this, props));
+
+			_this2.Toggle = _this2.Toggle.bind(_this2);
+
+			_this2.state = {
+				on: false
+			};
+			return _this2;
+		}
+
+		_createClass(Docs, [{
+			key: 'componentDidMount',
+			value: function componentDidMount() {
+				// console.log('Docs mounted');
+			}
+		}, {
+			key: 'Toggle',
+			value: function Toggle() {
+				if (this.state.on === false) {
+					this.setState({ on: true });
+				} else {
+					this.setState({ on: false });
+				}
+			}
+		}, {
+			key: 'render',
+			value: function render() {
+
+				if (this.state.on === true) {
+					return _react2.default.createElement(
+						'div',
+						{ className: 'docs_component' },
+						_react2.default.createElement(
+							'p',
+							{ style: { cursor: 'pointer' }, onClick: this.Toggle },
+							'Hide'
+						),
+						_react2.default.createElement(Docs_search, null),
+						_react2.default.createElement(
+							'div',
+							{ className: 'inner_scroll' },
+							_docs_data2.default.map(function (thang, i) {
+								return _react2.default.createElement(
+									'a',
+									{ key: i, style: { color: '#fff' }, href: thang.url },
+									_react2.default.createElement(
+										_reactFoundation.Column,
+										{ large: 3, className: 'doc_bloc' },
+										_react2.default.createElement('img', { className: 'doc_logo', title: thang.name, src: thang.logo })
+									)
+								);
+							})
+						)
+					);
+				} else {
+					return _react2.default.createElement(
+						'div',
+						{ className: 'docs_off_component', onClick: this.Toggle },
+						_react2.default.createElement(
+							'p',
+							null,
+							'Docs +'
+						)
+					);
+				}
+			}
+		}]);
+
+		return Docs;
+	}(_react.Component);
+
+	Docs.defaultProps = {
+		name: 'Docs'
+	};
+
+	exports.default = Docs;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Docs.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 216 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+			value: true
+	});
+	var docs_data = [{ symbol: 'R', logo: 'src/assets/docs_logos/grey/react.png', name: 'React', url: 'https://facebook.github.io/react/docs/hello-world.html' }, { symbol: 'JS', logo: 'src/assets/docs_logos/grey/javascript.png', name: 'JavaScript', url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' }, { symbol: 'CSS', logo: 'src/assets/docs_logos/grey/css.png', name: 'CSS', url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/Reference' }, { symbol: 'jQ', logo: 'src/assets/docs_logos/grey/jquery.png', name: 'Jquery', url: 'http://api.jquery.com/' }, { symbol: 'RB', logo: 'src/assets/docs_logos/grey/ruby.png', name: 'Ruby', url: 'http://ruby-doc.org/' }, { symbol: 'PHP', logo: 'src/assets/docs_logos/grey/php.png', name: 'PHP', url: 'http://php.net/docs.php' }, { symbol: 'A', logo: 'src/assets/docs_logos/grey/angular.png', name: 'Angular', url: 'https://docs.angularjs.org/api' }, { symbol: 'R', logo: 'src/assets/docs_logos/grey/rails.png', name: 'Ruby on Rails', url: 'http://api.rubyonrails.org/' }, { symbol: 'ND', logo: 'src/assets/docs_logos/grey/node.png', name: 'Node', url: 'https://nodejs.org/api/' }, { symbol: 'B', logo: 'src/assets/docs_logos/grey/bootstrap.png', name: 'Bootstrap', url: 'http://getbootstrap.com/' }, { symbol: 'F', logo: 'src/assets/docs_logos/grey/foundation.png', name: 'Foundation', url: 'http://foundation.zurb.com/sites/docs/' }, { symbol: 'NPM', logo: 'src/assets/docs_logos/grey/npm.png', name: 'NPM', url: 'https://www.npmjs.com/' }, { symbol: 'W', logo: 'src/assets/docs_logos/grey/webpack.png', name: 'Webpack', url: 'http://webpack.github.io/docs/' }
+
+	// {symbol: '+', logo: 'src/assets/docs_logos/grey/add.png', name: 'Add', url: '#'},
+
+
+	];
+	exports.default = docs_data;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/nbroaddus/Desktop/n_dev/work/dev-dash_R/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "docs_data.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }
 /******/ ]);
