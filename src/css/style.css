@@ -200,9 +200,12 @@ input::-webkit-input-placeholder {
   opacity: 1;
 }
 .weather_component img{
-  position: relative;
+/*   position: relative;
   left: 28px;
-  top: 0px;
+  top: 0px; */
+  position: absolute;
+  right: 71px;
+  top: 40px;
 }
 
 /* ==== DOCS ==== */
@@ -240,9 +243,9 @@ input::-webkit-input-placeholder {
   overflow: hidden;
 }
 
-.doc_bloc h1,h2,h3,h4,h5 {
+/* .doc_bloc h1,h2,h3,h4,h5 {
     font-style: italic;
-}
+} */
 
 .doc_bloc:hover {
   opacity: .8;
@@ -307,7 +310,7 @@ input::-webkit-input-placeholder {
     display: none;
   }
 
-  .docs_component {
+  .docs_component, .docs_off_component {
     display: none;
   }
 
