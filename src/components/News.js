@@ -17,7 +17,7 @@ class News extends Component {
 	}
 
 	componentDidMount() {
-		console.log('new mounted');
+		// console.log('new mounted');
 		this.Get();
 	}
 
@@ -31,7 +31,7 @@ class News extends Component {
 	}
 
 	Get(){
-		console.log('getting');
+		// console.log('getting');
 		let self= this;
 		const total = 20;
 
@@ -39,8 +39,8 @@ class News extends Component {
 				{},
 				 function(results){
 					let ids = results.slice(0, total);
-					console.log('ids',ids);
-					console.log(ids.length);
+					// console.log('ids',ids);
+					// console.log(ids.length);
 					loop_2(ids);
 			});
 
@@ -59,7 +59,7 @@ class News extends Component {
 			function final(stories){
 				if (stories.length === total){
 						self.setState({stories: stories});
-						console.log('this.state.stories', self.state.stories);	
+						// console.log('this.state.stories', self.state.stories);	
 					}
 			}
 }

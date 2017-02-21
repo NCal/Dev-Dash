@@ -24,26 +24,26 @@ class Weather extends Component {
 
 	componentDidMount(){
 		var self = this;
-		console.log('weather mounted');
+		// console.log('weather mounted');
 		this.handleLocalData();
 	}
 	handleLocalData(){
 		if (localStorage.location !== undefined){
-			console.log('local location exists', localStorage.location);
+			// console.log('local location exists', localStorage.location);
 			this.Get(localStorage.location);
 		}
 	}
 
 	Get(location){
 		let self = this;
-		console.log('weather get');
+		// console.log('weather get');
 		$.getJSON('http://api.openweathermap.org/data/2.5/weather?&APPID=6cdaac4949dc28cbd357bc03b8771c11', {
 	        	units: "imperial",
 		        q: location,
 		        mode: 'JSON'
 		    },
 		    function(response) {
-		    	console.log(response);
+		    	// console.log(response);
 		    	let locationName = response.name;
 		    	let current = response.weather[0].description;
 		    	let temp = response.main.temp;
@@ -53,7 +53,7 @@ class Weather extends Component {
 		        	self.setState({'name': locationName}, function(){
 		        		self.setState({'temp': temp +' °'}, function(){
 		        			self.setState({'icon': "http://openweathermap.org/img/w/"+ icon +".png"}, function(){
-		        				console.log('icon:', this.state.icon);
+		        				// console.log('icon:', this.state.icon);
 		        				self.setState({entered: true});
 		        			});
 		        		});
@@ -69,16 +69,16 @@ class Weather extends Component {
 		var input_value = document.querySelector('.weather_input').value;
 		if (e.key === 'Enter'){
 			this.setState({location: input_value}, function(){
-				console.log(this.state.location);
+				// console.log(this.state.location);
 				localStorage.location = this.state.location;
-				console.log('local location', localStorage.location);
+				// console.log('local location', localStorage.location);
 				this.Get(this.state.location);
 			});
 		}
 	}
 
 	clearState(){
-		console.log('clearState');
+		// console.log('clearState');
 		this.setState({
 			'entered': false,
 			'location': null,

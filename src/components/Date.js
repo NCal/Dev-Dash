@@ -15,7 +15,7 @@ class Main_Date extends Component {
 	}
 
 	componentDidMount() {
-		console.log('Date mounted');
+		// console.log('Date mounted');
 		this.startTime();
 	}
 

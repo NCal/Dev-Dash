@@ -200,9 +200,6 @@ input::-webkit-input-placeholder {
   opacity: 1;
 }
 .weather_component img{
-/*   position: relative;
-  left: 28px;
-  top: 0px; */
   position: absolute;
   right: 71px;
   top: 40px;

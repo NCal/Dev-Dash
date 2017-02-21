@@ -17,11 +17,11 @@ class Docs_search extends Component {
 	}
 
 	componentDidMount(){
-		console.log('Docs Search mounted');
+		// console.log('Docs Search mounted');
 	}
 	onEdit(e){
 		let search = e;
-		console.log(e);
+		// console.log(e);
 	
 		for (let i = 0; i< docs_data.length; i++){
 			if ( docs_data[i].name.toLowerCase().indexOf(search.toLowerCase()) === -1){
@@ -65,7 +65,7 @@ class Docs extends Component {
 	}
 
 	componentDidMount(){
-		console.log('Docs mounted');
+		// console.log('Docs mounted');
 	}
 
 	Toggle(){
