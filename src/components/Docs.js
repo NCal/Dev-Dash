@@ -10,13 +10,32 @@ class Docs extends Component {
       super(props);
       this.toggleOn =this.toggleOn.bind(this);
       this.addDoc = this.addDoc.bind(this);
+      this.subDoc = this.subDoc.bind(this);
       this.saveInput = this.saveInput.bind(this);
+      this.handleCustomDocs = this.handleCustomDocs.bind(this);
       
       this.state = {
          mode: 'off',
-         docInput: null
+         docInput: null,
+         customDocAmount: 0
       };
    }
+
+   componentDidMount() {
+   	this.handleCustomDocs();
+   }
+
+   handleCustomDocs(){
+   	console.log('handle custom docs');
+		if (localStorage.customDocAmount !== undefined){
+			let customDocs = JSON.parse(localStorage.customDocs);
+			// console.log('we have custom docs here:', customDocs);
+			customDocs.forEach(function(doc){
+				docsData.unshift(doc);
+			});
+			// console.log('updated docs data', docsData);
+   	}
+	}
 
    toggleOn(){
    	if (this.state.mode === 'off'){
@@ -27,9 +46,17 @@ class Docs extends Component {
    }
 
    addDoc(){
-   	console.log('add doc');
+   	// console.log('add doc');
    	this.setState({
-   		mode: 'add'});
+   		mode: 'add'
+   	});
+   }
+
+   subDoc(){
+   	// console.log('add doc');
+   	this.setState({
+   		mode: 'sub'
+   	});
    }
 
    handleInput(e){
@@ -39,14 +66,46 @@ class Docs extends Component {
    saveInput(){
    	let titleInput = document.getElementsByClassName('addTitleInput')[0];
    	let linkInput = document.getElementsByClassName('addLinkInput')[0];
-   	if (titleInput.value !== '' && linkInput.value !== ''){
-   		console.log(titleInput.value);
-   		// this.setState({docInput: textbox.value});
-   		docsData.unshift({symbol: ''+titleInput.value[0].toUpperCase()+'', logo: 'src/assets/docs_logos/grey/add.png', name: ''+titleInput.value+'', url: 'http://'+linkInput.value+'', type:'added'});
-   	}
-   	console.log('save input');
 
-   	this.setState({mode: 'on'});
+   	if (this.state.mode === 'sub'){
+	   	this.setState({
+	   		mode: 'on'
+			});
+			return;
+   	}
+
+   	if (titleInput.value !== '' && linkInput.value !== ''){
+   		docsData.unshift({symbol: ''+titleInput.value[0].toUpperCase()+'', logo: '', name: ''+titleInput.value+'', url: 'http://'+linkInput.value+'', type:'added'});
+
+	   	this.setState({
+	   		mode: 'on'
+			});
+
+			if (localStorage.customDocAmount === undefined){
+				// console.log('custom doc amount was undefined');
+				localStorage.customDocAmount = 1;
+			} else {
+				// console.log('adding to custom docs');
+				let localDocAmount = parseInt(localStorage.customDocAmount);
+				localStorage.customDocAmount = localDocAmount +=1;
+				// console.log('local storage custom doc amount:',localStorage.customDocAmount);
+			}
+
+			localStorage.customDocs = JSON.stringify(docsData.slice(0, parseInt(localStorage.customDocAmount)));
+			// console.log(JSON.parse(localStorage.customDocs));
+			// console.log('local docs', localStorage.customDocs);
+			// console.log(' new input was saved');
+
+   	} else {
+	   	console.log('no input was saved');
+	   	this.setState({
+	   		mode: 'on'
+			});
+   	}
+
+
+
+		
    }
 
    render(){
@@ -58,6 +117,9 @@ class Docs extends Component {
                <div className="inner_scroll">
             		<Column large={3} className="doc_bloc" style={{cursor: 'pointer'}} onClick={this.addDoc}>
                      <img className="doc_logo" title="add" src="src/assets/docs_logos/grey/add.png"/>
+                  </Column>
+            		<Column large={3} className="doc_bloc" style={{cursor: 'pointer'}} onClick={this.subDoc}>
+                     <img className="doc_logo" title="sub" src="src/assets/docs_logos/grey/sub.png"/>
                   </Column>
                  {docsData.map(function(thang, i){
                  	if (thang.type ==="added" ){
@@ -88,6 +150,21 @@ class Docs extends Component {
       		</div>
    		)
       }
+      if (this.state.mode === 'sub'){
+            	return (
+            		<div className="docs_component">
+            		   <p style={{'cursor': 'pointer'}} onClick={this.toggleOn}>Hide</p>
+            		   <div className="inner_scroll">
+	            		   <div style={{'color':'#fff', 'cursor': 'pointer'}} onClick={this.saveInput}>save</div>
+	            		   <ul>
+	            		   	{docsData.map(function(doc){
+										return <li>{doc.name}</li>
+	            		   	})}
+	            		   </ul>
+            		   </div>
+            		</div>
+         		)
+            }
    }
 }
 
