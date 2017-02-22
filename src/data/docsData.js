@@ -1,4 +1,4 @@
-let docs_data = [
+let docsData = [
 		{symbol: 'R', logo: 'src/assets/docs_logos/grey/react.png', name: 'React', url: 'https://facebook.github.io/react/docs/hello-world.html'},
 		{symbol: 'JS', logo: 'src/assets/docs_logos/grey/javascript.png', name: 'JavaScript', url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'},
 		{symbol: 'CSS', logo: 'src/assets/docs_logos/grey/css.png', name: 'CSS', url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/Reference'},
@@ -14,4 +14,4 @@ let docs_data = [
 		{symbol: 'W', logo: 'src/assets/docs_logos/grey/webpack.png', name: 'Webpack', url: 'http://webpack.github.io/docs/'}
 ];
 
-export default docs_data;
+export default docsData;
