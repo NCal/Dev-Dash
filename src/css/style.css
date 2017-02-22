@@ -232,6 +232,14 @@ input::-webkit-input-placeholder {
    width: 100%;
 }
 
+.docDeleteButton {
+  display: inline;
+  margin-left: 10px;
+  width: 20px; 
+  height: 20px; 
+  cursor: pointer;
+}
+
 /* ==== ANIMATION   ==== */
 
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }

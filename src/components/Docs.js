@@ -13,16 +13,23 @@ class Docs extends Component {
       this.subDoc = this.subDoc.bind(this);
       this.saveInput = this.saveInput.bind(this);
       this.handleCustomDocs = this.handleCustomDocs.bind(this);
+      this.docDelete = this.docDelete.bind(this);
       
       this.state = {
          mode: 'off',
          docInput: null,
-         customDocAmount: 0
+         customDocAmount: 0,
+         customDocs: false,
       };
    }
 
    componentDidMount() {
+   	console.log(Docs);
    	this.handleCustomDocs();
+
+   	if (localStorage.customDocAmount === "0"){
+   		this.setState({customDocs: false});
+   	}
    }
 
    handleCustomDocs(){
@@ -34,6 +41,7 @@ class Docs extends Component {
 				docsData.unshift(doc);
 			});
 			// console.log('updated docs data', docsData);
+			this.setState({customDocs: !this.state.customDocs});
    	}
 	}
 
@@ -59,6 +67,38 @@ class Docs extends Component {
    	});
    }
 
+   docDelete(e){
+   	let self = this;
+   	console.log('doc delete');
+   	console.log(e);
+   	var elToRemove = e.target.parentElement.innerText;
+   	// console.log('thing to remove:', e.target.parentElement.innerText);
+   	
+   	docsData.forEach(function(doc, i){
+   		
+			// if (doc.name === elToRemove){
+				// e.target.parentElement.remove();
+			 if (doc.type === 'added' && doc.name === e.target.parentElement.innerText){
+			 	e.target.parentElement.remove();
+			 	console.log(doc.type);
+				console.log(docsData);
+				console.log(doc);
+				console.log(docsData.indexOf(doc));
+				let startIndex = docsData.indexOf(doc);
+				docsData.splice(startIndex, 1);
+				let localDocAmount = parseInt(localStorage.customDocAmount);
+				localStorage.customDocAmount = localDocAmount -=1;
+				localStorage.customDocs = JSON.stringify(docsData.slice(0, parseInt(localStorage.customDocAmount)));
+
+				if (localStorage.customDocAmount === "0"){
+					self.setState({customDocs: false});
+				}
+			}
+
+
+   	});
+   }
+
    handleInput(e){
    	let input = e.target.value;
    }
@@ -78,7 +118,8 @@ class Docs extends Component {
    		docsData.unshift({symbol: ''+titleInput.value[0].toUpperCase()+'', logo: '', name: ''+titleInput.value+'', url: 'http://'+linkInput.value+'', type:'added'});
 
 	   	this.setState({
-	   		mode: 'on'
+	   		mode: 'on',
+	   		customDocs: true
 			});
 
 			if (localStorage.customDocAmount === undefined){
@@ -150,21 +191,33 @@ class Docs extends Component {
       		</div>
    		)
       }
-      if (this.state.mode === 'sub'){
+      if (this.state.mode === 'sub' && this.state.customDocs ===true){
             	return (
             		<div className="docs_component">
             		   <p style={{'cursor': 'pointer'}} onClick={this.toggleOn}>Hide</p>
+            		   <div style={{'color':'#fff', 'cursor': 'pointer'}} onClick={this.saveInput}>save</div>
             		   <div className="inner_scroll">
-	            		   <div style={{'color':'#fff', 'cursor': 'pointer'}} onClick={this.saveInput}>save</div>
+	            		  
 	            		   <ul>
-	            		   	{docsData.map(function(doc){
-										return <li>{doc.name}</li>
-	            		   	})}
+	            		   	{
+		            		   		docsData.map(function(doc, i){
+		            		   			if (doc.type === 'added'){
+		            		   				return <li className={'userDoc'+i} key={'doc'+ i} style={{'color':'#fff'}} onClick={this.docDelete}>{doc.name}<img src="src/assets/docs_logos/grey/delete.png" className="docDeleteButton" /></li>
+		            		   			}
+			            		   	}.bind(this))
+	            		   	}
 	            		   </ul>
             		   </div>
             		</div>
          		)
-            }
+      } else {
+      	return (
+      		<div className="docs_component">
+      		   <p style={{'cursor': 'pointer'}} onClick={this.toggleOn}>Hide</p>
+      		   <p style={{textAlign: 'left'}}>No custom links here</p>
+      		   <div style={{'color':'#fff', 'cursor': 'pointer', marginTop: '20px', fontStyle: 'italic'}} onClick={this.saveInput}>back</div>
+   		   </div> )
+      }
    }
 }
 
