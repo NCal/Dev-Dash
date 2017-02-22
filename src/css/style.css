@@ -70,29 +70,6 @@ input::-webkit-input-placeholder {
  display: none;
 }
 
-/* .empty {
-  position: relative;
-  height: 70px;
-}
-
-.fadeout {
-    position: relative; 
-    top: 263px;
-    height: 80px;
-    width: 480px;
-    display: none;
-    background: -webkit-linear-gradient(
-      rgba(255, 119, 115, 0) 0%,
-      rgba(255, 119, 115, 1) 100%
-    ); 
-  
-    background-image: linear-gradient(
-      rgba(255, 119, 115, 0) 0%,
-      rgba(255, 119, 115, 1) 100%
-    );
-   
-}  */
-
 .news_container {
   position: absolute;
   top: 40px;

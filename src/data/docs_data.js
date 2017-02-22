@@ -12,10 +12,6 @@ let docs_data = [
 		{symbol: 'F', logo: 'src/assets/docs_logos/grey/foundation.png', name: 'Foundation', url: 'http://foundation.zurb.com/sites/docs/'},
 		{symbol: 'NPM', logo: 'src/assets/docs_logos/grey/npm.png', name: 'NPM', url: 'https://www.npmjs.com/'},
 		{symbol: 'W', logo: 'src/assets/docs_logos/grey/webpack.png', name: 'Webpack', url: 'http://webpack.github.io/docs/'}
-
-		// {symbol: '+', logo: 'src/assets/docs_logos/grey/add.png', name: 'Add', url: '#'},
-
-
-
 ];
+
 export default docs_data;

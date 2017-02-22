@@ -6,26 +6,16 @@ import Search from './Search.js';
 import Main_Date from './Date.js';
 import News from './News.js';
 import Weather from './Weather.js';
-import Docs from './Docs.js'
+import Docs from './Docs.js';
 
 class App extends Component {
   constructor(props, context) {
-      super(props, context);
-
-        this.outer_click_handler = this.outer_click_handler.bind(this);
-      // STATE
-      this.state = {
-        name: 'App',
-      };
+    super(props, context);
+    // STATE
+    this.state = {
+      name: 'App',
+    };
   }
-
-  componentDidMount() {
-    // console.log('Component ' + this.props.name + ' Mounted');
-  }
-  outer_click_handler(e) {
-    // console.log('outer click handler', e);
-  }
-
 
   render(){
     return (
