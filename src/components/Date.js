@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Column } from 'react-foundation';
 import $ from 'jQuery';
-class Main_Date extends Component {
+class MainDate extends Component {
   constructor(props) {
     super(props);
 
@@ -59,4 +59,4 @@ Date.defaultProps = {
 	name: 'Date'
 };
 
-export default Main_Date;
+export default MainDate;

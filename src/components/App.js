@@ -3,7 +3,7 @@ import { Row, Column } from 'react-foundation';
 import Foundation from 'react-foundation';
 
 import Search from './Search.js';
-import Main_Date from './Date.js';
+import MainDate from './Date.js';
 import News from './News.js';
 import Weather from './Weather.js';
 import Docs from './Docs.js';
@@ -21,7 +21,7 @@ class App extends Component {
       return (
          <div className="application">
             <Search/>
-            <Main_Date/>
+            <MainDate/>
             <News/>
             <Weather/>
             <Docs/>

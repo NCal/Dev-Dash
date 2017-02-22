@@ -13,7 +13,6 @@ class News extends Component {
          on: false,
          stories: []
       };
-      
    }
 
    componentDidMount() {

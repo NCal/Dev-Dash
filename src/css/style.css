@@ -291,9 +291,9 @@ input::-webkit-input-placeholder {
       font-size: 16px;
    }
 
-    .search_option {
+   .search_option {
       width: 8px;
-    }
+   }
 
    .tab {
       display: none;

@@ -5,7 +5,7 @@ import $ from 'jQuery';
 import docs_data from '../data/docs_data.js';
 
 
-class Docs_search extends Component {
+class DocsSearch extends Component {
    constructor(props){
       super(props);
       this.handleInput =this.handleInput.bind(this);
@@ -51,14 +51,14 @@ class Docs_search extends Component {
 class Docs extends Component {
    constructor(props){
       super(props);
-      this.Toggle =this.Toggle.bind(this);
+      this.toggleOn =this.toggleOn.bind(this);
       
       this.state = {
          on: false
       };
    }
 
-   Toggle(){
+   toggleOn(){
       this.setState({on: !this.state.on});
    }
 
@@ -66,8 +66,8 @@ class Docs extends Component {
       if (this.state.on){
          return (
             <div className="docs_component">
-               <p style={{cursor: 'pointer'}} onClick={this.Toggle}>Hide</p>
-               <Docs_search/>
+               <p style={{cursor: 'pointer'}} onClick={this.toggleOn}>Hide</p>
+               <DocsSearch/>
                <div className="inner_scroll">
                   {docs_data.map(function(thang, i){
                      return <a key={i} style={{color: '#fff'}} href={thang.url}><Column large={3} className="doc_bloc">
@@ -78,7 +78,7 @@ class Docs extends Component {
             </div>
             )
       } else {
-         return (<div className="docs_off_component" onClick={this.Toggle}>
+         return (<div className="docs_off_component" onClick={this.toggleOn}>
             <p>Docs +</p>
          </div>)
       }
