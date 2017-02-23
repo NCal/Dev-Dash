@@ -20,18 +20,20 @@ class App extends Component {
   }
    componentDidMount() {
       this.changeBackground();
-      setTimeout(function(){$('.overlay').fadeOut(1000)},500);
+      setTimeout(function(){
+         $('.overlay').fadeOut(1000)
+      },500);
    }
 
    changeBackground(){
       let today = new Date;
       let todayNum = today.getUTCDate();
-      $('.bgImage').css({'background-image': 'url(src/assets/bg_photos/'+todayNum+'.jpg)'});
+      $('.bg_image').css({'background-image': 'url(src/assets/bg_photos/'+todayNum+'.jpg)'});
    }
    render(){
       return (
          <div className="application">
-            <div className="bgImage">
+            <div className="bg_image">
             <div className="underlay"></div>
                <MainDate/>
                <Search/>

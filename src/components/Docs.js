@@ -175,7 +175,7 @@ class Docs extends Component {
 	            		   	{
 	            		   		docsData.map(function(doc, i){
 	            		   			if (doc.type === 'added'){
-	            		   				return <li className={'userDoc'+i} key={'doc'+ i} style={{'color':'#fff'}} onClick={this.docDelete}>{doc.name}<img src="src/assets/docs_logos/grey/delete.png" className="docDeleteButton" /></li>
+	            		   				return <li className={'userDoc'+i} key={'doc'+ i} style={{'color':'#fff'}} onClick={this.docDelete}>{doc.name}<img src="src/assets/docs_logos/grey/delete.png" className="doc_delete_button" /></li>
 	            		   			}
 		            		   	}.bind(this))
 	            		   	}
