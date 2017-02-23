@@ -11,17 +11,31 @@ body {
    font-family: Quicksand, sans-serif; 
    overflow: hidden;
    background-color: #222;
-   background-image: url('/src/assets/bg_photos/LAX-DEN_Gilad_Rom_5.jpg');
+}
+
+.bgImage {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   height: 100%;
+   width: 100%;
    background-size: cover;
 }
 
+.date {
+   position: relative;
+   top: 230px;
+}
+
 .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #222;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: #fff;
 }
 
 h1,h2,h3,h4,h5,span,p,li,a,ul,ol{
@@ -119,7 +133,7 @@ input::-webkit-input-placeholder {
 /* ==== SEARCH ==== */
 .search {
    position: relative;
-   top: 500px;
+   margin-top: 400px;
    font-size:2em;
    color: rgb(0, 0, 0, 0.6);
 }

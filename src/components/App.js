@@ -18,26 +18,26 @@ class App extends Component {
        name: 'App',
       };
   }
-
    componentDidMount() {
       this.changeBackground();
       setTimeout(function(){$('.overlay').fadeOut(1000)},500);
    }
 
    changeBackground(){
-      console.log('change background');
       let today = new Date;
       let todayNum = today.getUTCDate();
-      $('body').css({'background-image': 'url(src/assets/bg_photos/'+todayNum+'.jpg)'});
+      $('.bgImage').css({'background-image': 'url(src/assets/bg_photos/'+todayNum+'.jpg)'});
    }
    render(){
       return (
          <div className="application">
-            <Search/>
-            <MainDate/>
-            <News/>
-            <Weather/>
-            <Docs/>
+            <div className="bgImage">
+               <MainDate/>
+               <Search/>
+               <News/>
+               <Weather/>
+               <Docs/>
+            </div>
          </div>
       )
    }

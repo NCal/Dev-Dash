@@ -21887,7 +21887,7 @@
 	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Quicksand);", ""]);
 
 	// module
-	exports.push([module.id, "/* ==== WEB FONTS ==== */\n\n/* ===== CONTAINER ELEMENT STYLES ===== */\n* {\n   box-sizing: border-box;\n}\nbody {\n   color: #576366;\n   margin: 0;\n   font-family: Quicksand, sans-serif; \n   overflow: hidden;\n   background-color: #222;\n   background-image: url('/src/assets/bg_photos/LAX-DEN_Gilad_Rom_5.jpg');\n   background-size: cover;\n}\n\n.overlay {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: #222;\n}\n\nh1,h2,h3,h4,h5,span,p,li,a,ul,ol{\n   font-family: Quicksand, sans-serif; \n}\n\ninput {\n   border: 0 !important; \n   color: #fff !important; \n   box-shadow: none !important;\n   background: transparent !important;\n   border-bottom: 1px solid #fff !important;\n}\n\ninput::-webkit-input-placeholder {\n   color: #fff !important;\n}\n\n.application {\n   padding: 10px;\n   margin-top: 10px;\n   height: auto;\n} \n\n.main_container {\n   margin:   0;\n   padding: 0;\n   height: 100%;\n   width: 100%;\n}\n\n.title {\n   opacity: .6;\n   transition: .5s;\n   font-size: 15px;\n}\n\n.title:hover {\n   opacity: 1;\n   transition: .5s;\n}\n\n/* ==== NEWS ==== */\n\n.news_container {\n   position: absolute;\n   top: 10px;\n   left: 10px;\n   overflow-x: hidden;\n   height: 300px;\n   width: 450px;\n   overflow-y: scroll\n}\n\n::-webkit-scrollbar {\n display: none;\n}\n\n.news_container {\n   position: absolute;\n   top: 40px;\n   left: 10px;\n   padding-left: 10px;\n}\n.news_container li {\n   font-size: 13pt;\n   color: #fff;\n   padding-left: 2px;\n}\n\n.news_container a {\n   color:   #fff;\n}\n\n.news_container a:hover {\n   text-decoration: underline;\n}\n\n.news_title {\n   position: absolute;\n}\n\n.outer {\n   position: absolute;\n   top: 10px;\n   left: 10px;\n}\n\n/* ==== TIME ==== */\n.time {\n   font-size: 4em;\n   color: #fff;\n}\n\n/* ==== SEARCH ==== */\n.search {\n   position: relative;\n   top: 500px;\n   font-size:2em;\n   color: rgb(0, 0, 0, 0.6);\n}\n\n.search_input {\n   height: 25px;\n   font-size: 30px;\n   padding: 20px;\n}\n\n.search_option {\n   position: relative;\n   margin: 10px;\n}\n\n.search_option_span {\n   position: relative;\n   font-size: 15pt;\n   color:   #fff;\n}\n\n/* ==== SROLL BAR ==== */\n::-webkit-scrollbar {\n   width: 4px;\n}\n \n::-webkit-scrollbar-track {\n   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); \n   -webkit-border-radius: 10px;\n   border-radius: 10px;\n}\n \n::-webkit-scrollbar-thumb {\n   -webkit-border-radius: 10px;\n   border-radius: 10px;\n   background: #fff; \n   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); \n}\n\n::-webkit-scrollbar-thumb:window-inactive {\n   background: rgba(0,0,0,0); \n}\n\n\n/* WEATHER COMPONENT */\n.weather_component {\n   position: absolute;\n   top: 10px;\n   right: 10px;\n}\n\n.weather_component h5, p, img{\n   margin-bottom: 0;\n   font-size: 18px;\n   color: #fff;\n   text-align: right;\n}\n.weather_component p {\n   opacity: .5;\n   transition: .5s;\n}\n\n.weather_component p:hover {\n   opacity: 1;\n}\n.weather_component img{\n   position: absolute;\n   right: 71px;\n   top: 40px;\n}\n\n/* ==== DOCS ==== */\n.docs_component{\n   height: 350px;\n   width: 300px;\n   opacity: .8;\n   background-color: #222;\n   position: absolute;\n   bottom: 0;\n   right: 0;\n   padding: 15px;\n   border-top-left-radius: 7px;\n}\n\n.docs_off_component {\n   position: absolute;\n   bottom: 10px;\n   right: 10px;\n   cursor: pointer;\n}\n\n.inner_scroll {\n   position: relative;\n   height: 300px;\n   padding-bottom: 20px;\n   overflow: scroll;\n}\n\n.doc_bloc {\n   text-align: center;\n   background-color: #222;\n   height: 70px;\n   overflow: hidden;\n}\n\n.doc_bloc:hover {\n   opacity: .8;\n   cursor: pointer;\n   background-color: #333;\n}\n\n.docs_search_input{\n   height: 25px;\n   display: inline;\n   width: 200px;\n   position: relative;\n}\n\n.doc_logo {\n   width: 100%;\n}\n\n.docDeleteButton {\n  display: inline;\n  margin-left: 10px;\n  width: 20px; \n  height: 20px; \n  cursor: pointer;\n}\n\n/* ==== ANIMATION   ==== */\n\n@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }\n@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }\n\n\n@keyframes pulsate {\n      0% {-webkit-transform: scale(1, 1); }\n      50% {-webkit-transform: scale(1.2, 1.2); }\n      100% {-webkit-transform: scale(1, 1);}\n}\n\n@-webkit-keyframes pulsate {\n      0% {-webkit-transform: scale(1, 1); }\n      50% {-webkit-transform: scale(1.2, 1.2); }\n      100% {-webkit-transform: scale(1, 1);}\n}\n\n@keyframes colorchange\n{\n   0%    {background: rgba(249, 229, 159, 0.28); }\n   50%   {background: rgba(255, 255, 255, 0.9);}\n   100% {background: rgba(249, 229, 159, 0.28);}\n}\n\n@-webkit-keyframes colorchange \n{\n   0%    {background: rgba(249, 229, 159, 0.28);}\n   50%   {background: rgba(255, 255, 255, 0.9);}\n   100% {background: rgba(249, 229, 159, 0.28);}\n}\n\n/* ==== MEDIA QUERIES ==== */\n\n@media screen and (max-width: 1200px){\n\n   .outer {\n      display: none;\n   }\n   .news_container {\n      display: none;\n   }\n\n   .docs_component, .docs_off_component {\n      display: none;\n   }\n\n   .news_component {\n      display: none;\n   }\n}\n\n\n@media screen and (max-width: 600px){\n\n   .search_option_span {\n      font-size: 16px;\n   }\n\n   .search_option {\n      width: 8px;\n   }\n\n   .tab {\n      display: none;\n      background-color: red;\n   }\n\n   .player_container {\n      display: none;\n   }\n\n   .ear_svg {\n      display: none;\n   }\n\n   .container {\n      top: 150px;\n   }\n}\n", ""]);
+	exports.push([module.id, "/* ==== WEB FONTS ==== */\n\n/* ===== CONTAINER ELEMENT STYLES ===== */\n* {\n   box-sizing: border-box;\n}\nbody {\n   color: #576366;\n   margin: 0;\n   font-family: Quicksand, sans-serif; \n   overflow: hidden;\n   background-color: #222;\n}\n\n.bgImage {\n   position: absolute;\n   top: 0;\n   left: 0;\n   width: 100%;\n   height: 100%;\n   height: 100%;\n   width: 100%;\n   background-size: cover;\n}\n\n.date {\n   position: relative;\n   top: 230px;\n}\n\n.overlay {\n   position: absolute;\n   top: 0;\n   left: 0;\n   width: 100%;\n   height: 100%;\n   background-color: #fff;\n}\n\nh1,h2,h3,h4,h5,span,p,li,a,ul,ol{\n   font-family: Quicksand, sans-serif; \n}\n\ninput {\n   border: 0 !important; \n   color: #fff !important; \n   box-shadow: none !important;\n   background: transparent !important;\n   border-bottom: 1px solid #fff !important;\n}\n\ninput::-webkit-input-placeholder {\n   color: #fff !important;\n}\n\n.application {\n   padding: 10px;\n   margin-top: 10px;\n   height: auto;\n} \n\n.main_container {\n   margin:   0;\n   padding: 0;\n   height: 100%;\n   width: 100%;\n}\n\n.title {\n   opacity: .6;\n   transition: .5s;\n   font-size: 15px;\n}\n\n.title:hover {\n   opacity: 1;\n   transition: .5s;\n}\n\n/* ==== NEWS ==== */\n\n.news_container {\n   position: absolute;\n   top: 10px;\n   left: 10px;\n   overflow-x: hidden;\n   height: 300px;\n   width: 450px;\n   overflow-y: scroll\n}\n\n::-webkit-scrollbar {\n display: none;\n}\n\n.news_container {\n   position: absolute;\n   top: 40px;\n   left: 10px;\n   padding-left: 10px;\n}\n.news_container li {\n   font-size: 13pt;\n   color: #fff;\n   padding-left: 2px;\n}\n\n.news_container a {\n   color:   #fff;\n}\n\n.news_container a:hover {\n   text-decoration: underline;\n}\n\n.news_title {\n   position: absolute;\n}\n\n.outer {\n   position: absolute;\n   top: 10px;\n   left: 10px;\n}\n\n/* ==== TIME ==== */\n.time {\n   font-size: 4em;\n   color: #fff;\n}\n\n/* ==== SEARCH ==== */\n.search {\n   position: relative;\n   margin-top: 400px;\n   font-size:2em;\n   color: rgb(0, 0, 0, 0.6);\n}\n\n.search_input {\n   height: 25px;\n   font-size: 30px;\n   padding: 20px;\n}\n\n.search_option {\n   position: relative;\n   margin: 10px;\n}\n\n.search_option_span {\n   position: relative;\n   font-size: 15pt;\n   color:   #fff;\n}\n\n/* ==== SROLL BAR ==== */\n::-webkit-scrollbar {\n   width: 4px;\n}\n \n::-webkit-scrollbar-track {\n   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); \n   -webkit-border-radius: 10px;\n   border-radius: 10px;\n}\n \n::-webkit-scrollbar-thumb {\n   -webkit-border-radius: 10px;\n   border-radius: 10px;\n   background: #fff; \n   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); \n}\n\n::-webkit-scrollbar-thumb:window-inactive {\n   background: rgba(0,0,0,0); \n}\n\n\n/* WEATHER COMPONENT */\n.weather_component {\n   position: absolute;\n   top: 10px;\n   right: 10px;\n}\n\n.weather_component h5, p, img{\n   margin-bottom: 0;\n   font-size: 18px;\n   color: #fff;\n   text-align: right;\n}\n.weather_component p {\n   opacity: .5;\n   transition: .5s;\n}\n\n.weather_component p:hover {\n   opacity: 1;\n}\n.weather_component img{\n   position: absolute;\n   right: 71px;\n   top: 40px;\n}\n\n/* ==== DOCS ==== */\n.docs_component{\n   height: 350px;\n   width: 300px;\n   opacity: .8;\n   background-color: #222;\n   position: absolute;\n   bottom: 0;\n   right: 0;\n   padding: 15px;\n   border-top-left-radius: 7px;\n}\n\n.docs_off_component {\n   position: absolute;\n   bottom: 10px;\n   right: 10px;\n   cursor: pointer;\n}\n\n.inner_scroll {\n   position: relative;\n   height: 300px;\n   padding-bottom: 20px;\n   overflow: scroll;\n}\n\n.doc_bloc {\n   text-align: center;\n   background-color: #222;\n   height: 70px;\n   overflow: hidden;\n}\n\n.doc_bloc:hover {\n   opacity: .8;\n   cursor: pointer;\n   background-color: #333;\n}\n\n.docs_search_input{\n   height: 25px;\n   display: inline;\n   width: 200px;\n   position: relative;\n}\n\n.doc_logo {\n   width: 100%;\n}\n\n.docDeleteButton {\n  display: inline;\n  margin-left: 10px;\n  width: 20px; \n  height: 20px; \n  cursor: pointer;\n}\n\n/* ==== ANIMATION   ==== */\n\n@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }\n@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }\n\n\n@keyframes pulsate {\n      0% {-webkit-transform: scale(1, 1); }\n      50% {-webkit-transform: scale(1.2, 1.2); }\n      100% {-webkit-transform: scale(1, 1);}\n}\n\n@-webkit-keyframes pulsate {\n      0% {-webkit-transform: scale(1, 1); }\n      50% {-webkit-transform: scale(1.2, 1.2); }\n      100% {-webkit-transform: scale(1, 1);}\n}\n\n@keyframes colorchange\n{\n   0%    {background: rgba(249, 229, 159, 0.28); }\n   50%   {background: rgba(255, 255, 255, 0.9);}\n   100% {background: rgba(249, 229, 159, 0.28);}\n}\n\n@-webkit-keyframes colorchange \n{\n   0%    {background: rgba(249, 229, 159, 0.28);}\n   50%   {background: rgba(255, 255, 255, 0.9);}\n   100% {background: rgba(249, 229, 159, 0.28);}\n}\n\n/* ==== MEDIA QUERIES ==== */\n\n@media screen and (max-width: 1200px){\n\n   .outer {\n      display: none;\n   }\n   .news_container {\n      display: none;\n   }\n\n   .docs_component, .docs_off_component {\n      display: none;\n   }\n\n   .news_component {\n      display: none;\n   }\n}\n\n\n@media screen and (max-width: 600px){\n\n   .search_option_span {\n      font-size: 16px;\n   }\n\n   .search_option {\n      width: 8px;\n   }\n\n   .tab {\n      display: none;\n      background-color: red;\n   }\n\n   .player_container {\n      display: none;\n   }\n\n   .ear_svg {\n      display: none;\n   }\n\n   .container {\n      top: 150px;\n   }\n}\n", ""]);
 
 	// exports
 
@@ -21977,10 +21977,9 @@
 	   }, {
 	      key: 'changeBackground',
 	      value: function changeBackground() {
-	         console.log('change background');
 	         var today = new Date();
 	         var todayNum = today.getUTCDate();
-	         (0, _jQuery2.default)('body').css({ 'background-image': 'url(src/assets/bg_photos/' + todayNum + '.jpg)' });
+	         (0, _jQuery2.default)('.bgImage').css({ 'background-image': 'url(src/assets/bg_photos/' + todayNum + '.jpg)' });
 	      }
 	   }, {
 	      key: 'render',
@@ -21988,11 +21987,15 @@
 	         return _react2.default.createElement(
 	            'div',
 	            { className: 'application' },
-	            _react2.default.createElement(_Search2.default, null),
-	            _react2.default.createElement(_Date2.default, null),
-	            _react2.default.createElement(_News2.default, null),
-	            _react2.default.createElement(_Weather2.default, null),
-	            _react2.default.createElement(_Docs2.default, null)
+	            _react2.default.createElement(
+	               'div',
+	               { className: 'bgImage' },
+	               _react2.default.createElement(_Date2.default, null),
+	               _react2.default.createElement(_Search2.default, null),
+	               _react2.default.createElement(_News2.default, null),
+	               _react2.default.createElement(_Weather2.default, null),
+	               _react2.default.createElement(_Docs2.default, null)
+	            )
 	         );
 	      }
 	   }]);
@@ -34865,7 +34868,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+		value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -34889,94 +34892,94 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var MainDate = function (_Component) {
-	  _inherits(MainDate, _Component);
+		_inherits(MainDate, _Component);
 
-	  function MainDate(props) {
-	    _classCallCheck(this, MainDate);
+		function MainDate(props) {
+			_classCallCheck(this, MainDate);
 
-	    var _this = _possibleConstructorReturn(this, (MainDate.__proto__ || Object.getPrototypeOf(MainDate)).call(this, props));
+			var _this = _possibleConstructorReturn(this, (MainDate.__proto__ || Object.getPrototypeOf(MainDate)).call(this, props));
 
-	    _this.startTime = _this.startTime.bind(_this);
-	    _this.checkTime = _this.checkTime.bind(_this);
+			_this.startTime = _this.startTime.bind(_this);
+			_this.checkTime = _this.checkTime.bind(_this);
 
-	    _this.state = {
-	      time: '',
-	      date: ''
-	    };
-	    return _this;
-	  }
+			_this.state = {
+				time: '',
+				date: ''
+			};
+			return _this;
+		}
 
-	  _createClass(MainDate, [{
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      this.startTime();
-	    }
-	  }, {
-	    key: 'startTime',
-	    value: function startTime() {
-	      var today = new Date();
-	      var h = today.getHours();
-	      var m = today.getMinutes();
+		_createClass(MainDate, [{
+			key: 'componentDidMount',
+			value: function componentDidMount() {
+				this.startTime();
+			}
+		}, {
+			key: 'startTime',
+			value: function startTime() {
+				var today = new Date();
+				var h = today.getHours();
+				var m = today.getMinutes();
 
-	      if (h >= 13) {
-	        h = h - 12;
-	      }
-	      if (h === 0 || h === 24 || h === -12) {
-	        h = 12;
-	      }
+				if (h >= 13) {
+					h = h - 12;
+				}
+				if (h === 0 || h === 24 || h === -12) {
+					h = 12;
+				}
 
-	      m = this.checkTime(m);
-	      this.setState({ time: h + ":" + m });
-	      this.setState({ date: today.toDateString() });
-	      var t = setTimeout(this.startTime, 500);
-	    }
-	  }, {
-	    key: 'checkTime',
-	    value: function checkTime(i) {
-	      if (i < 10) {
-	        i = "0" + i;
-	      };
-	      return i;
-	    }
-	  }, {
-	    key: 'handleMouseOver',
-	    value: function handleMouseOver() {
-	      (0, _jQuery2.default)('.time').animate({ 'letter-spacing': '0.3em' }, 200);
-	    }
-	  }, {
-	    key: 'handleMouseLeave',
-	    value: function handleMouseLeave() {
-	      (0, _jQuery2.default)('.time').animate({ 'letter-spacing': '0em' }, 200);
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          _reactFoundation.Column,
-	          { small: 8, medium: 8, large: 3, centerOnSmall: true, centerOnLarge: true, centerOnMedium: true },
-	          _react2.default.createElement(
-	            'h1',
-	            { className: 'time', style: { textAlign: 'center' }, onMouseOver: this.handleMouseOver, onMouseLeave: this.handleMouseLeave },
-	            this.state.time
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            { style: { textAlign: 'center' } },
-	            this.state.date
-	          )
-	        )
-	      );
-	    }
-	  }]);
+				m = this.checkTime(m);
+				this.setState({ time: h + ":" + m });
+				this.setState({ date: today.toDateString() });
+				var t = setTimeout(this.startTime, 500);
+			}
+		}, {
+			key: 'checkTime',
+			value: function checkTime(i) {
+				if (i < 10) {
+					i = "0" + i;
+				};
+				return i;
+			}
+		}, {
+			key: 'handleMouseOver',
+			value: function handleMouseOver() {
+				(0, _jQuery2.default)('.time').animate({ 'letter-spacing': '0.3em' }, 200);
+			}
+		}, {
+			key: 'handleMouseLeave',
+			value: function handleMouseLeave() {
+				(0, _jQuery2.default)('.time').animate({ 'letter-spacing': '0em' }, 200);
+			}
+		}, {
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'div',
+					{ className: 'date' },
+					_react2.default.createElement(
+						_reactFoundation.Column,
+						{ small: 8, medium: 8, large: 3, centerOnSmall: true, centerOnLarge: true, centerOnMedium: true },
+						_react2.default.createElement(
+							'h1',
+							{ className: 'time', style: { textAlign: 'center' }, onMouseOver: this.handleMouseOver, onMouseLeave: this.handleMouseLeave },
+							this.state.time
+						),
+						_react2.default.createElement(
+							'p',
+							{ style: { textAlign: 'center' } },
+							this.state.date
+						)
+					)
+				);
+			}
+		}]);
 
-	  return MainDate;
+		return MainDate;
 	}(_react.Component);
 
 	Date.defaultProps = {
-	  name: 'Date'
+		name: 'Date'
 	};
 
 	exports.default = MainDate;

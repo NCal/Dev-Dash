@@ -32,7 +32,7 @@ class MainDate extends Component {
    	let t = setTimeout(this.startTime, 500);
 	}
 
-  
+
 
    checkTime(i) {
       if (i < 10) {i = "0" + i };
@@ -48,7 +48,7 @@ class MainDate extends Component {
 	}
 
 	render(){
-		return (<div>
+		return (<div className="date">
 			<Column  small={8} medium={8} large={3} centerOnSmall centerOnLarge centerOnMedium >
 				<h1  className="time" style={{textAlign: 'center'}} onMouseOver={this.handleMouseOver} onMouseLeave={this.handleMouseLeave}>{this.state.time}</h1>
 				<p style={{textAlign: 'center'}}>{this.state.date}</p>
