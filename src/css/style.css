@@ -12,6 +12,16 @@ body {
    overflow: hidden;
    background-color: #222;
    background-image: url('/src/assets/bg_photos/LAX-DEN_Gilad_Rom_5.jpg');
+   background-size: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #222;
 }
 
 h1,h2,h3,h4,h5,span,p,li,a,ul,ol{
