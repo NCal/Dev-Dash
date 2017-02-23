@@ -6,15 +6,17 @@ import Foundation from 'react-foundation';
 class Weather extends Component {
    constructor(props) {
       super(props);
-
+      this.toggleTemp = this.toggleTemp.bind(this);
       this.getWeather = this.getWeather.bind(this);
       this.handleData = this.handleData.bind(this);
       this.clearState = this.clearState.bind(this);
+      
 
       this.state = {
          local: false,
          entered: false,
          location: null,
+         metric: 'F',
          name: null,
          temp: null,
          icon: null,
@@ -68,6 +70,32 @@ class Weather extends Component {
          }
    }
 
+   toggleTemp(){
+      if (this.state.metric !=='C'){
+         let split = this.state.temp.split('');
+         split.splice((split.length-2, 2));
+         let temp = parseInt(split.join(''));
+         let cel = (temp - 32) / (1.8);
+         cel = parseInt(cel.toFixed(4));
+         this.setState({
+            metric: 'C',
+            temp: cel +' °'
+         });
+      }  
+
+      else {
+         let split = this.state.temp.split('');
+         split.splice((split.length-2, 2));
+         let temp = parseInt(split.join(''));
+         let far = (temp * 1.8) + 33 ;
+         far = parseInt(far.toFixed(4));
+         this.setState({
+            metric: 'F',
+            temp: far +' °'
+         });
+      }
+   }
+
    clearState(){
       this.setState({
          'entered': false,
@@ -94,7 +122,7 @@ class Weather extends Component {
                      <h5>{this.state.name}</h5>
                      <h5>{this.state.current}</h5>
                      <img src={this.state.icon} alt="weather_icon" />
-                     <h5>{this.state.temp}</h5>
+                     <h5 onDoubleClick={this.toggleTemp}>{this.state.temp}</h5>
                      <p className="title" onClick={this.clearState} style={{cursor: 'pointer'}}>Change {<br/>}Location</p>
                   </Column>
                </div>
