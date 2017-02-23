@@ -32,6 +32,7 @@ class App extends Component {
       return (
          <div className="application">
             <div className="bgImage">
+            <div className="underlay"></div>
                <MainDate/>
                <Search/>
                <News/>
