@@ -35169,6 +35169,7 @@
 
 	      var _this = _possibleConstructorReturn(this, (Weather.__proto__ || Object.getPrototypeOf(Weather)).call(this, props));
 
+	      _this.toggleTemp = _this.toggleTemp.bind(_this);
 	      _this.getWeather = _this.getWeather.bind(_this);
 	      _this.handleData = _this.handleData.bind(_this);
 	      _this.clearState = _this.clearState.bind(_this);
@@ -35177,6 +35178,7 @@
 	         local: false,
 	         entered: false,
 	         location: null,
+	         metric: 'F',
 	         name: null,
 	         temp: null,
 	         icon: null,
@@ -35235,6 +35237,31 @@
 	         }
 	      }
 	   }, {
+	      key: 'toggleTemp',
+	      value: function toggleTemp() {
+	         if (this.state.metric !== 'C') {
+	            var split = this.state.temp.split('');
+	            split.splice((split.length - 2, 2));
+	            var temp = parseInt(split.join(''));
+	            var cel = (temp - 32) / 1.8;
+	            cel = parseInt(cel.toFixed(4));
+	            this.setState({
+	               metric: 'C',
+	               temp: cel + ' °'
+	            });
+	         } else {
+	            var _split = this.state.temp.split('');
+	            _split.splice((_split.length - 2, 2));
+	            var _temp = parseInt(_split.join(''));
+	            var far = _temp * 1.8 + 33;
+	            far = parseInt(far.toFixed(4));
+	            this.setState({
+	               metric: 'F',
+	               temp: far + ' °'
+	            });
+	         }
+	      }
+	   }, {
 	      key: 'clearState',
 	      value: function clearState() {
 	         this.setState({
@@ -35278,7 +35305,7 @@
 	                  _react2.default.createElement('img', { src: this.state.icon, alt: 'weather_icon' }),
 	                  _react2.default.createElement(
 	                     'h5',
-	                     null,
+	                     { onDoubleClick: this.toggleTemp },
 	                     this.state.temp
 	                  ),
 	                  _react2.default.createElement(
