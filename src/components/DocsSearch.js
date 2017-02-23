@@ -19,8 +19,10 @@ class DocsSearch extends Component {
       for (let i = 0; i< docsData.length; i++){
          if ( docsData[i].name.toLowerCase().indexOf(search.toLowerCase()) === -1){
             $('.doc_bloc img[title="'+docsData[i].name+'"]').parent().hide();
+            $('.doc_bloc h3[title="'+docsData[i].name+'"]').parent().hide();
          }   else {
             $('.doc_bloc img[title="'+docsData[i].name+'"]').parent().show();
+            $('.doc_bloc h3[title="'+docsData[i].name+'"]').parent().show();
          }
       }
    }

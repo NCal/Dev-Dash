@@ -193,18 +193,18 @@ input::-webkit-input-placeholder {
 }
 
 
-/* WEATHER COMPONENT */
+/* ==== WEATHER COMPONENT ==== */
 .weather_component {
    position: absolute;
    top: 10px;
    right: 10px;
+   text-align: right;
 }
 
-.weather_component h5, p, img{
+.weather_component h5, p {
    margin-bottom: 0;
    font-size: 18px;
    color: #fff;
-   text-align: right;
 }
 .weather_component p {
    opacity: .5;
@@ -213,11 +213,6 @@ input::-webkit-input-placeholder {
 
 .weather_component p:hover {
    opacity: 1;
-}
-.weather_component img{
-   position: absolute;
-   right: 71px;
-   top: 40px;
 }
 
 /* ==== DOCS ==== */
@@ -231,6 +226,9 @@ input::-webkit-input-placeholder {
    right: 0;
    padding: 15px;
    border-top-left-radius: 7px;
+}
+.docs_component p{
+   text-align: right;
 }
 
 .docs_off_component {
