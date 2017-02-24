@@ -2,9 +2,9 @@
   "manifest_version": 2,
    "name": "Dev-Dash",
    "short_name": "Dev-Dash",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "offline_enabled": true,
-
+  "description": "Replace a new tab page with a dashboard designed with developers and software engineers in mind. Dev Dash features a current news feed from Ycombinator's Hacker News, documentation for your favorite programming languages and frameworks, a quick search from Google, Stack Overflow, & Github, and of course - the time and weather.",
   "background": {
       "scripts": ["bundle.js"],
       "persistent": false
@@ -12,6 +12,11 @@
 
     "chrome_url_overrides": {
       "newtab": "index.html"
+    },
+    "icons": {
+       "128": "icon-128.png",
+       "16": "icon-16.png",
+       "48": "icon-48.png"
     },
 
   "permissions": [
