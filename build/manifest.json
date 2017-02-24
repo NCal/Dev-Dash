@@ -1,10 +1,10 @@
 {
    "manifest_version": 2,
    "name": "Dev-Dash",
-   "short_name": "Dev-Dash",
    "version": "0.0.3",
-   "offline_enabled": true,
    "description": "Replace a new tab page with a dashboard designed with developers and software engineers in mind.",
+   "offline_enabled": true,
+   "author": "Nathan Broaddus",
    "background": {
       "scripts": ["bundle.js"],
       "persistent": false
