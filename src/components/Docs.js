@@ -23,7 +23,6 @@ class Docs extends Component {
    }
 
    componentDidMount() {
-   	// console.log(Docs);
    	this.handleCustomDocs();
 
    	if (localStorage.customDocAmount === "0"){
@@ -32,14 +31,11 @@ class Docs extends Component {
    }
 
    handleCustomDocs(){
-   	// console.log('handle custom docs');
 		if (localStorage.customDocAmount !== undefined){
 			let customDocs = JSON.parse(localStorage.customDocs);
-			// console.log('we have custom docs here:', customDocs);
 			customDocs.forEach(function(doc){
 				docsData.unshift(doc);
 			});
-			// console.log('updated docs data', docsData);
 			this.setState({customDocs: !this.state.customDocs});
    	}
 	}

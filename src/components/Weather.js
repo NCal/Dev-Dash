@@ -47,6 +47,9 @@ class Weather extends Component {
             let current = response.weather[0].description;
             let temp = response.main.temp;
             let icon = response.weather[0].icon;
+            let split = temp.toString().split('');
+            split.splice(split.indexOf('.'), split.length);
+            temp = parseInt(split.join(''));
 
             self.setState({
                current: current,
@@ -62,9 +65,7 @@ class Weather extends Component {
       let input_value = document.querySelector('.weather_input').value;
          if (e.key === 'Enter'){
             this.setState({location: input_value}, function(){
-               // console.log(this.state.location);
                localStorage.location = this.state.location;
-               // console.log('local location', localStorage.location);
                this.getWeather(this.state.location);
             });
          }
