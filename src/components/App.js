@@ -27,7 +27,7 @@ class App extends Component {
 
    changeBackground(){
       let today = new Date;
-      let todayNum = today.getUTCDate();
+      let todayNum = today.getDate();
       $('.bg_image').css({'background-image': 'url(src/assets/bg_photos/'+todayNum+'.jpg)'});
    }
    render(){
