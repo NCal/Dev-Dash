@@ -1,7 +1,7 @@
 {
    "manifest_version": 2,
    "name": "Dev-Dash",
-   "version": "0.0.4",
+   "version": "0.0.5",
    "description": "Replace a new tab page with a dashboard designed with developers and software engineers in mind.",
    "offline_enabled": true,
    "author": "Nathan Broaddus",
@@ -17,9 +17,11 @@
       "16": "icon-16.png",
       "48": "icon-48.png"
    },
+   "content_security_policy": "script-src 'self' ; object-src 'self'",
    "permissions": [
-      "activeTab", "tabs", "storage",
-      "https://ajax.googleapis.com/",
+      "activeTab", 
+      "tabs", 
+      "storage",
       "geolocation"
    ]
 }
