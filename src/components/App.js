@@ -6,6 +6,7 @@ import Search from './Search.js';
 import MainDate from './Date.js';
 import News from './News.js';
 import Weather from './Weather.js';
+import Github from './Github.js';
 import Docs from './Docs.js';
 import picsData from '../data/picsData.js';
 
@@ -40,6 +41,7 @@ class App extends Component {
                <News/>
                <Weather/>
                <Docs/>
+               {/*<Github/>*/}
             </div>
          </div>
       )
