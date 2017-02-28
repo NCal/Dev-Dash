@@ -330,6 +330,10 @@ a {
       display: none;
    }
 
+   .github_component {
+      display: none;
+   }
+   
    .news_component {
       display: none;
    }
