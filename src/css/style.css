@@ -27,6 +27,12 @@ input {
 
 input::-webkit-input-placeholder {
    color: #fff !important;
+   /* font-style: italic; */
+}
+
+
+a {
+   color: #74c9ff;
 }
 
 /* ==== APPLICATION ==== */
@@ -46,13 +52,14 @@ input::-webkit-input-placeholder {
 
 .title {
    opacity: .6;
-   transition: .5s;
+   /* transition: .5s; */
    font-size: 15px;
+   cursor: pointer;
 }
 
 .title:hover {
    opacity: 1;
-   transition: .5s;
+   /* transition: .5s; */
 }
 
 /* ==== BG IMAGE ==== */
