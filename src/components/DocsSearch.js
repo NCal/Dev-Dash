@@ -15,6 +15,7 @@ class DocsSearch extends Component {
 
    onEdit(e){
       let search = e;
+      console.log(e);
    
       for (let i = 0; i< docsData.length; i++){
          if ( docsData[i].name.toLowerCase().indexOf(search.toLowerCase()) === -1){

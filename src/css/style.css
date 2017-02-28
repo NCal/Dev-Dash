@@ -281,6 +281,28 @@ input::-webkit-input-placeholder {
    cursor: pointer;
 }
 
+
+.github_component {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   /* cursor: pointer; */
+   color: #fff;
+}
+
+.gh_title {
+   padding-left: 10px;
+   padding-bottom: 10px;
+}
+
+.gh_on {
+   padding: 10px;
+   height: 200px;
+   width: 300px;
+   opacity: 0.7;
+   background-color: #222;
+}
+
 /* ==== ANIMATION   ==== */
 
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
