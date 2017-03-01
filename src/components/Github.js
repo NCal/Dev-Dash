@@ -12,7 +12,8 @@ class Github extends Component {
       this.state = {
          on: false,
          user_data: null,
-         user_repo_data: null
+         user_repo_data: null,
+         display_username: null
       };
    }
 
@@ -42,15 +43,28 @@ class Github extends Component {
       this.setState({user_data: null});
    }
 
+   manageUsernameLength(){
+      let self = this;
+      let username = this.state.user_data.user;
+      let username_length = this.state.user_data.user.length;
+      if (username_length > 13){
+         let display_un = username.split('');
+         display_un.splice(10, display_un.length);
+         display_un.push('..');
+         display_un = display_un.join('');
+         self.setState({display_username: display_un});
+      } else {
+         self.setState({display_username: username});
+      }
+   }
+
    getRequest(username){
-      console.log('USERNAME', username);
       let self = this;
       $.getJSON('https://api.github.com/users/'+ username, 
          {client_id: '28e07835843f7977ad64',
           client_secret: 'c971128144f02c7f97f96fdf45bf2649424cb46b'
          }, 
          function(res){
-          console.log('response',res);
             let user_data = {
                user : res.login,
                id: res.id,
@@ -67,34 +81,35 @@ class Github extends Component {
             };
             
             localStorage.user_data = JSON.stringify(user_data);
-            self.setState({user_data: JSON.parse(localStorage.user_data)});
-            console.log('USER DATA', user_data);
+            self.setState({user_data: JSON.parse(localStorage.user_data)}, function(){
+               self.manageUsernameLength();
+            });
            
       }).then(
-         $.getJSON('https://api.github.com/users/'+username+'/repos', 
-            {
-               client_id: '28e07835843f7977ad64',
-               client_secret: 'c971128144f02c7f97f96fdf45bf2649424cb46b'
-            }, 
-            function(res){
-               let repos = [];
-               res.forEach(function(repo, i){
-                  let repo_data = {
-                     name: res[i].name,
-                     description: res[i].description,
-                     open_issues: res[i].open_issues,
-                     url: res[i].html_url,
-                     last_push: res[i].pushed_at,
-                  };
-                  repos.push(repo_data);
-               });
+         // use d3 to visualize data in repos
+         // $.getJSON('https://api.github.com/users/'+username+'/repos', 
+         //    {
+         //       client_id: '28e07835843f7977ad64',
+         //       client_secret: 'c971128144f02c7f97f96fdf45bf2649424cb46b'
+         //    }, 
+         //    function(res){
+         //       let repos = [];
+         //       res.forEach(function(repo, i){
+         //          let repo_data = {
+         //             name: res[i].name,
+         //             description: res[i].description,
+         //             open_issues: res[i].open_issues,
+         //             url: res[i].html_url,
+         //             last_push: res[i].pushed_at,
+         //          };
+         //          repos.push(repo_data);
+         //       });
 
-               localStorage.user_repo_data = JSON.stringify(repos);
-               self.setState({user_repo_data: JSON.parse(localStorage.user_repo_data)});
-
-               console.log('state', self.state);
-            }
-      ));
+         //       localStorage.user_repo_data = JSON.stringify(repos);
+         //       self.setState({user_repo_data: JSON.parse(localStorage.user_repo_data)});
+         //    }
+         // )
+         );
    }
 
    render() {
@@ -116,12 +131,11 @@ class Github extends Component {
                 <p className="gh_title title gh_hide" onClick={this.handleClick}>Hide</p>
                  <a href={this.state.user_data.url}><img src={this.state.user_data.av}  className="gh_av" alt="" target="_blank"/></a>
                  <ul className="user_data_ul">
-                    <h5>{this.state.user_data.user}</h5>
+                    <a className="gh_username" href={this.state.user_data.url}><h5 >{this.state.display_username} <img className="gh_change_user" src="src/assets/edit.png" alt="" onClick={this.changeUser} /></h5></a>
                     <a href={"https://github.com/"+this.state.user_data.user+"?tab=following"}><li>Following : {this.state.user_data.following}</li></a>
                     <a href={"https://github.com/"+this.state.user_data.user+"?tab=followers"}><li>Followers : {this.state.user_data.followers}</li></a>
                     <a href={"https://github.com/"+this.state.user_data.user+"?tab=repositories"}><li>Public Repos : {this.state.user_data.pub_repos}</li></a>
                  </ul>
-                 <p className="gh_title title gh_change_user" onClick={this.changeUser}>Change User</p>
                </div>
             </div>
          )
