@@ -131,7 +131,7 @@ class Github extends Component {
                 <p className="gh_title title gh_hide" onClick={this.handleClick}>Hide</p>
                  <a href={this.state.user_data.url}><img src={this.state.user_data.av}  className="gh_av" alt="" target="_blank"/></a>
                  <ul className="user_data_ul">
-                    <a className="gh_username" href={this.state.user_data.url}><h5 >{this.state.display_username} <img className="gh_change_user" src="src/assets/edit.png" alt="" onClick={this.changeUser} /></h5></a>
+                    <h5 >{this.state.display_username} <img className="gh_change_user" src="src/assets/edit.png" alt="" onClick={this.changeUser} /></h5>
                     <a href={"https://github.com/"+this.state.user_data.user+"?tab=following"}><li>Following : {this.state.user_data.following}</li></a>
                     <a href={"https://github.com/"+this.state.user_data.user+"?tab=followers"}><li>Followers : {this.state.user_data.followers}</li></a>
                     <a href={"https://github.com/"+this.state.user_data.user+"?tab=repositories"}><li>Public Repos : {this.state.user_data.pub_repos}</li></a>

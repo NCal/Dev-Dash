@@ -56,7 +56,7 @@ class Weather extends Component {
          
 
          $.getJSON('https://maps.googleapis.com/maps/api/geocode/json?latlng=' + latitude + ',' + longitude + '&sensor=true', function(data) {
-            alert(latitude +' '+ longitude);
+            // alert(latitude +' '+ longitude);
             loc = data.results[2].address_components[0].long_name;
             self.setState({location: loc});
             self.getWeather(self.state.location);
