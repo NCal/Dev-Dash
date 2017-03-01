@@ -10,6 +10,7 @@ class Weather extends Component {
       this.getWeather = this.getWeather.bind(this);
       this.handleData = this.handleData.bind(this);
       this.clearState = this.clearState.bind(this);
+      this.locationTest = this.locationTest.bind(this);
       
 
       this.state = {
@@ -32,7 +33,41 @@ class Weather extends Component {
    handleLocalData(){
       if (localStorage.location !== undefined){
             this.getWeather(localStorage.location);
+      } else {
+          this.locationTest();
       }
+   }
+
+   locationTest(){
+      let self = this;
+      console.log('location test');
+      let loc = null;
+      var options = {
+          enableHighAccuracy: true,
+          timeout: 5000,
+          maximumAge: 0
+      };
+
+      function success(pos) {
+
+         let crd = pos.coords;
+         let latitude = crd.latitude;
+         let longitude = crd.longitude;
+         
+
+         $.getJSON('https://maps.googleapis.com/maps/api/geocode/json?latlng=' + latitude + ',' + longitude + '&sensor=true', function(data) {
+            loc = data.results[2].address_components[0].long_name;
+            self.setState({location: loc});
+            self.getWeather(self.state.location);
+            localStorage.location = self.state.location;
+         });
+      }
+
+      function error(err) {
+          console.warn(`ERROR(${err.code}): ${err.message}`);
+      };
+
+      navigator.geolocation.getCurrentPosition(success, error, options);
    }
 
    getWeather(location){
