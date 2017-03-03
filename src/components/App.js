@@ -5,6 +5,7 @@ import $ from 'jQuery';
 import Search from './Search.js';
 import MainDate from './Date.js';
 import News from './News.js';
+import Add from './Add.js';
 import Weather from './Weather.js';
 import Github from './Github.js';
 import Docs from './Docs.js';
@@ -36,6 +37,7 @@ class App extends Component {
          <div className="application">
             <div className="bg_image">
             <div className="underlay"></div>
+               {/*<Add/>*/}
                <MainDate/>
                <Search/>
                <News/>

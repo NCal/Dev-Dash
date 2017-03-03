@@ -371,6 +371,23 @@ a {
    display: inline;
 }
 
+/* ==== ADD ==== */
+.add {
+   position: relative;
+   margin: 0 auto;
+   text-align: center;
+   color: #fff;
+   opacity: .7;
+   width: 300px;
+   cursor: pointer;
+   transition: .3s
+}
+
+.add:hover {
+   opacity: 1;
+}
+
+
 /* ==== ANIMATION   ====
 
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
