@@ -10,10 +10,6 @@ class Add extends Component {
       };
    }
 
-   componentDidMount() {
-    console.log('add mounted');
-   }
-
    render() {
     return (<div className="add">
      <a href="https://goo.gl/KXAtAk"><h3>Add to Chrome</h3></a>

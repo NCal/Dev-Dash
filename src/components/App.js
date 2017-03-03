@@ -37,7 +37,7 @@ class App extends Component {
          <div className="application">
             <div className="bg_image">
             <div className="underlay"></div>
-               {/*<Add/>*/}
+                {/* <Add/>*/}
                <MainDate/>
                <Search/>
                <News/>

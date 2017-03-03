@@ -10,7 +10,7 @@ class News extends Component {
       this.getReq = this.getReq.bind(this);
       this.handleClick = this.handleClick.bind(this);
       this.state = {
-         on: false,
+         on: true,
          stories: []
       };
    }

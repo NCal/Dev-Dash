@@ -387,12 +387,6 @@ a {
    opacity: 1;
 }
 
-
-/* ==== ANIMATION   ====
-
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
-
 /* ==== MEDIA QUERIES ==== */
 
 @media screen and (max-width: 1200px){
