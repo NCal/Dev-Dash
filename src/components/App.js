@@ -9,6 +9,7 @@ import Add from './Add.js';
 import Weather from './Weather.js';
 import Github from './Github.js';
 import Docs from './Docs.js';
+import Share from './Share.js';
 import picsData from '../data/picsData.js';
 
 class App extends Component {
@@ -23,8 +24,8 @@ class App extends Component {
    componentDidMount() {
       this.changeBackground();
       setTimeout(function(){
-         $('.overlay').fadeOut(500);
-      },500);
+         $('.overlay').fadeOut(200);
+      },30);
    }
 
    changeBackground(){
@@ -38,6 +39,7 @@ class App extends Component {
             <div className="bg_image">
             <div className="underlay"></div>
                 {/* <Add/>*/}
+                <Share/>
                <MainDate/>
                <Search/>
                <News/>

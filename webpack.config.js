@@ -10,18 +10,18 @@ module.exports = {
             }
          }),
 
-         new webpackUglifyJsPlugin({
-            cacheFolder: __dirname+ 'public/cached_uglify/',
-            debug: false,
-            sourceMap: false,
-            drop_console: true,
-            output: {
-               comments: false 
-            },
-            compressor: {
-               warnings: false
-            }
-         })
+         // new webpackUglifyJsPlugin({
+         //    cacheFolder: __dirname+ 'public/cached_uglify/',
+         //    debug: false,
+         //    sourceMap: false,
+         //    drop_console: true,
+         //    output: {
+         //       comments: false 
+         //    },
+         //    compressor: {
+         //       warnings: false
+         //    }
+         // })
    ],
 
    module: {

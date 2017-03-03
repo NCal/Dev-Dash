@@ -134,11 +134,11 @@ class Docs extends Component {
                  {
                  	docsData.map(function(doc, i){
                  	if (doc.type ==="added" ){
-                 		return <a key={i} style={{color: '#fff'}} href={doc.url}><Column large={3} className="doc_bloc">
+                 		return <a key={i} style={{color: '#fff'}} href={doc.url} target="_blank"><Column large={3} className="doc_bloc">
                  		   <h3 title={doc.name}>{doc.symbol}</h3>
                  		</Column></a>
                  	} else {
-                 		return <a key={i} style={{color: '#fff'}} href={doc.url}><Column large={3} className="doc_bloc">
+                 		return <a key={i} style={{color: '#fff'}} href={doc.url} target="_blank"><Column large={3} className="doc_bloc">
                  		   <img className="doc_logo" title={doc.name} src={doc.logo}/>
                  		</Column></a>
                  	}

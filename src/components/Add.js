@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import $ from 'jQuery';
+// import $ from 'jQuery';
 
 class Add extends Component {
    constructor(props) {

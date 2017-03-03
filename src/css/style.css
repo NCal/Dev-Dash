@@ -30,7 +30,9 @@ input::-webkit-input-placeholder {
    /* font-style: italic; */
 }
 
-
+ol {
+    margin-left: 1.5rem;
+}
 a {
    color: #74c9ff;
 }
@@ -387,8 +389,26 @@ a {
    opacity: 1;
 }
 
-/* ==== MEDIA QUERIES ==== */
+/* ==== SHARE ==== */
+.share {
+   position: absolute;
+   right: 20px;
+   top: 230px;
+   z-index: 30;
+   opacity: .2;
+   transition: .3s
+}
 
+.share:hover {
+   opacity: .6;
+   transition: .3s
+}
+
+.share img {
+   width: 30px;
+}
+
+/* ==== MEDIA QUERIES ==== */
 @media screen and (max-width: 1200px){
 
    .outer {

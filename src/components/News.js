@@ -61,7 +61,7 @@ class News extends Component {
                <div className="news_container">
                   <ol>
                      {this.state.stories.map(function(story, i){
-                        return <li key={i}><a href={story.url}>{story.title}</a></li>
+                        return <li key={i}><a href={story.url} target="_blank">{story.title}</a></li>
                      })}
                   </ol>
                </div>
