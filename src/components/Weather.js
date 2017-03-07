@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import $ from 'jQuery';
+import $ from 'jquery';
 import { Row, Column } from 'react-foundation';
 import Foundation from 'react-foundation';
 

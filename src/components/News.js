@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Column } from 'react-foundation';
-import $ from 'jQuery';
+import $ from 'jquery';
 
 
 class News extends Component {

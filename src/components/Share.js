@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import $ from 'jQuery';
+import $ from 'jquery';
 
 class Share extends Component {
    constructor(props) {

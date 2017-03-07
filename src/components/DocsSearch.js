@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Column } from 'react-foundation';
-import $ from 'jQuery';
+import $ from 'jquery';
 import docsData from '../data/docsData.js';
 
 class DocsSearch extends Component {

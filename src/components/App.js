@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Column } from 'react-foundation';
 import Foundation from 'react-foundation';
-import $ from 'jQuery';
+import $ from 'jquery';
 import Search from './Search.js';
 import MainDate from './Date.js';
 import News from './News.js';
