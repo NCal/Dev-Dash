@@ -39,7 +39,12 @@ class News extends Component {
                for (let j=0; j < ids.length; j++){
                   $.getJSON('https://hacker-news.firebaseio.com/v0/item/'+ids[j]+'.json?print=pretty',
                   {},
-                  function(response){
+                  function(response, i){
+                     // fix askHN no response.url
+                     if (response.url === undefined) {
+                        response.url = 'https://news.ycombinator.com/item?id=' + response.id;
+                     }
+                     //
                      stories.push({ title: response.title, url: response.url});
                      setFinalState(stories);
                   });
