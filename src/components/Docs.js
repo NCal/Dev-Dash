@@ -69,7 +69,8 @@ class Docs extends Component {
    	let elToRemove = e.target.parentElement.innerText;
 
    	docsData.forEach(function(doc, i){
-			 if (doc.type === 'added' && doc.name === elToRemove){
+			 // if (doc.type === 'added' && doc.name === elToRemove){
+       if (doc.name === elToRemove){
 			 	e.target.parentElement.remove();
 				let startIndex = docsData.indexOf(doc);
 				let localDocAmount = parseInt(localStorage.customDocAmount);
@@ -161,7 +162,7 @@ class Docs extends Component {
       		</div>
    		)
       }
-      if (this.state.mode === 'sub' && this.state.customDocs ===true){
+      if (this.state.mode === 'sub'){
             	return (
             		<div className="docs_component">
             		   <p style={{'cursor': 'pointer'}} onClick={this.toggleOn}>Hide</p>
@@ -170,9 +171,9 @@ class Docs extends Component {
 	            		   <ul>
 	            		   	{
 	            		   		docsData.map(function(doc, i){
-	            		   			if (doc.type === 'added'){
+	            		   			// if (doc.type === 'added'){
 	            		   				return <li className={'userDoc'+i} key={'doc'+ i} style={{'color':'#fff'}} onClick={this.docDelete}>{doc.name}<img src="src/assets/docs_logos/grey/delete.png" className="doc_delete_button" /></li>
-	            		   			}
+	            		   			// }
 		            		   	}.bind(this))
 	            		   	}
 	            		   </ul>
