@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Row, Column } from 'react-foundation';
 import $ from 'jquery';
-import docsData from '../data/docsData.js';
+// import docsData from '../data/docsData.js';
+
+
 
 class DocsSearch extends Component {
    constructor(props){
@@ -16,13 +18,13 @@ class DocsSearch extends Component {
    onEdit(e){
       let search = e;
    
-      for (let i = 0; i< docsData.length; i++){
-         if ( docsData[i].name.toLowerCase().indexOf(search.toLowerCase()) === -1){
-            $('.doc_bloc img[title="'+docsData[i].name+'"]').parent().hide();
-            $('.doc_bloc h3[title="'+docsData[i].name+'"]').parent().hide();
+      for (let i = 0; i< JSON.parse(localStorage.preDocsData).length; i++){
+         if ( JSON.parse(localStorage.preDocsData)[i].name.toLowerCase().indexOf(search.toLowerCase()) === -1){
+            $('.doc_bloc img[title="'+JSON.parse(localStorage.preDocsData)[i].name+'"]').parent().hide();
+            $('.doc_bloc h3[title="'+JSON.parse(localStorage.preDocsData)[i].name+'"]').parent().hide();
          }   else {
-            $('.doc_bloc img[title="'+docsData[i].name+'"]').parent().show();
-            $('.doc_bloc h3[title="'+docsData[i].name+'"]').parent().show();
+            $('.doc_bloc img[title="'+JSON.parse(localStorage.preDocsData)[i].name+'"]').parent().show();
+            $('.doc_bloc h3[title="'+JSON.parse(localStorage.preDocsData)[i].name+'"]').parent().show();
          }
       }
    }

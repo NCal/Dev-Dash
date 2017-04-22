@@ -4,6 +4,7 @@ import Foundation from 'react-foundation';
 import DocsSearch from './DocsSearch.js';
 import docsData from '../data/docsData.js';
 
+
 class Docs extends Component {
    constructor(props){
       super(props);
@@ -11,34 +12,36 @@ class Docs extends Component {
       this.addDoc = this.addDoc.bind(this);
       this.subDoc = this.subDoc.bind(this);
       this.saveInput = this.saveInput.bind(this);
-      this.handleCustomDocs = this.handleCustomDocs.bind(this);
       this.docDelete = this.docDelete.bind(this);
       this.localDocDelete = this.localDocDelete.bind(this);
-      
+
       this.state = {
          mode: 'off',
          docInput: null,
          customDocs: false,
       };
    }
-
+    
+    componentWillMount() {
+          localStorage.customDocs= undefined;
+          this.doesPreDocsExist();
+    }
    componentDidMount() {
-   	this.handleCustomDocs();
 
    	if (localStorage.customDocAmount === "0"){
    		this.setState({customDocs: false});
    	}
    }
 
-   handleCustomDocs(){
-		if (localStorage.customDocAmount !== undefined){
-			let customDocs = JSON.parse(localStorage.customDocs);
-			customDocs.forEach(function(doc){
-				docsData.unshift(doc);
-			});
-			this.setState({customDocs: !this.state.customDocs});
-   	}
-	}
+   doesPreDocsExist(){
+      if (localStorage.preDocsData === undefined){
+            console.log('no predocs loaded, so loading them now');
+            localStorage.preDocsData = JSON.stringify(docsData);
+            localStorage.customDocAmount = 13;
+      } else {
+        console.log('predocs already exist');
+      }
+   }
 
    toggleOn(){
    	if (this.state.mode === 'off'){
@@ -61,27 +64,35 @@ class Docs extends Component {
    }
 
    docDelete(e){
-		let self = this;
 		this.localDocDelete(e);
    }
 
    localDocDelete(e){
+    let self = this;
    	let elToRemove = e.target.parentElement.innerText;
+    let js_preDocs =  JSON.parse(localStorage.preDocsData);
+    console.log(elToRemove);
 
-   	docsData.forEach(function(doc, i){
-			 // if (doc.type === 'added' && doc.name === elToRemove){
+   	js_preDocs.forEach(function(doc, i){
        if (doc.name === elToRemove){
 			 	e.target.parentElement.remove();
-				let startIndex = docsData.indexOf(doc);
+
+        js_preDocs.splice(js_preDocs.indexOf(doc), 1);
+
+
+
 				let localDocAmount = parseInt(localStorage.customDocAmount);
 
-				docsData.splice(startIndex, 1);
+
 				localStorage.customDocAmount = localDocAmount -=1;
-				localStorage.customDocs = JSON.stringify(docsData.slice(0, parseInt(localStorage.customDocAmount)));
+				// localStorage.customDocs = JSON.stringify(JSON.parse(localStorage.preDocsData).slice(0, parseInt(localStorage.customDocAmount)));
 
 				if (localStorage.customDocAmount === "0"){ self.setState({customDocs: false});}
 			}
+      
    	});
+      localStorage.preDocsData = JSON.stringify(js_preDocs);
+      console.log('after',js_preDocs);
    }
 
    saveInput(){
@@ -95,9 +106,11 @@ class Docs extends Component {
 			return;
    	}
 
-   	if (titleInput.value !== '' && linkInput.value !== ''){
-   		docsData.unshift({symbol: ''+titleInput.value[0].toUpperCase()+'', logo: '', name: ''+titleInput.value+'', url: 'http://'+linkInput.value+'', type:'added'});
-
+   	if (titleInput.value !== '' && linkInput.value !== ''){   		
+      let localDocs = JSON.parse(localStorage.preDocsData);
+      localDocs.unshift({symbol: ''+titleInput.value[0].toUpperCase()+'', logo: '', name: ''+titleInput.value+'', url: 'http://'+linkInput.value+'', type:'added'});
+      localStorage.preDocsData = JSON.stringify(localDocs);
+      
 	   	this.setState({
 	   		mode: 'on',
 	   		customDocs: true
@@ -106,13 +119,10 @@ class Docs extends Component {
 			if (localStorage.customDocAmount === undefined){ localStorage.customDocAmount = 1;} 
 			else {
 				let localDocAmount = parseInt(localStorage.customDocAmount);
-				localStorage.customDocAmount = localDocAmount +=1;
+				localStorage.customDocAmount = (localDocAmount +=1);
 			}
 
-			localStorage.customDocs = JSON.stringify(docsData.slice(0, parseInt(localStorage.customDocAmount)));
-
    	} else {
-	   	// console.log('no input was saved');
 	   	this.setState({
 	   		mode: 'on'
 			});
@@ -133,7 +143,7 @@ class Docs extends Component {
                      <img className="doc_logo" title="sub" src="src/assets/docs_logos/grey/sub.png"/>
                   </Column>
                  {
-                 	docsData.map(function(doc, i){
+                 	JSON.parse(localStorage.preDocsData).map(function(doc, i){
                  	if (doc.type ==="added" ){
                  		return <a key={i} style={{color: '#fff'}} href={doc.url} target="_blank"><Column large={3} className="doc_bloc">
                  		   <h3 title={doc.name}>{doc.symbol}</h3>
@@ -170,7 +180,7 @@ class Docs extends Component {
             		   <div className="inner_scroll">
 	            		   <ul>
 	            		   	{
-	            		   		docsData.map(function(doc, i){
+	            		   		JSON.parse(localStorage.preDocsData).map(function(doc, i){
 	            		   			// if (doc.type === 'added'){
 	            		   				return <li className={'userDoc'+i} key={'doc'+ i} style={{'color':'#fff'}} onClick={this.docDelete}>{doc.name}<img src="src/assets/docs_logos/grey/delete.png" className="doc_delete_button" /></li>
 	            		   			// }
