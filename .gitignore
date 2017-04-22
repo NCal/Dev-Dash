@@ -1,3 +1,4 @@
 node_modules
 .DS_Store
 unused_assets
+build/src/assets/bg_photos
