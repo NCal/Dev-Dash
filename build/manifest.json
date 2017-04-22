@@ -1,7 +1,7 @@
 {
    "manifest_version": 2,
    "name": "Dev-Dash",
-   "version": "0.0.9",
+   "version": "0.1.0",
    "description": "Replace a new tab page with a dashboard designed with developers in mind.",
    "offline_enabled": false,
    "author": "Nathan Broaddus",
