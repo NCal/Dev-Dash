@@ -23,8 +23,20 @@ class Docs extends Component {
    }
     
     componentWillMount() {
-          localStorage.customDocs= undefined;
           this.doesPreDocsExist();
+          if (localStorage.customDocs !== undefined){
+              let old_docs = JSON.parse(localStorage.customDocs);
+              let localDocs = JSON.parse(localStorage.preDocsData);
+              old_docs.forEach(function(old_doc, i){
+                
+                 localDocs.unshift(old_doc);
+              });
+            
+              // console.log(localDocs);
+              localStorage.preDocsData = JSON.stringify(localDocs);
+              localStorage.customDocs= undefined;
+          }
+
     }
    componentDidMount() {
 
