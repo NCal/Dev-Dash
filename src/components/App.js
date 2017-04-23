@@ -36,7 +36,7 @@ class App extends Component {
    }
 
    getBg(){
-    console.log('get bg');
+    // console.log('get bg');
     // $.get('http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key={86aa1ecca9719d0d668bf726a8401b9f}&tags=flower&per_page=3&format=json')
     $.get('https://api.flickr.com/services/rest/?method=flickr.photos.search',
       {
@@ -55,9 +55,9 @@ class App extends Component {
         response.photos.photo.map(function(thing){
           // console.log(thing);
           // if (Number(thing.width_o) > 2000){
-            console.log(thing);
-            console.log('small', 'https://farm'+thing.farm+'.staticflickr.com/'+thing.server+'/'+thing.id+'_'+thing.secret+'.jpg');
-            console.log('original size',thing.url_o);
+            // console.log(thing);
+            // console.log('small', 'https://farm'+thing.farm+'.staticflickr.com/'+thing.server+'/'+thing.id+'_'+thing.secret+'.jpg');
+            // console.log('original size',thing.url_o);
           // }
           // https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}.jpg
         });

@@ -24,19 +24,10 @@ class Docs extends Component {
     
     componentWillMount() {
           this.doesPreDocsExist();
-          if (localStorage.customDocs !== undefined){
-              let old_docs = JSON.parse(localStorage.customDocs);
-              let localDocs = JSON.parse(localStorage.preDocsData);
-              old_docs.forEach(function(old_doc, i){
-                
-                 localDocs.unshift(old_doc);
-              });
-            
-              // console.log(localDocs);
-              localStorage.preDocsData = JSON.stringify(localDocs);
-              localStorage.customDocs= undefined;
-          }
-
+          // localStorage.customDocs = undefined;
+          // if (localStorage.customDocs){
+          //   localStorage.clear();
+          // }
     }
    componentDidMount() {
 
@@ -47,11 +38,11 @@ class Docs extends Component {
 
    doesPreDocsExist(){
       if (localStorage.preDocsData === undefined){
-            console.log('no predocs loaded, so loading them now');
+            // console.log('no predocs loaded, so loading them now');
             localStorage.preDocsData = JSON.stringify(docsData);
             localStorage.customDocAmount = 13;
       } else {
-        console.log('predocs already exist');
+        // console.log('predocs already exist');
       }
    }
 
@@ -83,7 +74,7 @@ class Docs extends Component {
     let self = this;
    	let elToRemove = e.target.parentElement.innerText;
     let js_preDocs =  JSON.parse(localStorage.preDocsData);
-    console.log(elToRemove);
+    // console.log(elToRemove);
 
    	js_preDocs.forEach(function(doc, i){
        if (doc.name === elToRemove){
@@ -104,7 +95,7 @@ class Docs extends Component {
       
    	});
       localStorage.preDocsData = JSON.stringify(js_preDocs);
-      console.log('after',js_preDocs);
+      // console.log('after',js_preDocs);
    }
 
    saveInput(){
