@@ -27,6 +27,10 @@ class App extends Component {
       setTimeout(function(){
          $('.overlay').fadeOut(200);
       },30);
+
+      setTimeout(function(){
+         $('.overlay').hide();
+      },1000);
    }
 
    changeBackground(){
