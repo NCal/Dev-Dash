@@ -406,6 +406,15 @@ a {
    width: 30px;
 }
 
+
+/* ==== Ticker ==== */
+
+.ticker {
+   position: absolute;
+   top: 0;
+   right: 200px;
+}
+
 /* ==== MEDIA QUERIES ==== */
 @media screen and (max-width: 1200px){
 
