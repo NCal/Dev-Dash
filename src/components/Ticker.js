@@ -12,7 +12,7 @@ class Ticker extends Component {
       this.saveInput = this.saveInput.bind(this);
 
       this.state = {
-         on: true,
+         on: false,
          coin: null
       };
    }
@@ -23,7 +23,7 @@ class Ticker extends Component {
    }
 
    handleClick(){
-      // this.setState({'on': !this.state.on});
+      this.setState({'on': !this.state.on});
       // this.getReq();
    }
 
@@ -58,15 +58,15 @@ class Ticker extends Component {
    render(){
       if (this.state.on){
          return (
-            <div className="ticker" onClick={this.handleClick}>
-               <h1>Ticker on</h1>
+            <div className="ticker">
+               <img onClick={this.handleClick} className="ticker_img" src="src/assets/up_trend.svg"/>
                <input className="coin_input" type="text" placeholder="Enter a coin" onKeyDown={this.saveInput}/>
          </div>
          )
       } else {
          return (
             <div className="ticker" onClick={this.handleClick}>
-              <h1>Ticker off</h1>
+               <img onClick={this.handleClick} className="ticker_img" src="src/assets/up_trend.svg"/>
             </div>
             )
       }
