@@ -1,19 +1,9 @@
 import React, { Component } from 'react';
 
-class Add extends Component {
-   constructor(props) {
-      super(props);
-      let self = this;
-      this.state = {
-
-      };
-   }
-
-   render() {
+const Add = () => {
     return (<div className="add">
      <a href="https://goo.gl/KXAtAk"><h3>Add to Chrome</h3></a>
     </div>)
-   }
 }
 
 export default Add;

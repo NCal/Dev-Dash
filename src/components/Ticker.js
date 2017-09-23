@@ -41,8 +41,6 @@ class Ticker extends Component {
       .done(function() { console.log('getJSON request succeeded!'); })
       .fail(function() { console.log('getJSON request failed! '); })
       .always(function() { console.log('getJSON request ended!'); });
-
-
    }
       
    saveInput(e){

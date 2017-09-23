@@ -62,7 +62,7 @@ class News extends Component {
       if (this.state.on){
          return (
             <div className="outer" >
-               <h5 onClick={this.handleClick} style={{color: 'white', cursor: 'pointer'}} className="news_title title">hide</h5>
+               <h5 onClick={this.handleClick} style={{color: 'white', cursor: 'pointer'}} className="news_title title">Hide</h5>
                <div className="news_container">
                   <ol>
                      {this.state.stories.map(function(story, i){
