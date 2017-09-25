@@ -6,13 +6,7 @@ import Foundation from 'react-foundation';
 class Weather extends Component {
    constructor(props) {
       super(props);
-      this.toggleTemp = this.toggleTemp.bind(this);
-      this.getWeather = this.getWeather.bind(this);
-      this.handleData = this.handleData.bind(this);
-      this.clearState = this.clearState.bind(this);
-      this.locationTest = this.locationTest.bind(this);
       
-
       this.state = {
          local: false,
          entered: false,
@@ -25,20 +19,20 @@ class Weather extends Component {
       };
    }
 
-   componentDidMount(){
+   componentDidMount = () => {
       let self = this;
       this.handleLocalData();
    }
 
-   handleLocalData(){
-      if (localStorage.location !== undefined){
+   handleLocalData = () => {
+      if (localStorage.location){
             this.getWeather(localStorage.location);
       } else {
           this.locationTest();
       }
    }
 
-   locationTest(){
+   locationTest = () => {
       let self = this;
       console.log('location test');
       let loc = null;
@@ -55,8 +49,7 @@ class Weather extends Component {
          let longitude = crd.longitude;
          
 
-         $.getJSON('https://maps.googleapis.com/maps/api/geocode/json?latlng=' + latitude + ',' + longitude + '&sensor=true', function(data) {
-            // alert(latitude +' '+ longitude);
+         $.getJSON(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&sensor=true`, function(data) {
             loc = data.results[2].address_components[0].long_name;
             self.setState({location: loc});
             self.getWeather(self.state.location);
@@ -71,7 +64,7 @@ class Weather extends Component {
       navigator.geolocation.getCurrentPosition(success, error, options);
    }
 
-   getWeather(location){
+   getWeather = (location) =>{
       let self = this;
          $.getJSON('http://api.openweathermap.org/data/2.5/weather?&APPID=6cdaac4949dc28cbd357bc03b8771c11', {
                units: "imperial",
@@ -91,13 +84,13 @@ class Weather extends Component {
                current: current,
                name: locationName,
                temp: temp +' °',
-               icon: "http://openweathermap.org/img/w/"+ icon +".png",
+               icon: `http://openweathermap.org/img/w/${icon}.png`,
                entered: true
             });
       });  
    }
 
-   handleData(e){
+   handleData = (e) => {
       let input_value = document.querySelector('.weather_input').value;
          if (e.key === 'Enter'){
             this.setState({location: input_value}, function(){
@@ -107,7 +100,7 @@ class Weather extends Component {
          }
    }
 
-   toggleTemp(){
+   toggleTemp = () => {
       if (this.state.metric !=='C'){
          let split = this.state.temp.split('');
          split.splice((split.length-2, 2));
@@ -133,7 +126,7 @@ class Weather extends Component {
       }
    }
 
-   clearState(){
+   clearState = () => {
       this.setState({
          'entered': false,
          'location': null,
@@ -143,7 +136,7 @@ class Weather extends Component {
       });
    }
 
-   render(){
+   render = () => {
          if (!this.state.entered){
             return (
                <div className="weather_component">

@@ -7,14 +7,13 @@ let input_styles = {textAlign: 'center', cursor: 'pointer'};
 class Search extends Component{
    constructor(props) {
       super(props);
-      this.handleCheck = this.handleCheck.bind(this);
-      this.handleKeypress = this.handleKeypress.bind(this);
+
       this.state = {
          search: 'google',
       };
    }
 
-   handleKeypress(e){
+   handleKeypress = (e) =>{
       let input = document.querySelector('.search_input');
       let search = input.value; 
 
@@ -25,7 +24,7 @@ class Search extends Component{
       }
    }
 
-   handleCheck(e){
+   handleCheck = (e) => {
       let search_option = document.getElementsByClassName('search_option');
 
       if (e.target.type=== 'radio'){
@@ -56,7 +55,7 @@ class Search extends Component{
       }
    }
    
-   render() {
+   render = () => {
          return (<div className="search">
                <Column   small={8} medium={8} large={4} centerOnSmall centerOnLarge centerOnMedium >
                   <input type="text"   placeholder="search" className="search_input" onKeyDown={this.handleKeypress}/>

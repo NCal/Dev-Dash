@@ -7,23 +7,21 @@ class News extends Component {
    constructor(props) {
    	super(props);
 
-      this.getReq = this.getReq.bind(this);
-      this.handleClick = this.handleClick.bind(this);
       this.state = {
          on: true,
          stories: []
       };
    }
 
-   componentDidMount() {
+   componentDidMount = () => {
       this.getReq();
    }
 
-   handleClick(){
+   handleClick = () => {
       this.setState({'on': !this.state.on});
    }
 
-   getReq(){
+   getReq = () => {
       let self= this;
       const total = 20;
 
@@ -58,7 +56,7 @@ class News extends Component {
          }
 }
 
-   render(){
+   render = () => {
       if (this.state.on){
          return (
             <div className="outer" >

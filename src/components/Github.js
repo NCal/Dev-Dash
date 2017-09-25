@@ -4,10 +4,7 @@ import $ from 'jquery';
 class Github extends Component {
    constructor(props) {
       super(props);
-      this.getRequest = this.getRequest.bind(this);
-      this.handleClick = this.handleClick.bind(this);
-      this.saveInput = this.saveInput.bind(this);
-      this.changeUser = this.changeUser.bind(this);
+
       let self = this;
       this.state = {
          on: false,
@@ -17,33 +14,33 @@ class Github extends Component {
       };
    }
 
-   componentDidMount() {
+   componentDidMount = () => {
       if ( localStorage.user_name !== undefined && localStorage.user_name !== "undefined" ){
          this.getRequest(localStorage.user_name);
          this.setState({on: true});
       }
    }
 
-   handleClick(){
+   handleClick = () => {
       this.setState({'on': !this.state.on});
    }
 
-   saveInput(e){
+   saveInput = (e) => {
       let username = $('.gh_on input').val();
       if (e.key === 'Enter' && username !== ''){this.setUserName(username);} 
       if (e.type === 'click' && username !== ''){ this.setUserName(username);}
    }
 
-   setUserName(username){
+   setUserName = (username) => {
       localStorage.user_name = username; this.getRequest(username);
    }
 
-   changeUser(){
+   changeUser = () =>{
       localStorage.user_name = undefined;
       this.setState({user_data: null});
    }
 
-   manageUsernameLength(){
+   manageUsernameLength = () => {
       let self = this;
       let username = this.state.user_data.user;
       let username_length = this.state.user_data.user.length;
@@ -58,7 +55,7 @@ class Github extends Component {
       }
    }
 
-   getRequest(username){
+   getRequest = (username) => {
       let self = this;
       $.getJSON('https://api.github.com/users/'+ username, 
          {client_id: '28e07835843f7977ad64',
@@ -112,7 +109,7 @@ class Github extends Component {
          );
    }
 
-   render() {
+   render = () => {
       if (this.state.on && this.state.user_data === null){
          return (
             <div className="github_component"> 

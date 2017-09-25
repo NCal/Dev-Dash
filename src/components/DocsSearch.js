@@ -1,21 +1,18 @@
 import React, { Component } from 'react';
 import { Row, Column } from 'react-foundation';
 import $ from 'jquery';
-// import docsData from '../data/docsData.js';
-
-
 
 class DocsSearch extends Component {
    constructor(props){
       super(props);
-      this.handleInput =this.handleInput.bind(this);
+
       this.state = {
          name: 'docs_search',
          add_state: false
       };
    }
 
-   onEdit(e){
+   onEdit = (e) => {
       let search = e;
    
       for (let i = 0; i< JSON.parse(localStorage.preDocsData).length; i++){
@@ -29,12 +26,12 @@ class DocsSearch extends Component {
       }
    }
 
-   handleInput(e){
+   handleInput = (e) => {
       let search = e.target.value;
       this.onEdit(search);
    }
 
-   render(){
+   render = () => {
       if (!this.state.add_state){
          return (<div>
             <input type="text" className="docs_search_input" placeholder="search" onChange={this.handleInput}/>

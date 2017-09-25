@@ -2,14 +2,9 @@ import React, { Component } from 'react';
 import { Row, Column } from 'react-foundation';
 import $ from 'jquery';
 
-
 class Ticker extends Component {
    constructor(props) {
       super(props);
-
-      this.handleClick = this.handleClick.bind(this);
-      this.getReq = this.getReq.bind(this);
-      this.saveInput = this.saveInput.bind(this);
 
       this.state = {
          on: false,
@@ -17,17 +12,17 @@ class Ticker extends Component {
       };
    }
 
-   componentDidMount() {
+   componentDidMount = () => {
       // this.getReq();
       console.log('Ticker');
    }
 
-   handleClick(){
+   handleClick = () => {
       this.setState({'on': !this.state.on});
       // this.getReq();
    }
 
-   getReq(coin){
+   getReq = (coin) => {
       let self= this;
       const total = 20;
 
@@ -43,7 +38,7 @@ class Ticker extends Component {
       .always(function() { console.log('getJSON request ended!'); });
    }
       
-   saveInput(e){
+   saveInput = (e) => {
       console.log(e.target.value);
       console.log('save input');
       let coin = e.target.value;
@@ -53,7 +48,7 @@ class Ticker extends Component {
 
 
 
-   render(){
+   render = () => {
       if (this.state.on){
          return (
             <div className="ticker">

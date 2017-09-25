@@ -432,8 +432,8 @@ a {
    position: absolute;
    width: 200px;
    height: 200px;
-   top: 0;
-   right: 200px;
+   bottom: 70px;
+   left: 30px;
 }
 
 .ticker_img {
@@ -455,6 +455,10 @@ a {
    }
 
    .github_component {
+      display: none;
+   }
+
+   .ticker {
       display: none;
    }
    

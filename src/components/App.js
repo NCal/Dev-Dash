@@ -15,13 +15,9 @@ import Ticker from './Ticker.js';
 class App extends Component {
    constructor(props, context) {
       super(props, context);
-      this.changeBackground = this.changeBackground.bind(this);
-
-      this.state = {
-       name: 'App',
-      };
   }
-   componentDidMount() {
+
+   componentDidMount = () => {
       this.changeBackground();
       setTimeout(function(){
          $('.overlay').fadeOut(200);
@@ -32,13 +28,13 @@ class App extends Component {
       },1000);
    }
 
-   changeBackground(){
-      let today = new Date;
-      let todayNum = today.getDate();
-      $('.bg_image').css({'background-image': 'url(src/assets/bg_photos/'+todayNum+'.jpg)'});
+   changeBackground = () => {
+      const today = new Date;
+      const todayNum = today.getDate();
+      $('.bg_image').css({'background-image': `url(src/assets/bg_photos/${todayNum}.jpg)`});
    }
 
-   render(){
+   render = () => {
       return (
          <div className="application">
             <div className="bg_image">
