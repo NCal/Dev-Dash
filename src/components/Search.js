@@ -1,75 +1,147 @@
-import React, { Component } from 'react';
-import { Row, Column } from 'react-foundation';
+import React, { Component } from 'react'
+import { Row, Column } from 'react-foundation'
 
-let Search_urls = [{name: 'google' },{name: 'stackoverflow'},{name: 'github'}];
-let input_styles = {textAlign: 'center', cursor: 'pointer'};
+let Search_urls = [
+  { name: 'google' },
+  { name: 'stackoverflow' },
+  { name: 'github' }
+]
+let input_styles = { textAlign: 'center', cursor: 'pointer' }
 
-class Search extends Component{
-   constructor(props) {
-      super(props);
+class Search extends Component {
+  constructor(props) {
+    super(props)
 
-      this.state = {
-         search: 'google',
-      };
-   }
+    this.state = {
+      search: 'google'
+    }
+  }
 
-   handleKeypress = (e) =>{
-      let input = document.querySelector('.search_input');
-      let search = input.value; 
+  handleKeypress = e => {
+    let input = document.querySelector('.search_input')
+    let search = input.value
 
-      for (let i=0; i < document.getElementsByClassName('search_option').length; i++){
-         if (e.key === 'Enter' && this.state.search === document.getElementsByClassName('search_option')[i].name){
-            window.location = 'https://www.'+this.state.search+'.com/search?q=' + search;
-         } 
+    for (
+      let i = 0;
+      i < document.getElementsByClassName('search_option').length;
+      i++
+    ) {
+      if (
+        e.key === 'Enter' &&
+        this.state.search ===
+          document.getElementsByClassName('search_option')[i].name
+      ) {
+        window.location =
+          'https://www.' + this.state.search + '.com/search?q=' + search
       }
-   }
+    }
+  }
 
-   handleCheck = (e) => {
-      let search_option = document.getElementsByClassName('search_option');
+  handleCheck = e => {
+    let search_option = document.getElementsByClassName('search_option')
 
-      if (e.target.type=== 'radio'){
-         let clicked_box = e.target;
-         // uncheck all buttons
-         for (let i=0; i < search_option.length; i++){
-            search_option[i].checked =false;
-         }
-
-         clicked_box.checked = true;
-         this.setState({search: clicked_box.name});
+    if (e.target.type === 'radio') {
+      let clicked_box = e.target
+      // uncheck all buttons
+      for (let i = 0; i < search_option.length; i++) {
+        search_option[i].checked = false
       }
 
-      else {
-         let clicked_box = e.target.getAttribute('name');
-         let self = this;
+      clicked_box.checked = true
+      this.setState({ search: clicked_box.name })
+    } else {
+      let clicked_box = e.target.getAttribute('name')
+      let self = this
 
-         this.setState({search: clicked_box});
-            setTimeout(function(){
-               for (let i=0;i< search_option.length; i++){
-                  search_option[i].checked =false;
-                  
-                  if (self.state.search === search_option[i].name){
-                     document.querySelector('.'+search_option[i].name+'_input').checked = true;
-                  }
-               }
-            },10);
-      }
-   }
-   
-   render = () => {
-         return (<div className="search">
-               <Column   small={8} medium={8} large={4} centerOnSmall centerOnLarge centerOnMedium >
-                  <input type="text"   placeholder="search" className="search_input" onKeyDown={this.handleKeypress}/>
-                  <div className="option_container" style={{textAlign: 'center'}}>
-                     <input style={input_styles} className="search_option google_input" type="radio" name="google" onClick={this.handleCheck} defaultChecked/><span style={{cursor: 'pointer'}} type="span" name="google" onClick={this.handleCheck} className="search_option_span google">Google</span>
-                     <input style={input_styles} className="search_option stackoverflow_input" type="radio" name="stackoverflow" onClick={this.handleCheck} /><span style={{cursor: 'pointer'}} type="span"   name="stackoverflow" onClick={this.handleCheck}   className="search_option_span stackoverflow">Stack Overflow</span>
-                     <input style={input_styles} className="search_option github_input" type="radio" name="github" onClick={this.handleCheck} /><span   style={{cursor: 'pointer'}} type="span"   name="github" onClick={this.handleCheck} className="search_option_span github">Github</span>
-                  </div>
-               </Column>
-         </div>)
-   }
+      this.setState({ search: clicked_box })
+      setTimeout(function() {
+        for (let i = 0; i < search_option.length; i++) {
+          search_option[i].checked = false
+
+          if (self.state.search === search_option[i].name) {
+            document.querySelector(
+              '.' + search_option[i].name + '_input'
+            ).checked = true
+          }
+        }
+      }, 10)
+    }
+  }
+
+  render = () => {
+    return (
+      <div className="search">
+        <Column
+          small={8}
+          medium={8}
+          large={4}
+          centerOnSmall
+          centerOnLarge
+          centerOnMedium
+        >
+          <input
+            type="text"
+            placeholder="search"
+            className="search_input"
+            onKeyDown={this.handleKeypress}
+          />
+          <div className="option_container" style={{ textAlign: 'center' }}>
+            <input
+              style={input_styles}
+              className="search_option google_input"
+              type="radio"
+              name="google"
+              onClick={this.handleCheck}
+              defaultChecked
+            />
+            <span
+              style={{ cursor: 'pointer' }}
+              type="span"
+              name="google"
+              onClick={this.handleCheck}
+              className="search_option_span google"
+            >
+              Google
+            </span>
+            <input
+              style={input_styles}
+              className="search_option stackoverflow_input"
+              type="radio"
+              name="stackoverflow"
+              onClick={this.handleCheck}
+            />
+            <span
+              style={{ cursor: 'pointer' }}
+              type="span"
+              name="stackoverflow"
+              onClick={this.handleCheck}
+              className="search_option_span stackoverflow"
+            >
+              Stack Overflow
+            </span>
+            <input
+              style={input_styles}
+              className="search_option github_input"
+              type="radio"
+              name="github"
+              onClick={this.handleCheck}
+            />
+            <span
+              style={{ cursor: 'pointer' }}
+              type="span"
+              name="github"
+              onClick={this.handleCheck}
+              className="search_option_span github"
+            >
+              Github
+            </span>
+          </div>
+        </Column>
+      </div>
+    )
+  }
 }
 
+Search.defaultProps = {}
 
-Search.defaultProps = {};
-
-export default Search;
+export default Search

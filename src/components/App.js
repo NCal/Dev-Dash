@@ -1,68 +1,70 @@
-import React, { Component } from 'react';
-import { Row, Column } from 'react-foundation';
-import Foundation from 'react-foundation';
-import $ from 'jquery';
-import Search from './Search.js';
-import MainDate from './Date.js';
-import News from './News.js';
-import Add from './Add.js';
-import Weather from './Weather.js';
-import Github from './Github.js';
-import Docs from './Docs.js';
-import Share from './Share.js';
-import Ticker from './Ticker.js';
+import React, { Component } from 'react'
+import { Row, Column } from 'react-foundation'
+import Foundation from 'react-foundation'
+import $ from 'jquery'
+import Search from './Search.js'
+import MainDate from './Date.js'
+import News from './News.js'
+import Add from './Add.js'
+import Weather from './Weather.js'
+import Github from './Github.js'
+import Docs from './Docs.js'
+import Share from './Share.js'
+import Ticker from './Ticker.js'
 
 class App extends Component {
-   constructor(props, context) {
-      super(props, context);
+  constructor(props, context) {
+    super(props, context)
   }
 
-   componentDidMount = () => {
-      this.changeBackground();
-      setTimeout(function(){
-         $('.overlay').fadeOut(200);
-      },30);
+  componentDidMount = () => {
+    this.changeBackground()
+    setTimeout(function() {
+      $('.overlay').fadeOut(200)
+    }, 30)
 
-      setTimeout(function(){
-         $('.overlay').hide();
-      },1000);
-   }
+    setTimeout(function() {
+      $('.overlay').hide()
+    }, 1000)
+  }
 
-   changeBackground = () => {
-      const today = new Date;
-      const todayNum = today.getDate();
-      $('.bg_image').css({'background-image': `url(src/assets/bg_photos/${todayNum}.jpg)`});
-   }
+  changeBackground = () => {
+    const today = new Date()
+    const todayNum = today.getDate()
+    $('.bg_image').css({
+      'background-image': `url(src/assets/bg_photos/${todayNum}.jpg)`
+    })
+  }
 
-   render = () => {
-      return (
-         <div className="application">
-            <div className="bg_image">
-            <div className="underlay"></div>
-                {/* <Add/>*/}
-               <Share/>
-               <MainDate/>
-               <Search/>
-               <News/>
-               <Weather/>
-               <Docs/>
-               <Github/>
-      {/*<Ticker/>*/}
-            </div>
-         </div>
-      )
-   }
+  render = () => {
+    return (
+      <div className="application">
+        <div className="bg_image">
+          <div className="underlay" />
+          {/* <Add/>*/}
+          <Share />
+          <MainDate />
+          <Search />
+          <News />
+          <Weather />
+          <Docs />
+          <Github />
+          {/*<Ticker/>*/}
+        </div>
+      </div>
+    )
+  }
 }
 
-// PROPS 
+// PROPS
 App.defaultProps = {
-   name:'APP',
-   kind: 'Parent'
-};
+  name: 'APP',
+  kind: 'Parent'
+}
 
 App.propTypes = {
-   name: React.PropTypes.string.isRequired,
-   kind: React.PropTypes.string
+  name: React.PropTypes.string.isRequired,
+  kind: React.PropTypes.string
 }
 
-export default App;
+export default App
