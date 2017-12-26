@@ -16,14 +16,14 @@ class MainDate extends Component {
   }
 
    startTime = () => {
-      const today = new Date();
-      let h = today.getHours();
-      let m = today.getMinutes();
+		const today = new Date();
+		let h = today.getHours();
+		let m = today.getMinutes();
 
 	 	if (h >= 13 ){h = h - 12}
 	 	if (h === 0 || h === 24 || h === -12 ){ h= 12; }
 
-  		m = this.checkTime(m);
+  	m = this.checkTime(m);
  		this.setState({ time: h + ":" + m});
  		this.setState({ date: today.toDateString() });
    	const t = setTimeout(this.startTime, 500);
@@ -34,18 +34,20 @@ class MainDate extends Component {
       return i;
   }
 
-	handleMouseOver = () => {
-	   $('.time').animate({'letter-spacing': '0.3em'}, 150);
+	handleMouseOver = (e) => {
+		let targ = e.target.className
+	   $(`.${targ}`).animate({'letter-spacing': '0.3em'}, 150);
 	}
 
-	handleMouseLeave = () => {
-		$('.time').animate({'letter-spacing': '0em'}, 150);
+	handleMouseLeave = (e) => {
+		let targ = e.target.className;
+		$(`.${targ}`).animate({ "letter-spacing": "0em" }, 150);
 	}
 
 	render = () => {
 		return (<div className="date">
 			<Column  small={8} medium={8} large={3} centerOnSmall centerOnLarge centerOnMedium >
-				<h1  className="time" style={{textAlign: 'center'}} onMouseOver={this.handleMouseOver} onMouseLeave={this.handleMouseLeave}>{this.state.time}</h1>
+				<h1  className="time" style={{textAlign: 'center'}} onMouseOver={(e)=>this.handleMouseOver(e)} onMouseLeave={(e)=>this.handleMouseLeave(e)}>{this.state.time}</h1>
 				<p style={{textAlign: 'center'}}>{this.state.date}</p>
 			</Column>
 		</div>)

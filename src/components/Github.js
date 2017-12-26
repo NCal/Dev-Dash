@@ -10,7 +10,8 @@ class Github extends Component {
          on: false,
          user_data: null,
          user_repo_data: null,
-         display_username: null
+         display_username: null,
+         githubInput: null
       };
    }
 
@@ -26,7 +27,7 @@ class Github extends Component {
    }
 
    saveInput = (e) => {
-      let username = $('.gh_on input').val();
+      let username = this.state.githubInput;
       if (e.key === 'Enter' && username !== ''){this.setUserName(username);} 
       if (e.type === 'click' && username !== ''){ this.setUserName(username);}
    }
@@ -109,13 +110,17 @@ class Github extends Component {
          );
    }
 
+   setUser = (e) => {
+    this.setState({githubInput: e.target.value})
+   }
+
    render = () => {
       if (this.state.on && this.state.user_data === null){
          return (
             <div className="github_component"> 
                <div className="gh_on">
                  <p className="gh_title title gh_hide" onClick={this.handleClick}>Hide</p>
-                 <input className="user_name_input" type="text" placeholder="Enter your Github Username" onKeyDown={this.saveInput}/>
+                 <input className="user_name_input" type="text" placeholder="Enter your Github Username" onChange={this.setUser} onKeyDown={this.saveInput}/>
                  <div className="save_gh_input  title" onClick={this.saveInput}>Save</div>
                </div>
             </div>

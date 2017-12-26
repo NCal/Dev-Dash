@@ -11,7 +11,9 @@ class Docs extends Component {
       this.state = {
          mode: 'off',
          docInput: null,
-         customDocs: false,
+				 customDocs: false,
+				 customTitle: null,
+				 customLink: null
       };
    }
     
@@ -63,7 +65,7 @@ class Docs extends Component {
 
         js_preDocs.splice(js_preDocs.indexOf(doc), 1);
 
-        let localDocAmount = parseInt(localStorage.customDocAmount);
+        let localDocAmount = parseInt(localStorage.customDocAmount)
         localStorage.customDocAmount = localDocAmount -=1;
 
         if (localStorage.customDocAmount === "0"){ self.setState({customDocs: false});}
@@ -74,8 +76,8 @@ class Docs extends Component {
    }
 
    saveInput = () =>{
-   	let titleInput = document.getElementsByClassName('addTitleInput')[0];
-   	let linkInput = document.getElementsByClassName('addLinkInput')[0];
+   	let titleInput = this.state.customTitle
+   	let linkInput = this.state.customLink
 
    	if (this.state.mode === 'sub'){
 	   	this.setState({
@@ -86,7 +88,7 @@ class Docs extends Component {
 
    	if (titleInput.value !== '' && linkInput.value !== ''){   		
       let localDocs = JSON.parse(localStorage.preDocsData);
-      localDocs.unshift({symbol: ''+titleInput.value[0].toUpperCase()+'', logo: '', name: ''+titleInput.value+'', url: 'http://'+linkInput.value+'', type:'added'});
+      localDocs.unshift({symbol: ''+titleInput[0].toUpperCase()+'', logo: '', name: ''+titleInput+'', url: 'http://'+linkInput+'', type:'added'});
       localStorage.preDocsData = JSON.stringify(localDocs);
       
 	   	this.setState({
@@ -105,7 +107,17 @@ class Docs extends Component {
 	   		mode: 'on'
 			});
    	}
-   }
+	 }
+	 
+	 updateCustomLink = (e) => {
+		 let self = this;
+		this.setState({customLink: e.target.value})
+
+	 }
+
+	 updateCustomTitle = (e) => {
+		this.setState({customTitle: e.target.value})
+	 }
 
    render = () => {
       if (this.state.mode ==='on'){
@@ -144,8 +156,8 @@ class Docs extends Component {
       	return (
       		<div className="docs_component">
       		   <p style={{'cursor': 'pointer'}} onClick={this.toggleOn}>Hide</p>
-      		   <input className="addTitleInput" type="text" placeholder="Name"/>
-      		   <input className="addLinkInput" type="text" placeholder="Link"/>
+      		   <input className="addTitleInput" type="text" placeholder="Name" onChange={this.updateCustomTitle}/>
+      		   <input className="addLinkInput" type="text" placeholder="Link" onChange={this.updateCustomLink}/>
       		   <div style={{'color':'#fff', 'cursor': 'pointer'}} onClick={this.saveInput}>save</div>
       		</div>
    		)

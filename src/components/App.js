@@ -47,7 +47,7 @@ class App extends Component {
                <Weather/>
                <Docs/>
                <Github/>
-               <Ticker/>
+      {/*<Ticker/>*/}
             </div>
          </div>
       )
