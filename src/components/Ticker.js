@@ -9,7 +9,7 @@ class Ticker extends Component {
     super(props)
 
     this.state = {
-      on: true,
+      on: false,
       coin: null,
       BTC: 'loading..',
       LTC: 'loading..',
@@ -20,67 +20,84 @@ class Ticker extends Component {
 
   componentDidMount = () => {
     let self = this
-    // console.log('Ticker')
+    console.log('Ticker')
     this.socketsOn()
   }
 
   socketsOn = () => {
     let self = this
-    // console.log('sockets on')
-    socket.on('trades', tradeMsg => {
-      // console.log(tradeMsg.market_id.substr(4))
-      if (
-        tradeMsg.exchange_id === 'bitfinex' &&
-        tradeMsg.market_id.substr(4) == 'USD'
-      ) {
-        // console.log(tradeMsg)
-        switch (tradeMsg.coin) {
-          case 'BTC':
-            self.setState({
-              BTC: Number(tradeMsg.message.msg.price).toFixed(2)
-            })
-            break
-          case 'ETH':
-            self.setState({
-              ETH: Number(tradeMsg.message.msg.price).toFixed(2)
-            })
-            break
-          case 'LTC':
-            self.setState({
-              LTC: Number(tradeMsg.message.msg.price).toFixed(2)
-            })
-            break
-          case 'BCH':
-            self.setState({
-              BCH: Number(tradeMsg.message.msg.price).toFixed(2)
-            })
-            break
+    if (this.state.on) {
+      console.log('socket on')
+      socket.open()
+      socket.on('trades', tradeMsg => {
+        if (
+          tradeMsg.exchange_id === 'bitfinex' &&
+          tradeMsg.market_id.substr(4) == 'USD'
+        ) {
+          // console.log(tradeMsg)
+          switch (tradeMsg.coin) {
+            case 'BTC':
+              self.setState({
+                BTC: Number(tradeMsg.message.msg.price).toFixed(2)
+              })
+              break
+            case 'ETH':
+              self.setState({
+                ETH: Number(tradeMsg.message.msg.price).toFixed(2)
+              })
+              break
+            case 'LTC':
+              self.setState({
+                LTC: Number(tradeMsg.message.msg.price).toFixed(2)
+              })
+              break
+            case 'BCH':
+              self.setState({
+                BCH: Number(tradeMsg.message.msg.price).toFixed(2)
+              })
+              break
+          }
         }
-      }
-      if (
-        tradeMsg.exchange_id === 'kraken' &&
-        tradeMsg.market_id.substr(4) == 'USD'
-      ) {
-        // console.log(tradeMsg)
-        switch (tradeMsg.coin) {
-          case 'LTC':
-            self.setState({
-              LTC: Number(tradeMsg.message.msg.price).toFixed(2)
-            })
-            break
-          case 'ETH':
-            self.setState({
-              ETH: Number(tradeMsg.message.msg.price).toFixed(2)
-            })
-            break
+        if (
+          tradeMsg.exchange_id === 'kraken' &&
+          tradeMsg.market_id.substr(4) == 'USD'
+        ) {
+          switch (tradeMsg.coin) {
+            case 'BTC':
+              self.setState({
+                BTC: Number(tradeMsg.message.msg.price).toFixed(2)
+              })
+              break
+            case 'LTC':
+              self.setState({
+                LTC: Number(tradeMsg.message.msg.price).toFixed(2)
+              })
+              break
+            case 'ETH':
+              self.setState({
+                ETH: Number(tradeMsg.message.msg.price).toFixed(2)
+              })
+              break
+            case 'BCH':
+              self.setState({
+                BCH: Number(tradeMsg.message.msg.price).toFixed(2)
+              })
+              break
+          }
         }
-      }
-    })
+      })
+    } else {
+      socket.close()
+      console.log('socket closed')
+    }
   }
 
   handleClick = () => {
-    this.setState({ on: !this.state.on })
-    // this.getReq()
+    console.log('handleClick')
+    let self = this
+    this.setState({ on: !this.state.on }, () => {
+      self.socketsOn()
+    })
   }
 
   saveInput = e => {
@@ -94,42 +111,45 @@ class Ticker extends Component {
     }
   }
 
-  turnOn = () => {
-    // let self = this
-    // console.log('turn on')
-    // this.setState({ on: !self.state.on })
-    // this.socketsOn()
-  }
-
   render = () => {
     if (this.state.on) {
-      return (
-        <div className="ticker">
+      return <div className='ticker'>
           <ul>
             <li>
-              <img src="src/assets/up_trend.svg" />
+              <img src='src/assets/up_trend.svg' onClick={this.handleClick} />
             </li>
             <li>
-              <span className="coin">BTC</span>: {this.state.BTC}
+              <a href='http://coincap.io/BTC' target='blank_'>
+                <span className='coin'>BTC</span>
+              </a>: {this.state.BTC}
             </li>
             <li>
-              <span className="coin">LTC</span>: {this.state.LTC}
+              <a href='http://coincap.io/LTC' target='blank_'>
+                <span className='coin'>LTC</span>
+              </a>: {this.state.LTC}
             </li>
             <li>
-              <span className="coin">ETH</span>: {this.state.ETH}
+              <a href='http://coincap.io/ETH' target='blank_'>
+                <span className='coin'>ETH</span>
+              </a>: {this.state.ETH}
             </li>
             <li>
-              <span className="coin">BCH</span>: {this.state.BCH}
+              <a href='http://coincap.io/BCH' target='blank_'>
+                <span className='coin'>BCH</span>
+              </a>: {this.state.BCH}
             </li>
           </ul>
         </div>
-      )
     } else {
       return (
-        <div className="ticker">
+        <div className='ticker'>
           <ul>
             <li>
-              <img src="src/assets/up_trend.svg" onClick={this.turnOn} />
+              <img
+                title='Cryptocurrency Tickers'
+                src='src/assets/up_trend.svg'
+                onClick={this.handleClick}
+              />
             </li>
           </ul>
         </div>

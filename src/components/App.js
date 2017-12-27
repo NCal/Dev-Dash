@@ -19,6 +19,7 @@ class App extends Component {
 
   componentDidMount = () => {
     this.changeBackground()
+    
     setTimeout(function() {
       $('.overlay').fadeOut(200)
     }, 30)

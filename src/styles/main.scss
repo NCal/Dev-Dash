@@ -428,7 +428,7 @@ a {
 /* ==== Ticker ==== */
 
 .ticker {
-  cursor: pointer;
+  // cursor: pointer;
   position: absolute;
   width: 600px;
   height: 200px;
@@ -453,6 +453,19 @@ a {
 
 .ticker_img {
    height: 40px;
+}
+
+.ticker {
+  a {
+    color: #fff;
+  }
+  img {
+    cursor: pointer;
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 4000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+  }
 }
 
 /* ==== MEDIA QUERIES ==== */
@@ -509,4 +522,9 @@ a {
    .container {
       top: 150px;
    }
+}
+
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
 }
