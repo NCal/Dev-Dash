@@ -76,6 +76,4 @@ class MainDate extends Component {
   }
 }
 
-
-
 export default MainDate

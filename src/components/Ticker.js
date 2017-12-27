@@ -21,7 +21,7 @@ class Ticker extends Component {
   componentDidMount = () => {
     let self = this
     // console.log('Ticker')
-    this.socketsOn();
+    this.socketsOn()
   }
 
   socketsOn = () => {
@@ -98,7 +98,6 @@ class Ticker extends Component {
     // let self = this
     // console.log('turn on')
     // this.setState({ on: !self.state.on })
-
     // this.socketsOn()
   }
 
