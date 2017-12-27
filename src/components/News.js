@@ -104,8 +104,4 @@ class News extends Component {
   }
 }
 
-News.defaultProps = {
-  name: 'News'
-}
-
 export default News

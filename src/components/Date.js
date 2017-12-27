@@ -76,8 +76,6 @@ class MainDate extends Component {
   }
 }
 
-Date.defaultProps = {
-  name: 'Date'
-}
+
 
 export default MainDate

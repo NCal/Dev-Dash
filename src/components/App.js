@@ -49,22 +49,12 @@ class App extends Component {
           <Weather />
           <Docs />
           <Github />
-          {/*<Ticker/>*/}
+          <Ticker/>
         </div>
       </div>
     )
   }
 }
 
-// PROPS
-App.defaultProps = {
-  name: 'APP',
-  kind: 'Parent'
-}
-
-App.propTypes = {
-  name: React.PropTypes.string.isRequired,
-  kind: React.PropTypes.string
-}
 
 export default App

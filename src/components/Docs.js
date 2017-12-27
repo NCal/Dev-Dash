@@ -293,8 +293,5 @@ class Docs extends Component {
   }
 }
 
-Docs.defaultProps = {
-  name: 'Docs'
-}
 
 export default Docs

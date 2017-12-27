@@ -142,6 +142,5 @@ class Search extends Component {
   }
 }
 
-Search.defaultProps = {}
 
 export default Search

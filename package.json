@@ -19,7 +19,8 @@
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
     "react-foundation": "^0.7.0",
-    "sass-loader": "^4.1.1"
+    "sass-loader": "^4.1.1",
+    "socket.io-client": "^2.0.4"
   },
   "devDependencies": {
     "babel-core": "^6.11.4",
