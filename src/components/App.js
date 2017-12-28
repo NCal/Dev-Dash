@@ -11,6 +11,7 @@ import Github from './Github.js'
 import Docs from './Docs.js'
 import Share from './Share.js'
 import Ticker from './Ticker.js'
+import Donate from './Donate.js'
 
 class App extends Component {
   constructor(props, context) {
@@ -51,6 +52,7 @@ class App extends Component {
           <Docs />
           <Github />
           <Ticker />
+          <Donate/>
         </div>
       </div>
     )

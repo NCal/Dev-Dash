@@ -468,6 +468,39 @@ a {
   }
 }
 
+
+.donate {
+  position: relative;
+  top: 30px;
+  font-size: .8em;
+  width: 400px;
+  margin: 0 auto;
+  
+
+  .coin_list{
+    position: relative;
+    left: 40px;
+    list-style-type: none;
+    li {
+      color: #fff;
+    }
+    .coin_header {
+      font-weight: bold;
+    }
+  }
+  
+  img {
+    position: relative;
+    top: 80px;
+    opacity: .65;
+    height: 25px;
+    cursor: pointer;
+    
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
 /* ==== MEDIA QUERIES ==== */
 @media screen and (max-width: 1200px){
 
@@ -476,6 +509,10 @@ a {
    }
    .news_container {
       display: none;
+   }
+
+   .donate {
+     display: none;
    }
 
    .docs_component, .docs_off_component {
