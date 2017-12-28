@@ -11,7 +11,7 @@ class Donate extends Component {
 
   showAddress = () => {
     let self = this;
-    console.log('show address');
+    // console.log('show address');
     this.setState({on: !self.state.on})
   }
   render = () => {

@@ -20,14 +20,14 @@ class Ticker extends Component {
 
   componentDidMount = () => {
     let self = this
-    console.log('Ticker')
+    // console.log('Ticker')
     this.socketsOn()
   }
 
   socketsOn = () => {
     let self = this
     if (this.state.on) {
-      console.log('socket on')
+      // console.log('socket on')
       socket.open()
       socket.on('trades', tradeMsg => {
         if (
@@ -88,7 +88,7 @@ class Ticker extends Component {
       })
     } else {
       socket.close()
-      console.log('socket closed')
+      // console.log('socket closed')
     }
   }
 
