@@ -43,22 +43,28 @@ class News extends Component {
           {},
           function(response, i) {
             // fix askHN no response.url
-            if (response.url === undefined) {
-              response.url =
-                'https://news.ycombinator.com/item?id=' + response.id
+            // console.log(response.url)
+            if (response !== null){
+              if (response.url === undefined) {
+                // console.log('no url', response)
+                response.url = 'https://news.ycombinator.com/item?id=' + response.id
+              }
+              //
+              stories.push({
+                title: response.title, 
+                url: response.url
+              })
+              setFinalState(stories)
             }
-            //
-            stories.push({ title: response.title, url: response.url })
-            setFinalState(stories)
           }
         )
       }
     }
 
     function setFinalState(stories) {
-      if (stories.length === total) {
+      // if (stories.length === total) {
         self.setState({ stories: stories })
-      }
+      // }
     }
   }
 
